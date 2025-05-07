@@ -1,4 +1,91 @@
 ---
-import { Image } from "astro:assets";
 import Link from "../components/Link.astro";
 ---
+<section class="bg-brown-600 text-white-500 p-xs sm:p-xxs md:p-sm lg:p-m">
+  <!-- nyhedsbrev -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="flex-1">
+      <h6 class="font-semibold mb-2 col-span-1">Nyhedsbrev</h6>
+    </div>
+    <div class="col-span-2">
+      <h6 class="font-semibold mb-1">Hold dit opdateret</h6>
+      <p class="text-white-500 mb-4">og få besked om tilbud, kampagner og konkurrencer!</p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input
+          type="email"
+          placeholder="Email.."
+          class="bg-black border-b border-white px-2 py-1 focus:outline-none text-white placeholder-gray-400 w-full sm:w-auto"
+        />
+        <button class="bg-orange-500 hover:bg-orange-600 text-white-500 font-semibold px-4 py-1 w-full sm:w-auto">
+          Tilmeld
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <hr class=" my-s" />
+
+  <!-- Besøg os -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <div>
+      <h6 class="font-semibold mb-4 col-span-1">Besøg os</h6>
+    </div>
+    <div class="mb-s">
+      <p class="font-medium text-white-500">Langholt (Nordjylland)</p>
+        <p class="text-white-500">
+          Gravsholtvej 15<br />
+          9310 Vodskov<br />
+          Man - Fre: 8:00 - 16:00<br />
+          Lørdag: 10:00 - 14:00
+        </p>
+    </div>
+    <div >
+      <p class="font-medium text-white-500">Valby (København)</p>
+        <p class="text-white-500">
+          Valby Langgade 30<br />
+          2500 Valby<br />
+          Man - Fre: 10:00 - 17:30<br />
+          Lørdag: 10:00 - 14:00
+        </p>
+    </div>
+  </div>
+
+  <hr class=" my-s" />
+
+
+  <!-- lær mere -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <div>
+      <h6 class="font-semibold mb-2">Lær mere</h6>
+    </div>
+    <div>
+      <h6 class="font-semibold mb-2">Kundeservice</h6>
+      <div class="flex flex-col -space-y-xxxs">
+        <Link size="small" variant="footer" href="/">Kontakt</Link>
+        <Link size="small" variant="footer" href="/">Fragt / Levering</Link>
+        <Link size="small" variant="footer" href="/">Bytte / Retur</Link>
+        <Link size="small" variant="footer" href="/">Levering af paller</Link>
+        <Link size="small" variant="footer" href="/">Prisgaranti</Link>
+        <Link size="small" variant="footer" href="/">Finansiering</Link>
+        <Link size="small" variant="footer" href="/">Klarna betaling</Link>
+        <Link size="small" variant="footer" href="/">FAQ</Link>
+        <Link size="small" variant="footer" href="/">Erhvervskunde</Link>
+      </div>
+    </div>
+    <div>
+      <h6 class="font-semibold mb-2">Information</h6>
+      <div class="flex flex-col -space-y-xxxs">
+        <Link size="small" variant="footer" href="/">Om Biopejs-shop</Link>
+        <Link size="small" variant="footer" href="/">Mød os på messe</Link>
+        <Link size="small" variant="footer" href="/">Handelsbetingelser</Link>
+        <Link size="small" variant="footer" href="/">Kundebilleder</Link>
+        <Link size="small" variant="footer" href="/">Guides om pejse</Link>
+        <Link size="small" variant="footer" href="/">Blog</Link>
+        <Link size="small" variant="footer" href="/">Persondata</Link>
+        <Link size="small" variant="footer" href="/">Cookies</Link>
+        <Link size="small" variant="footer" href="/">Bæredygtighed</Link>
+      </div>
+     
+    </div>
+  </div>
+</section>

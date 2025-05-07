@@ -118,9 +118,9 @@ export default {
     borderWidth: {
       DEFAULT: "1px",
       0: "0px",
-      2: "2px",
-      3: "3px",
-      4: "4px",
+      2: "1px",
+      3: "2px",
+      4: "3px",
     },
 
     /* Border radius størrelser herunder */

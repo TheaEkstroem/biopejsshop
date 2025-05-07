@@ -2,24 +2,43 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
+import ProductCard from "../components/productcard.astro";
+
 import { Image } from "astro:assets";
-import Hero from "../public/hero.webp";
+import biopejslink from "../assets/images/kategori_links/aduro_biopejslink.webp";
+import hybridlink from "../assets/images/kategori_links/hybrid_link.webp";
+import elpejslink from "../assets/images/kategori_links/elpejs_link.webp";
+import gaspejslink from "../assets/images/kategori_links/gaspejs_link.webp";
+import Børsen from "../assets/images/børsen.webp";
 
 ---
 
-<MainLayout title="Titel">
+<MainLayout title="Biopejs-shop">
   <article>
-    <!-- Hero -->
-    <section class=" bg-white-700">
-      <Image class="" src={Hero} alt="Hero image" loading="lazy"></Image>
+    <!-- hero -->
+    <section
+      class="relative flex items-center justify-center w-full h-screen bg-cover bg-center"
+      style="background-image: url('/src/assets/images/hero.webp');"
+    >
+      <div
+        class="text-white z-10 ml-auto flex flex-col px-m sm:px-m md:px-lg lg:px-lg xl:px-xl"
+      >
+        <h1
+          class="text-white-500 w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-2xl"
+        >
+          Skab hygge uden røg Biopejse til moderne hjem
+        </h1>
 
-      <h1 class="text-white-500">Index overskrift</h1>
+        <Button size="medium" variant="buttonbrown" href="/biopejs">
+          Find din Biopejs
+        </Button>
+      </div>
     </section>
 
-    <!--  -->
-    <section>
+    <!-- kategori -->
+    <section class="p-xs sm:p-s md:p-ml lg:p-lg">
       <h2>Lær mere om vores brede udvalg af pejse</h2>
-      <p>
+      <p class="max-w-full sm:max-w-[700px] md:max-w-[800px] lg:max-w-[832px]">
         Lær mere om vores forskellige typer pejse og find den perfekte løsning
         til dit hjem. Vi tilbyder både biopejse, hybridpejse, elpejse og
         gaspejse – hver med deres unikke fordele og designmuligheder. Uanset om
@@ -28,15 +47,381 @@ import Hero from "../public/hero.webp";
         tilbyde.
       </p>
 
+      <!-- kategori links -->
+      <div
+        class="pt-sm sm:pt-ml md:pt-lg flex flex-wrap gap-s md:gap-lg justify-center"
+      >
+        <!-- Biopejs -->
+        <div class="flex flex-col items-center justify-center">
+          <div
+            class="w-[170px] h-[280px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"
+          >
+            <Image
+              src={biopejslink}
+              alt="Biopejs"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <Link size="medium" variant="link" href="/biopejs">Biopejs</Link>
+        </div>
+
+        <!-- Hybrid -->
+        <div class="flex flex-col items-center justify-center">
+          <div
+            class="w-[170px] h-[280px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"
+          >
+            <Image
+              src={hybridlink}
+              alt="Hybrid"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <Link size="medium" variant="link" href="/hybridpejs">Hybrid</Link>
+        </div>
+
+        <!-- Elpejs  -->
+        <div class="flex flex-col items-center justify-center">
+          <div
+            class="w-[170px] h-[280px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"
+          >
+            <Image
+              src={elpejslink}
+              alt="Elpejs"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <Link size="medium" variant="link" href="/elpejs">Elpejs</Link>
+        </div>
+
+        <!-- Gaspejs -->
+        <div class="flex flex-col items-center justify-center">
+          <div
+            class="w-[170px] h-[280px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"
+          >
+            <Image
+              src={gaspejslink}
+              alt="Gaspejs"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <Link size="medium" variant="link" href="/gaspejs">Gaspejs</Link>
+        </div>
+      </div>
     </section>
 
-    <h3>Index overskrift</h3>
-    <h4>Index overskrift</h4>
-    <h5>Index overskrift</h5>
-    <p>Index overskrift</p>
+    <!-- citat og CTA  -->
+    <section
+      class="relative flex items-center justify-center w-full h-screen bg-cover bg-center"
+      style="background-image: url('/src/assets/images/træbaggrund.webp');"
+    >
+      <div
+        class="text-white z-10 m-auto flex flex-col items-left gap-xl px-m sm:px-m md:px-lg lg:px-lg xl:px-xl"
+      >
+        <h1 class="text-white-500 w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl">
+          Skab hygge uden røg Biopejse til moderne hjem
+        </h1>
+        <p
+          class="text-white-500 text-2xl md:text-4xl italic w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl"
+        >
+          “Vores passion er at finde den bedste løsning til jer, og vi har
+          derfor altid jer i centrum. På den måde finder vi den rette pejs, der
+          passer til jeres hjem, behov og ønsker.”
+        </p>
 
-    <Button size="medium" variant="buttonbrown" href="/">Abonnement</Button>
+        <Button size="medium" variant="buttonorange" href="/biopejs"
+          >Find din Biopejs</Button
+        >
+      </div>
+    </section>
 
-    <Link>Klik!</Link>
+    <!-- bruger anbefalinger -->
+    <section class="p-xs sm:p-s md:p-ml lg:p-lg">
+      <h2 class="items-end">Køb favoritterne - Udvalgt af vores kunder</h2>
+      <div class="flex gap-xxs">
+      <ProductCard
+        href="/singleview"
+        imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
+        brand="Cocoon Fires"
+        productName="Aeris"
+        price="22.999 kr."
+      />
+      <ProductCard
+        href="/singleview"
+        imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
+        brand="Cocoon Fires"
+        productName="Aeris"
+        price="22.999 kr."
+      />
+      <ProductCard
+        href="/singleview"
+        imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
+        brand="Cocoon Fires"
+        productName="Aeris"
+        price="22.999 kr."
+      />
+      <ProductCard
+        href="/singleview"
+        imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
+        brand="Cocoon Fires"
+        productName="Aeris"
+        price="22.999 kr."
+      />
+    </div>
+    </section>
+
+    <!-- acordion SEO tekst -->
+    <section class="p-xs sm:p-s md:p-ml lg:p-lg">
+      <h2 class="py-s">Pejse uden besvær</h2>
+      <div class="flex flex-col gap-sm">
+        <!-- Biopejs: Miljøvenlige bioethanol pejs - uden skorsten!  -->
+        <details class="w-full sm:w-[1000px]">
+          <summary
+            class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
+          >
+            <div class="md:block hidden"></div>
+            <h4>Biopejs: Miljøvenlige bioethanol pejs - uden skorsten!</h4>
+          </summary>
+          <div>
+            <p class="py-xs">
+              En biopejs drives af brændstoffet bioethanol og kan installeres
+              helt uden brug af skorsten eller aftræk. Derfor er det en yderst
+              fleksibel pejs, som fås i mange prisklasser og typer til både
+              private og virksomheder. Forbruget i en biopejs varierer tilmed
+              afhængigt af brændkammer og design. Læs mere om forbrug her. En
+              pejs til bioethanol er blevet meget populær de seneste år, og
+              dette er blandt andet grundet dens store fleksibilitet samt det
+              faktum, at den er en af de mest miljøvenlige og rengøringsfrie
+              pejse på markedet. En bioethanol pejs er stadig en relativ ny type
+              pejs, som de seneste år er blevet rigtig populær, men grundet at
+              der er tale om en type af pejse, hvor der afbrændes brandbare
+              materialer, så er det altid godt at have helt styr på sikkerheden.
+              Vi anbefaler derfor, at man følger manualen, der medfølger alle
+              pejsene, samt følger Sikkerhedsstyrelsens gode råd om korrekt brug
+              af biopejse.
+            </p>
+            <p class="py-xs">
+              Biopejse fås i alle typer, designs og kan installeres stort set
+              over alt - uanset om det er en fristående-, hængende- eller
+              biopejs til indbygning. Flammen i biopejsen er ægte. Det vil sige
+              den bliver varm og samtidig udleder varme. Dog er de fleste
+              biopejse justerbare, så du kan reducere forbruget af bioethanol,
+              så pejsen samtidig kan anvendes som en dekorativ hyggepejs, hvis
+              det ønskes. Der fås både manuelle og automatiske biopejse, som kan
+              betjenes via fjernbetjening, smartphone eller app. Ønsker du at
+              bringe hyggen fra din biopejs udendørs, er det også muligt at købe
+              udendørs biopejse ved os. Se vores store udvalg af forskellige
+              slags pejse og ildsteder her.
+            </p>
+          </div>
+        </details>
+
+        <!--  Biopejs ophæng: Til ethvert hjem  -->
+        <details class="w-full sm:w-[1000px]">
+          <summary
+            class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
+          >
+            <div class="md:block hidden"></div>
+            <h4>Biopejs ophæng: Til ethvert hjem</h4>
+          </summary>
+          <div>
+            <p class="py-xs">
+              Du kan hænge en biopejs op som ophæng på væggen og give nyt
+              fantastisk liv i stuen eller køkkenet, og så fylder den næsten
+              intet, så den kan være i stort set alle hjem. Det er utrolig nemt
+              at hænge en af vores væghængte biopejse op, og langt de fleste
+              vægge kan bære vægten af en væg-biopejs. Vær dog altid opmærksom
+              på den enkelte vægbiopejs' vægt, da denne kan variere en del fra
+              pejs til pejs.
+            </p>
+            <p class="py-xs">
+              Det nyeste skud på stammen af biopejse er lofthængte biopejse! En
+              ekstremt populær lofthængt model er Cocoon Aeris fra Cocoon Fires,
+              som du eksempelvis i en årrække kunne se hver morgen og aften i
+              Go' Morgen Danmark og Go' Aften Live på TV2. Vi har en række
+              forskellige lofthængte bioethanol pejse i vores sortiment, som kan
+              findes sammen med vores væghængte biopejse.
+            </p>
+          </div>
+        </details>
+
+        <!-- Biopejs Tilbehør   -->
+        <details class="w-full sm:w-[1000px]">
+          <summary
+            class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
+          >
+            <div class="md:block hidden"></div>
+            <h4>Biopejs Tilbehør</h4>
+          </summary>
+          <div>
+            <p class="py-xs">
+              En biopejs er ikke fuldendt uden det rette tilbehør. Det første og
+              vigtigste, man skal bruge, er selvfølgelig biopejsens brændstof,
+              bioethanol. Vores bioethanol er af højeste kvalitet, og det
+              afgiver derfor nærmest ingen lugt og ingen sod. Den bioethanol,
+              der bruges i en biopejs, skal gerne have en alkohol procent på
+              mellem 95% - 97,5% for, at den brænder så rent og lugtfrit som
+              muligt. Vores bioethanol har en alkoholprocent på 96,6%, og du
+              finder vores bioethanol her.
+            </p>
+
+            <p class="py-xs">
+              Vi har ofte også rigtig gode tilbud på storkøb af bioethanol! Ud
+              over bioethanol kan det også være rart at have det rigtige værktøj
+              til påfyldning, rengøring og at tænde pejsen. Vi har derfor et
+              stort udvalg af tilbehør til dig og din bioethanol pejs, som du
+              kan finde her. Vil du gerne peppe din biopejs op eller gøre den
+              mere realistisk, så har vi også masser af dekorationer til
+              biopejse. Her kan du finde både keramisk træ, keramiske sten eller
+              glow flame, som laver realistiske gnister.
+            </p>
+          </div>
+        </details>
+
+        <!-- Gaspejs: Det autentiske flammevidunder uden brænde og rengøring  -->
+        <details class="w-full sm:w-[1000px]">
+          <summary
+            class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
+          >
+            <div class="md:block hidden"></div>
+            <h4>
+              Gaspejs: Det autentiske flammevidunder uden brænde og rengøring
+            </h4>
+          </summary>
+          <div>
+            <p class="py-xs">
+              Gaspejse installeres ofte i nyere hjem, fordi de efterhånden er så
+              intelligente og autentiske, at brugerne foretrækker denne frem for
+              den traditionelle brændeovn. En gaspejs kan have en høj
+              varmeeffekt og kan således opvarme et helt hus. Heldigvis er det
+              nemt og komfortabelt at justere på flammen og varmeeffekten, hvis
+              det bliver for varmt, og der eksempelvis ønskes et hyggeniveau. En
+              gaspejs ses ofte indbygget i nybyggerier og ved større
+              renoveringsprojekter, fordi det er en fremtidssikker professionel
+              pejs. Den fås både med naturgas, bygas og til flaskegas.
+              Indretningen med en gaspejs er ligeledes relativt fleksibel, fordi
+              den ikke kræver en skorsten, men derimod blot et aftræk. Gaspejse
+              fås både til indendørs og udendørs brug. En udendørs gaspejs
+              kræver ikke aftræk eller lignende, men placeres ofte direkte på
+              terrassen, som en traditionel terrassevarmer. Se vores udvalg af
+              indendørs gaspejse eller udendørs terrassevarmere til gas her.
+            </p>
+          </div>
+        </details>
+
+        <!-- Udendørs ildsteder og pejse: Bålfade, terrassevarmere og pizzaovne   -->
+        <details class="w-full sm:w-[1000px]">
+          <summary
+            class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
+          >
+            <div class="md:block hidden"></div>
+            <h4>
+              Udendørs ildsteder og pejse: Bålfade, terrassevarmere og pizzaovne
+            </h4>
+          </summary>
+          <div>
+            <p class="py-xs">
+              Det nyeste skud på vores produktstamme er vores udendørs
+              sortiment, som inkluderer alt fra bålfade, pizzaovne og grill til
+              gas terrassevarmere og elektriske terrassevarmere, udendørs
+              biopejse og havepejse. Så skal du skabe hygge og varme på
+              terrassen eller i haven på de lange sommeraftener, så har vi helt
+              sikkert det, du mangler! Vi har et stort udvalg af produkter til
+              madlavning udendørs, som du kan finde her. Her har vi blandt andet
+              mærker som Morsø og Vulcanus, som laver både grill og pizzaovne,
+              så du kan lave lækker mad på terrassen eller i haven. I vores
+              udendørs sortiment har vi også forskellige ildsteder som bålfade
+              og havepejse.
+            </p>
+            <p class="py-xs">
+              Vores bålfade kommer i mange forskellige størrelser, former og
+              materialer, så der er helt sikkert også et til dig og din have! Vi
+              har også en masse tilbehør til bålfade, så du f.eks. kan lave mad
+              over bålet. Vil du gerne have varme på terrassen, så kan du vælge
+              en el, terrassevarmer eller gas terrassevarmer , som sørger for,
+              at du kan blive på terrassen på de lange sommeraftener, når mørket
+              falder på, og der bliver lidt køligere! Og vil du gerne vil have
+              biopejsen med i haven, på altanen eller på terrassen, så har vi
+              også mange udendørs biopejse, som du kan finde her , eller du kan
+              bygge din egen udendørs pejs, f.eks. kan du bygge den ned i et
+              bord.
+            </p>
+          </div>
+        </details>
+
+        <!-- Opti-myst pejs: Hybridpejsen der skaber flammer af vand   -->
+        <details class="w-full sm:w-[1000px]">
+          <summary
+            class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
+          >
+            <div class="md:block hidden"></div>
+            <h4>Opti-myst pejs: Hybridpejsen der skaber flammer af vand</h4>
+          </summary>
+          <div>
+            <p class="py-xs">
+              For de fleste lyder det vildt, at flammer kan skabes af vand, og
+              normalt er vand og el heller ikke en god kombination. Men med en
+              hybridpejs kombineres netop vand, strøm og LED-lys til at skabe
+              den flotte og meget naturtro Opti-myst flamme. Hybridpejse, eller
+              vanddamppejse om man vil, er kommet for at blive. Store
+              producenter som Dimplex, Magic-Fire by Saffretti og Xaralyn er de
+              første, der laver disse fantastiske og forunderlige pejse, og
+              mellem dem findes der et stort udvalg af både fritstående,
+              indbyggede eller hængende hybridpejse. Hybridpejse skaber en
+              utrolig naturtro flamme, damper uden nogen form for brandfare, og
+              de afgiver ingen varme. Med denne løsning skånes miljøet til det
+              maksimale! Du kan se vores store udvalg af de miljøvenlige
+              hybridpejse her.
+            </p>
+          </div>
+        </details>
+
+        <!-- Elpejs: Flammer skabt med stikkontakten   -->
+        <details class="w-full sm:w-[1000px]">
+          <summary
+            class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
+          >
+            <div class="md:block hidden"></div>
+            <h4>Elpejs: Flammer skabt med stikkontakten</h4>
+          </summary>
+          <div>
+            <p class="py-xs">
+              Det har aldrig været nemmere at installere en pejs i hjemmet end
+              med en elektrisk pejs. En elpejs drives af strøm og er særligt
+              attraktiv for solcelleejere med overskydende energi. De er
+              utroligt nemme at tilslutte og kræver ikke en kompliceret
+              installation i form af skorsten, aftræk eller lignende. Vores
+              elpejse fås både stående, ophængt eller indbygget i væggen. Du
+              tænker måske, at en elpejs er smart, men at du mangler varmen fra
+              den klassiske brændeovn? Intet problem, fordi de fleste elektriske
+              pejse kommer med et varmemodul, så du stadig får den hyggelige
+              varme fra pejsen - bare helt uden den åbne ild eller røg, os og
+              aske! Mange vælger en elektrisk pejs, fordi der ingen brandfare er
+              forbundet hermed. De danner nemlig ikke ægte flammer, men derimod
+              elektroniske ved hjælp af LED-lys, hvorfor "ilden" altid er under
+              fuld kontrol.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- børsen -->
+
+    <section class="p-xs sm:p-s md:p-ml lg:p-lg">
+      <div class="sm:grid grid-cols-3 items-center">
+        <div class="sm:w-[850px] sm:h-[444px] col-span-2">
+      <Image
+              src={Børsen}
+              alt="Børsen gazelle pris "
+              class="w-full h-full object-cover col-span-2"
+            /> 
+          </div>
+      <div class="flex flex-col gap-xs">
+        <h2>Børsens Gazelle</h2>
+        <p class="text-orange-500">Biopejs-shop.dk er blevet tildelt Børsens Gazellepris hvert år fra 2018 til 2024.</p>
+        <p>Denne prestigefyldte pris uddeles til virksomheder, der udviser markant vækst, fordobler deres omsætning eller bruttoresultat over en fireårig periode og opererer med sund økonomi. Gazelleprisen er en anerkendelse af vores dedikation til innovation, kvalitet og kundetilfredshed.</p>
+      </div>
+    </div>
+    </section>
   </article></MainLayout
 >

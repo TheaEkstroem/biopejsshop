@@ -1,4 +1,88 @@
 ---
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import Hero from "../assets/images/hero.webp";
 ---
+
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header
+      class="bg-[#f9f8f6] px-4 py-4 flex items-center justify-between relative z-50"
+    >
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img src="/logo.png" alt="Biopejs logo" class="h-8 mr-2" />
+      </div>
+
+      <!-- Search bar -->
+      <div class="hidden md:flex flex-1 max-w-md px-4">
+        <input
+          type="text"
+          placeholder="Søg efter vare"
+          class="w-full bg-transparent px-xxxs py-xxxs"
+        />
+      </div>
+
+      <!-- Cart and Burger -->
+      <div class="flex items-center gap-4">
+        <!-- Cart Icon -->
+        <button aria-label="Cart">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 3h2l.4 2M7 13h14l-1.35 6.78A2 2 0 0117.7 22H6.3a2 2 0 01-1.95-1.55L3 5h18"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          id="burger"
+          class="md:hidden focus:outline-none"
+          onclick="document.getElementById('mobile-nav').classList.toggle('hidden')"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav
+      id="mobile-nav"
+      class="md:flex hidden flex-col md:flex-row gap-4 px-4 pb-4 md:pb-0 md:px-6 text-sm bg-[#f9f8f6] md:items-center"
+    >
+      <Link size="small" variant="link" href="/biopejs">Biopejs</Link>
+      <Link size="small" variant="link" href="/hybridpejs">Hybridpejs</Link>
+      <Link size="small" variant="link" href="/elpejs">Elpejs</Link>
+      <Link size="small" variant="link" href="/gaspejs">Gaspejs</Link>
+      <Link size="small" variant="link" href="/">Udendørs</Link>
+      <Link size="small" variant="link" href="/">Mærker</Link>
+      <Link size="small" variant="link" href="/guides">Guides</Link>
+      <Link size="small" variant="link" href="/omos">Om os</Link>
+      <Link size="small" variant="link" href="/galleri">Galleri</Link>
+    </nav>
+  </body>
+</html>
