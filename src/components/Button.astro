@@ -1,0 +1,42 @@
+---
+// Henter parametrene fra Astro.props
+const { href="#", target="_self", variant= "textlink", size = "inline" } = Astro.props; 
+
+//Definer den styling (Tailwind classes, der gør sig gældende for alle knapper
+const linkStyling = " btn relative flex items-center p-xxs justify-center font-semibold transition duration-300 ease-in-out border-2"; 
+
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
+const variantClasses = {
+/* blå knap */
+    "buttonblue":"text-font-white bg-brand-blue  border-transparent hover:bg-transparent hover:text-brand-blue hover:border-brand-blue" ,
+    "buttonstrokeblue":"text-brand-blue  border-brand-blue hover:bg-brand-blue hover:text-font-white" ,
+
+    /* lilla kanp */
+    "buttonpurple": "text-brand-rosa bg-brand-purple border-transparent hover:bg-transparent hover:text-brand-purple hover:border-brand-purple",
+    "buttonstrokepurple": "text-brand-purple border-brand-purple hover:bg-brand-purple hover:text-font-white",
+
+    /* gul knap */
+    "buttonyellow": "text-brand-blue bg-brand-yellow border-transparent hover:bg-transparent hover:text-brand-yellow hover:border-brand-yellow",
+    "buttonstrokeyellow": "text-brand-yellow border-brand-yellow hover:bg-brand-yellow hover:text-font-white",
+
+    /* rosa knap */
+    "buttonrosa": "text-font-white bg-brand-rosa border-transparent hover:bg-transparent hover:text-brand-rosa hover:border-brand-rosa",
+    "buttonstrokerosa": "text-brand-rosa border-brand-rosa hover:bg-brand-rosa hover:text-font-white",
+};
+
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
+const sizeClasses = {
+    "xsmall": "text-[16px] px-s py-xxxs  ",
+   "small": "text-[16px] px-xxxs py-xxs",
+    "medium": "text-lg px-xxs py-xxs",
+    "large": "text-3xl px-xxs py-xxs",
+    "xlarge": "text-3xl px-xxs py-xxs",
+};
+
+---
+<!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
+<a href={href} target={target} class:list={[linkStyling, variantClasses[variant], sizeClasses[size],]}><slot /></a>
+
+
+
+
