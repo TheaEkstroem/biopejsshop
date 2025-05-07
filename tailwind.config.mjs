@@ -99,8 +99,8 @@ export default {
     },
     /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
     fontFamily: {
-      futura: ["futura-pt", "sans-serif"],
-      geologica: ["Geologica", "sans-serif"],
+      cormorant: ["Cormorant", "serif"],
+      roboto: ["Roboto", "sans-serif"],
     },
 
     /* Tilføj dit typografiske hierarki herunder */

@@ -2,9 +2,8 @@
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import Hero from "../assets/images/hero.webp";
+import logo from "../assets/images/logo.webp";
 ---
-
 <html lang="da">
   <head>
     <meta charset="UTF-8" />
@@ -15,10 +14,11 @@ import Hero from "../assets/images/hero.webp";
       class="bg-[#f9f8f6] px-4 py-4 flex items-center justify-between relative z-50"
     >
       <!-- Logo -->
+       <a href="/">
       <div class="flex items-center">
         <img src="/logo.png" alt="Biopejs logo" class="h-8 mr-2" />
       </div>
-
+    </a>
       <!-- Search bar -->
       <div class="hidden md:flex flex-1 max-w-md px-4">
         <input
@@ -74,7 +74,7 @@ import Hero from "../assets/images/hero.webp";
       id="mobile-nav"
       class="md:flex hidden flex-col md:flex-row gap-4 px-4 pb-4 md:pb-0 md:px-6 text-sm bg-[#f9f8f6] md:items-center"
     >
-      <Link size="small" variant="link" href="/biopejs">Biopejs</Link>
+      <Link size="small" variant="link" href="/biopejskategori">Biopejs</Link>
       <Link size="small" variant="link" href="/hybridpejs">Hybridpejs</Link>
       <Link size="small" variant="link" href="/elpejs">Elpejs</Link>
       <Link size="small" variant="link" href="/gaspejs">Gaspejs</Link>
