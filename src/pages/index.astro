@@ -3,14 +3,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
-import Hero from "../assets/images/hero.webp";
+import Hero from "../public/hero.webp";
 
 ---
 
 <MainLayout title="Titel">
   <article>
     <!-- Hero -->
-    <section class="px-s md:px-2xl py-10xl bg-white-700">
+    <section class=" bg-white-700">
       <Image class="" src={Hero} alt="Hero image" loading="lazy"></Image>
 
       <h1 class="text-white-500">Index overskrift</h1>
