@@ -2,21 +2,41 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+import Hero from "../assets/images/hero.webp";
+
 ---
+
 <MainLayout title="Titel">
-	<article >
-		<section class="px-s md:px-2xl py-10xl bg-white-700">
-		<h1 class="text-blue-600">Index overskrift</h1>
-		</section>
-		<h2>Index overskrift</h2>
-		<h3>Index overskrift</h3>
-		<h4>Index overskrift</h4>
-		<h5>Index overskrift</h5>
-		<p>Index overskrift</p>
+  <article>
+    <!-- Hero -->
+    <section class="px-s md:px-2xl py-10xl bg-white-700">
+      <Image class="" src={Hero} alt="Hero image" loading="lazy"></Image>
 
-		<Button size="medium" variant="buttonbrown" href="/">Abonnement</Button>
+      <h1 class="text-white-500">Index overskrift</h1>
+    </section>
 
-		<Link>Klik!</Link>
+    <!--  -->
+    <section>
+      <h2>Lær mere om vores brede udvalg af pejse</h2>
+      <p>
+        Lær mere om vores forskellige typer pejse og find den perfekte løsning
+        til dit hjem. Vi tilbyder både biopejse, hybridpejse, elpejse og
+        gaspejse – hver med deres unikke fordele og designmuligheder. Uanset om
+        du ønsker en miljøvenlig løsning, et moderne udtryk eller en pejs uden
+        skorsten, kan du her læse mere om, hvad de forskellige modeller kan
+        tilbyde.
+      </p>
 
+    </section>
 
-</MainLayout>
+    <h3>Index overskrift</h3>
+    <h4>Index overskrift</h4>
+    <h5>Index overskrift</h5>
+    <p>Index overskrift</p>
+
+    <Button size="medium" variant="buttonbrown" href="/">Abonnement</Button>
+
+    <Link>Klik!</Link>
+  </article></MainLayout
+>
