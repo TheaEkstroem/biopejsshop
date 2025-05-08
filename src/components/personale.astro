@@ -4,14 +4,14 @@ const {imageSrc, Name } = Astro.props;
 ---
 
 <div
-  class="block max-w-sm mx-auto p-s"
+  class="flex flex-col gap-s items-center max-w-sm mx-auto p-s"
 >
   <img
     src={imageSrc}
     alt={Name}
     class="w-[200px] h-[220px] object-contain mx-auto -mt-ml"
   />
-  <div class="-mt-s">
-    <p class="text-brown-700">{Name}</p>
+  <div class="-mt-xxxs">
+    <p class="text-brown-700 font-medium">{Name}</p>
   </div>
 </div>

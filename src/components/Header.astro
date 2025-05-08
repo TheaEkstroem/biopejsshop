@@ -1,88 +1,144 @@
 ---
-import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
-import { Image } from "astro:assets";
-import logo from "../assets/images/logo.webp";
 ---
-<html lang="da">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <header
-      class="bg-[#f9f8f6] px-4 py-4 flex items-center justify-between relative z-50"
-    >
+
+<!-- Navigation -->
+<div class="px-10">
+  <div
+    x-data="{ showmenu: false }"
+    class="px-s py-xs fixed top-0 left-0 z-50 w-full bg-white-500"
+  >
+    <!-- Desktop -->
+    <div id="navbar" class="flex flex-row justify-between">
       <!-- Logo -->
-       <a href="/">
-      <div class="flex items-center">
-        <img src="/logo.png" alt="Biopejs logo" class="h-8 mr-2" />
+      <div class="logo">
+        <a href="/">
+          <img src="/logo.png" alt="Biopejs logo" class="h-8 mr-2" />
+        </a>
       </div>
-    </a>
+
       <!-- Search bar -->
-      <div class="hidden md:flex flex-1 max-w-md px-4">
+      <div class="hidden md:flex flex-1 max-w-xl px-4">
+        <div class="flex flex-1 space-x-m">
         <input
           type="text"
           placeholder="Søg efter vare"
           class="w-full bg-transparent px-xxxs py-xxxs"
         />
+
+        <a href="/kurv">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
+          <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9zM1 7v1h14V7zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5"/>
+        </svg>
+      </a>
+    </div>
       </div>
+    </div>
 
-      <!-- Cart and Burger -->
-      <div class="flex items-center gap-4">
-        <!-- Cart Icon -->
-        <button aria-label="Cart">
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3 3h2l.4 2M7 13h14l-1.35 6.78A2 2 0 0117.7 22H6.3a2 2 0 01-1.95-1.55L3 5h18"
-            ></path>
-          </svg>
-        </button>
-
-        <!-- Mobile Menu Toggle -->
-        <button
-          id="burger"
-          class="md:hidden focus:outline-none"
-          onclick="document.getElementById('mobile-nav').classList.toggle('hidden')"
+      <!-- nav -->
+      <div class="">
+        <nav
+          id="desktopmenu"
+          class="hidden md:flex md:flex-row md:items-center gap-20"
         >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"></path>
+          <ul class="flex flex-row gap-s">
+            <li>
+              <Link size="small" variant="link" href="/biopejskategori"
+                >Biopejs</Link
+              >
+            </li>
+            <li>
+              <Link size="small" variant="link" href="/hybridpejs"
+                >Hybridpejs</Link
+              >
+            </li>
+            <li>
+              <Link size="small" variant="link" href="/elpejs">Elpejs</Link>
+            </li>
+            <li>
+              <Link size="small" variant="link" href="/gaspejs">Gaspejs</Link>
+            </li>
+            <li>
+              <Link size="small" variant="link" href="/">Udendørs</Link>
+            </li>
+            <li>
+              <Link size="small" variant="link" href="/">Mærker</Link>
+            </li>
+            <li>
+              <Link size="small" variant="link" href="/guides">Guides</Link>
+            </li>
+            <li>
+              <Link size="small" variant="link" href="/om">Om os</Link>
+            </li>
+            <li>
+              <Link size="small" variant="link" href="/galleri">Galleri</Link>
+            </li>
+
+            <!-- kurv -->
+            <li>
+              <a href="/kurv">
+                <!--   <Image
+                src={kurv}
+                alt="kurv symbol"
+                class="w-[30px] h-auto object-fit"
+              /> -->
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- burgermenu -->
+        <button
+          id="burger-menu"
+          id="burgermenu"
+          class="md:hidden"
+          x-on:click="showmenu = ! showmenu"
+        >
+          <svg viewBox="0 0 100 80" width="30" height="30">
+            <rect width="100" height="15" rx="10"></rect>
+            <rect y="30" width="100" height="15" rx="10"></rect>
+            <rect y="60" width="100" height="15" rx="10"></rect>
           </svg>
         </button>
       </div>
-    </header>
 
-    <!-- Navigation -->
-    <nav
-      id="mobile-nav"
-      class="md:flex hidden flex-col md:flex-row gap-4 px-4 pb-4 md:pb-0 md:px-6 text-sm bg-[#f9f8f6] md:items-center"
-    >
-      <Link size="small" variant="link" href="/biopejskategori">Biopejs</Link>
-      <Link size="small" variant="link" href="/hybridpejs">Hybridpejs</Link>
-      <Link size="small" variant="link" href="/elpejs">Elpejs</Link>
-      <Link size="small" variant="link" href="/gaspejs">Gaspejs</Link>
-      <Link size="small" variant="link" href="/">Udendørs</Link>
-      <Link size="small" variant="link" href="/">Mærker</Link>
-      <Link size="small" variant="link" href="/guides">Guides</Link>
-      <Link size="small" variant="link" href="/om">Om os</Link>
-      <Link size="small" variant="link" href="/galleri">Galleri</Link>
-    </nav>
-  </body>
-</html>
+      <!-- mobile view -->
+      <nav
+        id="mobilmenu"
+        class="flex flex-col pt-4 w-full md:hidden"
+        x-show="showmenu"
+        x-transition
+        x-on:click="showmenu = false"
+        x-on:click.outside="showmenu = false"
+      >
+        <ul class="text-right no-underline pt-xs">
+          <li class="pb-xxs">
+            <Link size="medium" variant="textlink" href="/kaffer"
+              >KAFFETYPER</Link
+            >
+          </li>
+
+          <li class="pb-xxs">
+            <Link size="medium" variant="textlink" href="/sortiment"
+              >PRODUKTUDVALG</Link
+            >
+          </li>
+          <!--    <li class="pb-xxs">
+          <Link size="medium" variant="textlink" href="/">WHOLESALE</Link>
+        </li>
+        <li class="pb-xxs">
+          <Link size="medium" variant="primary" size="medium" href="/"
+            >KAFFEBAR</Link
+          >
+        </li> -->
+          <li class="pb-xxs">
+            <Link size="medium" variant="textlink" href="/om">OM</Link>
+          </li>
+          <!-- kurv -->
+          <li class="pb-xxs">
+            <Link size="medium" variant="textlink" href="/kurv">KURV</Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

@@ -3,25 +3,190 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
 import Personale from "../components/personale.astro";
-
+import Kontaktperson from "../components/kontaktperson.astro";
 ---
 
 <MainLayout title="Os bag Biopejs">
+  <article class="px-m sm:px-m md:px-lg lg:px-lg xl:px-xl max-w-screen-2xl mx-auto">
+    <h2 class="pt-ml">Os bag Biopejs</h2>
+    <div class="sm:grid grid-cols-2 gap-xl pt-m ">
+      <div class="pb-s">
+        <h3>Sådan startede vi</h3>
+        <p>
+          Biopejs-shop startede som en del af CC- trading i 2010 stiftet af
+          Casper W. Lanng og Christoffer L. Mortensen, hvor det kun var en
+          webshop. I 2018 åbnede det første showroom i Aalborg, som i 2021
+          flyttede til Langholt på Gravsholtvej 15, og i 2020 åbnede endnu et på
+          Valby Langgade 30 i Valby, hvor der begge steder udstilles et bredt
+          udvalg af vores pejsemuligheder såsom biopejse, gaspejse, elpejse og
+          opti-myst pejse. Siden begyndelsen er der kommet en del dygtige
+          medarbejdere til med forskellige modersmål, så vi kan hjælpe og
+          rådgive vores kunder i hele Europa på bedste vis.
+        </p>
+      </div>
 
-<article>
+      <div>
+        <h3>Vores passion</h3>
+        <p>
+          Vores passion er at finde den bedste løsning for vores kunder, og vi
+          har derfor altid kunden i centrum. På den måde finder vi den rette
+          pejs, der passer til den enkelte kundes behov og ønsker. Vores dygtige
+          personale hjælper dig hellere end gerne med gode råd og anbefalinger
+          via vores live-chat, mail, telefon eller i et af vores showrooms. Vi
+          er en moderne virksomhed, og tilbyder derfor også vores kunder ekstra
+          grafisk materiale i form af billeder eller videoer af de ønskede
+          pejse, hvis ikke der er mulighed for at se pejsen fysisk i et af vores
+          showrooms.
+        </p>
+      </div>
+    </div>
 
+    <!-- info -->
+<div class="grid md:grid-cols-3 gap-m py-s md:py-xl">
+    <div class="block max-w-sm mx-auto bg-blue-100 p-s w-[442px]">
+      <div class="p-s">
+        <p class="font-semibold text-xl">Information</p>
+        <div class="flex flex-col justify-between gap-xs mt-xxs">
+          <p>Biopejs-shop.dk</p>
+          <p>Gravsholtvej 15, Langholt 9310 Vodskov Danmark</p>
+          <p>CVR nr. DK34607907</p>
+        </div>
+      </div>
+    </div>
 
+    <div class="block max-w-sm mx-auto bg-blue-100 p-s w-[442px]">
+        <div class="p-s">
+          <p class="font-semibold text-xl">Bankoplysninger</p>
+          <div class="flex flex-col justify-between gap-xs mt-xxs">
+            <p>Spar Nord Bank
+                Konto nr.: 4580007339
+                Reg nr.: 9314</p>
+            <p>IBAN nr.:
+                DK2693144580007339
+                BIC: SPNODK22</p>
+          </div>
+        </div>
+      </div>
 
+      <div class="block max-w-sm mx-auto bg-blue-100 p-s w-[442px]">
+        <div class="p-s">
+          <p class="font-semibold text-xl">Kundeservicev</p>
+          <div class="flex flex-col justify-between gap-xs mt-xxs">
+            <p> Tlf: 52 700 500</p>
+            <p>Mail: info@biopejs-shop.dk</p>
+            <p>Live chat her på siden</p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- cheferne -->
+    <h2 class="text-center">Kontaktpersoner</h2>
+    <div class="px-0 lg:px-xl grid grid-cols-2 md:grid-cols-4 mt-ml mb-xl">
+      <Kontaktperson
+        imageSrc="/src/assets/images/personale/steffen.webp"
+        Name="Steffen Lanng"
+        Job="Salgsansvarlig - Danmark"
+        Telefon="+45 81 80 77 82"
+        Email="sl@biopejs-shop.dk"
+      />
+
+      <Kontaktperson
+        imageSrc="/src/assets/images/personale/casper.webp"
+        Name="Casper W. Lanng"
+        Job="Indehaver"
+        Telefon="+45 60 66 96 24"
+        Email="ca@biopejs-shop.dk"
+      />
+
+      <Kontaktperson
+        imageSrc="/src/assets/images/personale/christoffer.webp"
+        Name="Christoffer L. Mortensen"
+        Job="Indehaver"
+        Telefon="+45 60 66 96 03"
+        Email="ch@biopejs-shop.dk"
+      />
+      <Kontaktperson
+        imageSrc="/src/assets/images/personale/jeannette.webp"
+        Name="Jeanette H. Trangeled"
+        Job="Bogholderi"
+        Telefon="+45 60 66 96 49"
+        Email="bogholderi@biopejs- shop.dk"
+      />
+    </div>
 
     <!-- personale -->
-
-    <Personale
-    imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
-    Name="Aeris"
-   />
-
-
-
-</article>
-    
+    <h2 class="text-center">Personale</h2>
+    <div class="px-0 lg:px-xl grid grid-cols-2 md:grid-cols-4 gap-y-xl mt-ml">
+      <Personale
+        imageSrc="/src/assets/images/personale/amalie.webp"
+        Name="Amalie H. Larsen"
+      />
+      <Personale
+        imageSrc="/src/assets/images/personale/anders.webp"
+        Name="Anders Hauge"
+      />
+      <Personale
+        imageSrc="/src/assets/images/personale/andreea.webp"
+        Name="Andreea Ionescu"
+      />
+      <Personale
+        imageSrc="/src/assets/images/personale/aleksandra.webp"
+        Name="Aleksandra Wróbel"
+      />
+      <!--  -->
+      <Personale
+        imageSrc="/src/assets/images/personale/Michael.webp"
+        Name="Michael Falkenberg"
+      />
+      <Personale
+        imageSrc="/src/assets/images/personale/hannahclaire.webp"
+        Name="Hannah-Claire Virgien"
+      />
+      <Personale
+        imageSrc="/src/assets/images/personale/Héléna.webp"
+        Name="Héléna Nicol"
+      />
+      <Personale
+        imageSrc="/src/assets/images/personale/david.webp"
+        Name="David Mockovsky"
+      />
+      <!--  -->
+      <Personale
+        imageSrc="/src/assets/images/personale/kristinne.webp"
+        Name="Kristinne Schimkat"
+      />
+      <Personale
+        imageSrc="/src/assets/images/personale/line.webp"
+        Name="Line Schack Nielsen"
+      />
+      <Personale
+        imageSrc="/src/assets/images/personale/lisa.webp"
+        Name="Lisa Brohus"
+      />
+      <Personale
+        imageSrc="/src/assets/images/personale/marisa.webp"
+        Name="Marisa Gómez"
+      />
+      <!--  -->
+      <Personale
+        imageSrc="/src/assets/images/personale/jack.webp"
+        Name="Jack Kavanagh"
+      />
+      <Personale
+        imageSrc="/src/assets/images/personale/william.webp"
+        Name="Wiliam Rossi"
+      />
+      <Personale
+        imageSrc="/src/assets/images/personale/morgan.webp"
+        Name="Morgan Nielsen"
+      />
+      <Personale
+        imageSrc="/src/assets/images/personale/olivia.webp"
+        Name="Olivia Rydermark"
+      />
+    </div>
+  </article>
 </MainLayout>
