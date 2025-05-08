@@ -1,11 +1,84 @@
 ---
+// src/pages/biopejskategori.astro
 import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
+import KategoriLink from "../components/kategorilink.astro";
 ---
 
 <MainLayout title="Biopejs">
+  <article>
+    <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
+      <h2 class="pb-xs">Biopejse: Miljøvenlige pejse uden krav om skorsten</h2>
+      <p class="max-w-full sm:max-w-[500px] md:max-w-[819px] lg:max-w-[819px]">
+        Oplev et af verdens største udvalg af biopejse uden skorsten, der skaber
+        varme og elegance uden behov for skorsten eller aftræk. Vores
+        miljøvenlige pejse bruger bioethanol, en vedvarende energikilde, der
+        skaber ægte flammer uden røg, aske eller sod. Vælg mellem forskellige
+        stilarter, herunder fritstående, vægmonterede og indbyggede modeller, så
+        du kan finde den perfekte biopejs til din indretning og nyde den ideelle
+        kombination af moderne design og bæredygtig opvarmning.
+      </p>
 
+      <h3 class="pb-xs pt-ml">Kategorier</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-sm pb-ml">
+        <KategoriLink
+          imageSrc="/src/assets/images/biopejs_link/loft-link.webp"
+          linkUrl="/productview"
+          overlayText="Lofthængt"
+        />
 
-    
-</MainLayout>
+        <KategoriLink
+          imageSrc="/src/assets/images/biopejs_link/væg-link.webp"
+          linkUrl="/"
+          overlayText="Væghængt"
+        />
+        <KategoriLink
+          imageSrc="/src/assets/images/biopejs_link/fri-link.webp"
+          linkUrl="/"
+          overlayText="Fritstående"
+        />
+        <KategoriLink
+          imageSrc="/src/assets/images/biopejs_link/indbyg-link.webp"
+          linkUrl="/"
+          overlayText="Indsat"
+        />
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-xl md:pt-s">
+        <div class=" md:pb-s">
+          <h3>Danmarks største udvalg</h3>
+          <p>
+            Biopejs Shop tilbyder Danmarks største udvalg af bioethanol pejse.
+            Vi har biopejse fra alle de velkendte producenter som eksempelvis
+            Cocoon Fires, Planika Fires og Xaralyn. Biopejse brænder på
+            bioethanol, som er en sprit produceret på organiske materialer, som
+            for eksempel kartofler, majs og roer. Der er således tale om et
+            miljøvenligt og bæredygtigt produkt. Ved afbrænding afgiver
+            bioethanol kun CO2, varme og fordampet vand. Derfor kræver biopejse
+            ikke skorsten eller aftræk og kan derfor være den ideelle løsning,
+            hvis man ikke har mulighed for eller lyst til at få lavet skorsten
+            eller aftræk, men stadigvæk gerne vil have hyggen fra den åbne ild,
+            som en biopejs giver
+          </p>
+        </div>
+
+        <div>
+          <h3>Guides om biopejse</h3>
+          <p>
+            Biopejse er, for mange, stadig et nyt fænomen, der endnu ikke er
+            stiftet alverdens bekendtskab med. Derfor oplever vi, at vores
+            brugere er i tvivl om adskillige ting, når det kommer til brug af en
+            pejs til bioethanol. Vi har forsøgt at samle de mest gængse
+            problemstillinger og informations-artikler i en guide sektion.  Find
+            svar på alle dine spørgsmål omkring biopejse i vores guide, og lad
+            dig inspirere af de mange tips og tricks, der gør sig gældende ved
+            en biopejs. Skulle du have spørgsmål, som ikke er dækket af
+            guidesektionen, så tøv ikke med at kontakte vores kundeservice - vi
+            er eksperter i biopejse!
+          </p>
+        </div>
+      </div>
+    </section>
+  </article></MainLayout
+>

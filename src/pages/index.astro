@@ -2,8 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
-import ProductCard from "../components/productcard.astro";
-
 import { Image } from "astro:assets";
 import biopejslink from "../assets/images/kategori_links/aduro_biopejslink.webp";
 import hybridlink from "../assets/images/kategori_links/hybrid_link.webp";
@@ -21,7 +19,7 @@ import Børsen from "../assets/images/børsen.webp";
       style="background-image: url('/src/assets/images/hero.webp');"
     >
       <div
-        class="text-white z-10 ml-auto flex flex-col px-m sm:px-m md:px-lg lg:px-lg xl:px-xl"
+        class="text-white z-10 ml-auto flex flex-col px-m sm:px-m md:px-lg lg:px-lg xl:px-xl "
       >
         <h1
           class="text-white-500 w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-2xl"
@@ -138,7 +136,7 @@ import Børsen from "../assets/images/børsen.webp";
     <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
       <h2 class="items-end">Køb favoritterne - Udvalgt af vores kunder</h2>
       <div class="flex gap-xs">
-      <ProductCard
+      <!-- <ProductCard
         href="/singleview"
         imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
         brand="Cocoon Fires"
@@ -165,7 +163,7 @@ import Børsen from "../assets/images/børsen.webp";
         brand="Cocoon Fires"
         productName="Aeris"
         price="22.999 kr."
-      />
+      /> -->
     </div>
     </section>
 
