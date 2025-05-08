@@ -1,0 +1,17 @@
+---
+// Props
+const {imageSrc, Name } = Astro.props;
+---
+
+<div
+  class="block max-w-sm mx-auto p-s"
+>
+  <img
+    src={imageSrc}
+    alt={Name}
+    class="w-[200px] h-[220px] object-contain mx-auto -mt-ml"
+  />
+  <div class="-mt-s">
+    <p class="text-brown-700">{Name}</p>
+  </div>
+</div>
