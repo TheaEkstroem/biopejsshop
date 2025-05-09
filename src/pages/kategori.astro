@@ -1,0 +1,36 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import KategoriLink from "../components/kategorilink.astro";
+
+// Fetch all products to extract tags
+const products = await fetch("https://cjepvoafgeuerftcusje.supabase.co/rest/v1/productview", {
+  headers: {
+    apikey: "your-api-key-here",
+  },
+}).then(res => res.json());
+
+// 1. Collect all tags
+const allTags = products.flatMap(product => product.tags);
+const uniqueTags = [...new Set(allTags)];
+
+// 2. Optional: assign images for each category (just examples)
+const tagImages = {
+  "lofthængt": "/imgs/categories/lofthaengt.webp",
+  "væghængt": "/imgs/categories/vaeghaengt.webp",
+  "indbyg": "/imgs/categories/indbyg.webp",
+  // Add more as needed
+};
+---
+
+<MainLayout title="Kategorier">
+  <h1 class="text-xl font-bold mb-4">Kategorier</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {uniqueTags.map(tag => (
+      <KategoriLink
+        imageSrc={tagImages[tag]}
+        linkUrl={`/biopejskategori/${tag}`}
+        overlayText={tag}
+      />
+    ))}
+  </div>
+</MainLayout>

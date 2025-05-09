@@ -1,20 +1,19 @@
 ---
 // Props
-const { href = "#", imageSrc, brand, productName, price } = Astro.props;
+// const { href = "#", imageSrc, brand, productName, price } = Astro.props;
 
 // Indsætter dataen, så vi kan bruge den nede i html'en ved at skrive data. efterfulgt af den data vi gerne vil bruge fra datasættet.
 const { data } = Astro.props;
 console.log(data);
 
 ---
-
-<a href={href} class="block max-w-sm mx-auto bg-[#FFFFFF] overflow-hidden p-s hover:shadow-drop25 transition-shadow duration-200">
+<a href={`/productview/${data.tags}`} class="block max-w-sm md:max-w-lg mx-auto bg-[#FFFFFF] overflow-hidden p-s hover:shadow-drop25 transition-shadow duration-200">
   <img
-    src={imageSrc}
+    src=`/imgs/produktbilleder/${data.image}`
     alt={data.product}
-    class="w-[380px] h-[380px] object-contain mx-auto -mt-ml bg-white shadow-md"
+    class="w-[380px] h-[380px] object-contain mx-auto -mt-xs bg-white shadow-md"
   />
-  <div class="-mt-s">
+  <div class="mt-xs">
     <p class="text-brown-600  text-sm uppercase tracking-wide">{data.brand}</p>
     <div class="flex items-center justify-between mt-xxs">
     <p class="text-brown-600">{data.product}</p>

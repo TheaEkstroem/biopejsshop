@@ -3,13 +3,13 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ProductCard from "../components/productcard.astro";
 
-const { params } = Astro;
+ const { params } = Astro;
 
 
 const categoryMap = {
   lofthængt: "Lofthængt",
   Væghængt: "Væghængt"
-};
+}; 
 const title = categoryMap[params.category] || "Ukendt";
 
 
@@ -30,15 +30,14 @@ const data = await fetch(
 console.log(data);
 
 
----
 
-<MainLayout>
-    <article class="max-w-screen-2xl mx-auto">
+---
+<MainLayout title="Products">
+    <article class="pt-l px-m sm:px-m md:px-lg lg:px-lg xl:px-xl max-w-screen-2xl mx-auto">
   <h2 class="mb-sm">Biopejse: {title}</h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-xs">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-sm">
       <!-- Mapper over dataen, og indsætter det i komponentet CardArtworks -->
-
   {data.map(product => (
       <ProductCard data={product} />
     ))}
