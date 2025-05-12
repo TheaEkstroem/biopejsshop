@@ -1,7 +1,7 @@
 ---
 const { imageSrc, linkUrl, overlayText } = Astro.props;
 ---
-<a href={linkUrl} class="relative group block w-[336px] h-[240px] overflow-hidden">
+<a href={linkUrl} class="relative group block w-auto h-9xl md:w-[336px] md:h-[240px] overflow-hidden">
     <div class="absolute inset-s flex items-center justify-center">
         <p class="text-white-500 text-2xl font-medium  text-center z-10 ">{overlayText}</p>
       </div>
