@@ -8,16 +8,17 @@ import ProductCard from "../components/productcard.astro";
 
 const categoryMap = {
   lofthængt: "Lofthængt",
-  Væghængt: "Væghængt"
+  væghængt: "Væghængt",
+  fritstående: "Fritstående",
+  indbyg: "Indbygget",
 }; 
 const title = categoryMap[params.category] || "Ukendt";
-
 
 //https://cjepvoafgeuerftcusje.supabase.co
 //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNqZXB2b2FmZ2V1ZXJmdGN1c2plIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ2MjU1MDksImV4cCI6MjA2MDIwMTUwOX0.gU1uwhXne8u2qV-q9X6GfqGiJhLSQ3lYIWqdx5_EzJ4
 // Fetcher data
 const data = await fetch(
-  "https://cjepvoafgeuerftcusje.supabase.co/rest/v1/productview",
+  "https://cjepvoafgeuerftcusje.supabase.co/rest/v1/productview?order=id.asc",
   {
     method: "GET",
     headers: {
@@ -30,6 +31,7 @@ const data = await fetch(
 console.log(data);
 
 
+const filteredData = data.filter((item) => item.tags.includes(params.tags));
 
 ---
 <MainLayout title="Products">

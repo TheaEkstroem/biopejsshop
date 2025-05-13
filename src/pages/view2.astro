@@ -1,0 +1,61 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ProductCard from "../components/productcard.astro";
+import { pathHasLocale } from "astro:i18n";
+
+const { request } = Astro;
+const url = new URL(request.url);
+const tagParam = url.searchParams.get("tags") || "";
+const tagList = tagParam.split(",").filter(Boolean); // e.g. ["lofthængt", "væghængt"]
+
+// Fetch ALL products
+const data = await fetch(
+  "https://cjepvoafgeuerftcusje.supabase.co/rest/v1/productview?order=id.asc",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNqZXB2b2FmZ2V1ZXJmdGN1c2plIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ2MjU1MDksImV4cCI6MjA2MDIwMTUwOX0.gU1uwhXne8u2qV-q9X6GfqGiJhLSQ3lYIWqdx5_EzJ4",
+    },
+  }
+).then((res) => res.json());
+
+
+// Filter by tags
+const filteredProducts = data.filter((product) => {
+  if (!Array.isArray(product.tags)) return false; // Sanity check
+  return tagList.some((tag) => product.tags.includes(tag));
+});
+/* const filteredProducts = data.filter((product) => {
+  if (!product.tags) return false; // Ensure product has tags
+  const productTags = Array.isArray(product.tags) ? product.tags : [];
+  return tagList.some((tag) => productTags.includes(tag));
+}); */
+
+// Filter by tags
+/* const filteredProducts = data.filter((product) => {
+  if (!product.tags) return false;
+  const productTags = Array.isArray(product.tags)
+    ? product.tags
+    : product.tags.split(",");
+  return tagList.some((tag) => productTags.includes(tag));
+}); */
+---
+
+<MainLayout title="Filtered Products">
+  <h2 class="mb-sm">Showing: {tagList.join(", ")}</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-sm">
+   
+   {
+      filteredProducts.length > 0
+        ? filteredProducts.map((product) => (
+            <ProductCard data={product} />
+          )): <p>No products matched your selected tags.</p>}
+
+    <!--  {
+      filteredProducts.map((product) => (
+        <ProductCard data={product} />
+      ))
+    } -->
+  </div>
+</MainLayout>
