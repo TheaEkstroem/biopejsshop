@@ -1,0 +1,48 @@
+---
+// src/pages/biopejskategori/[category].astro
+import MainLayout from "../layouts/MainLayout.astro";
+import ProductCard from "../components/productcard.astro";
+
+ const { params } = Astro;
+
+
+const categoryMap = {
+  lofthængt: "Lofthængt",
+  væghængt: "Væghængt",
+  fritstående: "Fritstående",
+  indbyg: "Indbygget",
+}; 
+const title = categoryMap[params.category] || "Ukendt";
+
+//https://cjepvoafgeuerftcusje.supabase.co
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNqZXB2b2FmZ2V1ZXJmdGN1c2plIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ2MjU1MDksImV4cCI6MjA2MDIwMTUwOX0.gU1uwhXne8u2qV-q9X6GfqGiJhLSQ3lYIWqdx5_EzJ4
+// Fetcher data
+const data = await fetch(
+  "https://cjepvoafgeuerftcusje.supabase.co/rest/v1/productview?order=id.asc",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNqZXB2b2FmZ2V1ZXJmdGN1c2plIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ2MjU1MDksImV4cCI6MjA2MDIwMTUwOX0.gU1uwhXne8u2qV-q9X6GfqGiJhLSQ3lYIWqdx5_EzJ4",
+    },
+  }
+  // Resultatet konverteres til JSON-format med response.json().
+).then((response) => response.json());
+console.log(data);
+
+
+const filteredData = data.filter((item) => item.tags.includes(params.tags));
+
+---
+<MainLayout title="Products">
+    <article class="pt-l px-m sm:px-m md:px-lg lg:px-lg xl:px-xl max-w-screen-2xl mx-auto">
+  <h2 class="mb-sm">Biopejse: {title}</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-sm">
+      <!-- Mapper over dataen, og indsætter det i komponentet CardArtworks -->
+  {data.map(product => (
+      <ProductCard data={product} />
+    ))}
+  </div>
+</article>
+</MainLayout>
