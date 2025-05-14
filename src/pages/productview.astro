@@ -4,7 +4,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout title="Filtered Products">
   <h2 class="mb-sm">Showing: <span id="tag-display">Loading tags...</span></h2>
-  <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-sm">
+  <div
+    id="product-grid"
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-sm"
+  >
     <p>Loading products...</p>
   </div>
 
@@ -13,7 +16,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 
     // Initialize Supabase client
     const supabaseUrl = "https://cjepvoafgeuerftcusje.supabase.co";
-    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNqZXB2b2FmZ2V1ZXJmdGN1c2plIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ2MjU1MDksImV4cCI6MjA2MDIwMTUwOX0.gU1uwhXne8u2qV-q9X6GfqGiJhLSQ3lYIWqdx5_EzJ4";
+    const supabaseKey =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNqZXB2b2FmZ2V1ZXJmdGN1c2plIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ2MjU1MDksImV4cCI6MjA2MDIwMTUwOX0.gU1uwhXne8u2qV-q9X6GfqGiJhLSQ3lYIWqdx5_EzJ4";
     const supabase = createClient(supabaseUrl, supabaseKey);
 
     // Function to extract tags from the URL
@@ -32,7 +36,10 @@ import MainLayout from "../layouts/MainLayout.astro";
       tagDisplay.textContent = clientTagList.join(", ") || "No tags selected";
 
       // Supabase query using AND logic for tags
-      let query = supabase.from("productview").select("*").order("id", { ascending: true });
+      let query = supabase
+        .from("productview")
+        .select("*")
+        .order("id", { ascending: true });
       if (clientTagList.length > 0) {
         query = query.contains("newtags", clientTagList);
       }
@@ -49,17 +56,25 @@ import MainLayout from "../layouts/MainLayout.astro";
         productGrid.innerHTML = data
           .map(
             (product) => `
-            <a href="/singleview?id=${product.id}" class="product-card">
-                <h3>${product.brand}</h3>
-                <img src="/imgs/produktbilleder/${product.image}" alt="${product.brand}" />
-                <p>${product.description}</p>
-                <p>Price: ${product.price}</p>
+            <a href="/singleview?id=${product.id}" class="product-card block max-w-sm md:max-w-lg mx-auto bg-[#FFFFFF] overflow-hidden p-s hover:shadow-drop25 transition-shadow duration-200">
+              <img  
+              src="/imgs/produktbilleder/${product.image}" 
+              alt=${product.product} 
+              class="w-[380px] h-[380px] object-contain mx-auto -mt-xs bg-white shadow-md" />
+              <div class="mt-xs">
+                   <p class="text-brown-600  text-sm uppercase tracking-wide">${product.brand}</p>
+                <div class="flex items-center justify-between mt-xxs">
+                   <p class="text-brown-600">${product.product}</p>
+                   <p class="text-orange-500  font-bold">${product.price}</p>
+                </div>
+              </div>
             </a>
             `
           )
           .join("");
       } else {
-        productGrid.innerHTML = "<p>No products matched your selected tags.</p>";
+        productGrid.innerHTML =
+          "<p>No products matched your selected tags.</p>";
       }
     }
 
@@ -67,3 +82,9 @@ import MainLayout from "../layouts/MainLayout.astro";
     fetchProducts();
   </script>
 </MainLayout>
+
+<!-- 
+                 <h3>${product.brand}</h3>
+                <img src="/imgs/produktbilleder/${product.image}" alt="${product.brand}" />
+                <p>${product.description}</p>
+                <p>Price: ${product.price}</p>  -->
