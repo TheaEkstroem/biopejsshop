@@ -3,14 +3,16 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Filtered Products">
-  <h2 class="mb-sm">Showing: <span id="tag-display">Loading tags...</span></h2>
+        <article class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">  
+
+  <h2 class="mb-sm">Viser: <span id="tag-display">Loading tags...</span></h2>
   <div
     id="product-grid"
     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-sm"
   >
     <p>Loading products...</p>
   </div>
-
+        </article>
   <script type="module">
     import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
