@@ -9,7 +9,7 @@ console.log(data);
 ---
 
 <!-- ${data.tags.join(",")}`-->
-<a href={`/productview/${data.tags}`} class="block max-w-sm md:max-w-lg mx-auto bg-[#FFFFFF] overflow-hidden p-s hover:shadow-drop25 transition-shadow duration-200">
+<a href={`product/${data.slug}`} class="block max-w-sm md:max-w-lg mx-auto bg-[#FFFFFF] overflow-hidden p-s hover:shadow-drop25 transition-shadow duration-200">
   <img
     src=`/imgs/produktbilleder/${data.image}`
     alt={data.product}

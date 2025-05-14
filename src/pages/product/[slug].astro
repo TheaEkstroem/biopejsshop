@@ -1,5 +1,4 @@
 ---
-import "../../styles/style.css";
 import MainLayout from "../../layouts/MainLayout.astro";
 import Button from "../../components/Button.astro";
 
@@ -21,12 +20,17 @@ export async function getStaticPaths() {
   // Når dataene er hentet, bruger koden map-funktionen til at iterere over hvert kunstværk i dataene.
   // For hvert kunstværk returneres et objekt med params og props:
  
-  return {
+  return data.map((product) => ({
+  params: { slug: product.tags },
+  props: { data: product },
+}));
+
+  /* return {
     paths: data.map((product) => ({
       params: { slug: product.tag },
       props: { data: product },
     })),
-  };
+  }; */
 }
 
 // Indsætter dataen, så vi kan bruge den nede i html'en ved at skrive data. efterfulgt af den data vi gerne vil bruge fra datasættet.
@@ -39,7 +43,7 @@ console.log(data);
     <figure>
       <img
         class="large_img"
-        src={`/imgs/artworks/${data.image}`}
+        src=`/imgs/artworks/${data.image}`,
         width="720px"
         height="620px"
         loading="lazy"
