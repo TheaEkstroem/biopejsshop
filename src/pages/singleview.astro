@@ -1,14 +1,671 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="product">
   <article class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
-    <h2 class="mb-sm">
-      Showing: <span id="tag-display">Loading tags...</span>
-    </h2>
-    <div id="product" class="gap-y-sm">
+    <!-- breadcrumb -->
+    <section class="flex text-gray-700 text-sm" aria-label="Breadcrumb">
+      <ol class="inline-flex items-center space-x-1 md:space-x-3">
+        <li>
+          <div class="flex items-center">
+            <a
+              href="/biopejskategori"
+              class="text-black-400 hover:text-orange-500">Biopejs Kategori</a
+            >
+          </div>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <svg
+              class="w-xs h-xs text-gray-400 mx-auto"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M7.05 4.05a.5.5 0 01.7 0L13 9.3l-5.25 5.25a.5.5 0 01-.7-.7L11.29 9.3 7.05 5.05a.5.5 0 010-.7z"
+              ></path>
+            </svg>
+            <a
+              href="/productview?tags=biopejs"
+              class="text-black-400 hover:text-orange-500">Kategori</a
+            >
+          </div>
+        </li>
+        <li aria-current="page">
+          <div class="flex items-center">
+            <svg
+              class="w-xs h-xs text-gray-400 mx-auto"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M7.05 4.05a.5.5 0 01.7 0L13 9.3l-5.25 5.25a.5.5 0 01-.7-.7L11.29 9.3 7.05 5.05a.5.5 0 010-.7z"
+              ></path>
+            </svg>
+            <span class="text-black-400" id="tagbreadcurmbs"
+              >Nuværende side</span
+            >
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Dynamisk -->
+    <div id="product" class="pb-m">
       <p>Loading products...</p>
     </div>
+
+    <!-- Tab -->
+    <section class="pb-xl">
+      <div class="w-full p-4">
+        <!-- Tabs Buttons -->
+        <div
+          class="flex md:flex-row flex-col gap-x-10xl justify-evenly border-b border-brown-500 pt-xs md:pt-s"
+          id="tabs"
+        >
+          <button
+            class="tab-button px-s py-xxxs text-lg md:text-2xl font-cormorant transition text-brown-700 hover:text-orange-500"
+            data-tab="Produktbeskrivelse"
+          >
+            Produktbeskrivelse
+          </button>
+
+          <button
+            class="tab-button px-s py-xxxs text-lg md:text-2xl font-cormorant transition text-brown-700 hover:text-orange-500"
+            data-tab="Specifikationer"
+          >
+            Specifikationer
+          </button>
+
+          <button
+            class="tab-button px-s py-xxxs text-lg md:text-2xl font-cormorant transition text-brown-700 hover:text-orange-500"
+            data-tab="Download"
+          >
+            Download
+          </button>
+
+          <button
+            class="tab-button px-s py-xxxs text-lg md:text-2xl font-cormorant transition text-brown-700 hover:text-orange-500"
+            data-tab="Video"
+          >
+            Video
+          </button>
+          <button
+            class="tab-button px-s py-xxxs text-lg md:text-2xl font-cormorant transition text-brown-700 hover:text-orange-500"
+            data-tab="Illustrationer"
+          >
+            Illustrationer
+          </button>
+        </div>
+
+        <!-- Tabs indhold -->
+        <div class="mt-4 p-sm">
+          <!-- Produktbeskrivelse -->
+          <div class="tab-content" id="Produktbeskrivelse">
+            <div class="grid grid-cols-1 gap-m md:grid-cols-2">
+              <div>
+                <p>
+                  Design pejs til bioethanol fra Cocoon Fires i modellen Aeris,
+                  som er velkendt fra Go' Morgen og Go' Aften Danmark, der
+                  sendes dagligt i fjernsynet på TV2. Der er for alvor kræset om
+                  denne ekstravagante biopejs, som har en finish i poleret stål,
+                  hvilket gør designet endnu mere markant.
+                </p>
+                <p class="py-xxs">
+                  Cocoon Fires Aeris model er ikke bare en biopejs, men mindst
+                  lige så meget et designikon, som vil pynte i ethvert hjem.
+                </p>
+                <p class="font-medium">Værd at fremhæve</p>
+                <ul class="list-inside">
+                  <li class="list-disc font-roboto font-light">
+                    Cocoon Fires eget 1.5L brandkar er inkluderet
+                  </li>
+                  <li class="list-disc font-roboto font-light">
+                    Teleskopstang med 6 niveauers længde
+                  </li>
+                  <li class="list-disc font-roboto font-light">
+                    Monteringsbeslag medfølger
+                  </li>
+                  <li class="list-disc font-roboto font-light">
+                    Ingen elektricitet nødvendig
+                  </li>
+                  <li class="list-disc font-roboto font-light">
+                    Nem at montere og benytte
+                  </li>
+                  <li class="list-disc font-roboto font-light">
+                    Teleskopstang kan justeres: 142 cm / 134,5 cm / 125,5 cm /
+                    116,5 cm / 107,5 cm / 98,5 cm. Fuld udstrækning: 182,5 cm
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <p>
+                  Biopejsen vejer blot 24 kg, hvilket betyder at Aeris fra
+                  Cocoon ville kunne hænge på næsten ethvert loft. Go' Morgen
+                  Danmark pejsen virker ualmindelig elegant i rummet med sit
+                  unikke ophæng, der bevirker, at pejsen fremstår som en
+                  svævende globe af ild. Det er desuden muligt at rotere
+                  biopejsen hele vejen rundt, så flammerne kan nydes fra alle
+                  vinkler.
+                </p>
+                <p class="py-xs">
+                  Ved brug kan biopejsen over længere tid få en "champagne"
+                  farve, på grund af den varme som metallet bliver udsat for.
+                </p>
+                <p>
+                  Cocoon har også tænkt over monteringsdelen, idet beslaget kan
+                  tilkøbes som vinkelbeslag, så den røgfrie pejs kan monteres på
+                  enhver skråvæg. Det er ligeledes muligt at montere flere
+                  ophængsbeslag, så pejsen kan flyttes rundt efter behov. Det
+                  betyder, at den nemt kan flyttes fra opholdsstue til spisestue
+                  eller fra bolig til sommerhus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Specifikationer -->
+          <div class="tab-content hidden" id="Specifikationer">
+            <div class="p-6 grid md:grid-cols-3 gap-sm justify-center">
+              <!-- Nøglespecifikationer -->
+              <div>
+                <p class="font-medium mb-4">Nøglespecifikationer</p>
+                <table class="table-auto w-full">
+                  <tr
+                    ><td class="border-b-2 px-4 py-2">Product Type</td><td
+                      class="border-b-2 px-4 py-2">Loft­hængt biopejs</td
+                    ></tr
+                  >
+                  <tr
+                    ><td class="border-b-2 px-4 py-2">Mærke</td><td
+                      class="border-b-2 px-4 py-2">Cocoon Fires</td
+                    ></tr
+                  >
+                  <tr
+                    ><td class="border-b-2 px-4 py-2">Designer</td><td
+                      class="border-b-2 px-4 py-2">Federico Otero</td
+                    ></tr
+                  >
+                  <tr
+                    ><td class="border-b-2 px-4 py-2">Brug</td><td
+                      class="border-b-2 px-4 py-2">Indendørs</td
+                    ></tr
+                  >
+                  <tr
+                    ><td class="border-b-2 px-4 py-2">Garanti</td><td
+                      class="border-b-2 px-4 py-2">2 år</td
+                    ></tr
+                  >
+                </table>
+              </div>
+
+              <!-- Tekniske specifikationer -->
+              <div>
+                <p class="font-medium mb-4">Tekniske specifikationer</p>
+                <table class="table-auto w-full">
+                  <tbody>
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Min. rumstørrelse</td
+                      ><td class="border-b-2 px-4 py-2">45 m³</td></tr
+                    >
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Brændstof</td><td
+                        class="border-b-2 px-4 py-2">Bioethanol</td
+                      ></tr
+                    >
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Brændetid op til</td><td
+                        class="border-b-2 px-4 py-2">5 timer</td
+                      ></tr
+                    >
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Kapacitet</td><td
+                        class="border-b-2 px-4 py-2">1,5 Liter</td
+                      ></tr
+                    >
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Varmeeffekt (Max.)</td
+                      ><td class="border-b-2 px-4 py-2">3 kW</td></tr
+                    >
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Forbrug</td><td
+                        class="border-b-2 px-4 py-2">0,3 L/t</td
+                      ></tr
+                    >
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Materiale og udseende -->
+              <div>
+                <p class="font-medium mb-4">Materiale og udseende</p>
+                <table class="table-auto w-full">
+                  <tbody>
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Materiale</td><td
+                        class="border-b-2 px-4 py-2"
+                        >Rustfrit stål, Kulstof stål</td
+                      ></tr
+                    >
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Farve</td><td
+                        class="border-b-2 px-4 py-2">Poleret stål</td
+                      ></tr
+                    >
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Finish</td><td
+                        class="border-b-2 px-4 py-2">Poleret</td
+                      ></tr
+                    >
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Form</td><td
+                        class="border-b-2 px-4 py-2">Oval</td
+                      ></tr
+                    >
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Brandkar specifikationer -->
+              <div>
+                <p class="font-medium mb-4">Brandkar specifikationer</p>
+                <table class="table-auto w-full">
+                  <tbody>
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Justerbar flamme</td><td
+                        class="border-b-2 px-4 py-2">Ja</td
+                      ></tr
+                    >
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Styring</td><td
+                        class="border-b-2 px-4 py-2">Manuel</td
+                      ></tr
+                    >
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Brandkammer model</td
+                      ><td class="border-b-2 px-4 py-2"
+                        >Cocoon 2.0 Burner System</td
+                      ></tr
+                    >
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Fjernbetjening</td><td
+                        class="border-b-2 px-4 py-2">Nej</td
+                      ></tr
+                    >
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Mål og vægt -->
+              <div>
+                <p class="font-medium mb-4">Mål og vægt</p>
+                <table class="table-auto w-full">
+                  <tbody>
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Længde/Bredde</td><td
+                        class="border-b-2 px-4 py-2">60 cm</td
+                      ></tr
+                    >
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Højde</td><td
+                        class="border-b-2 px-4 py-2">182,50 cm</td
+                      ></tr
+                    >
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Dybde</td><td
+                        class="border-b-2 px-4 py-2">60 cm</td
+                      ></tr
+                    >
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Diameter</td><td
+                        class="border-b-2 px-4 py-2">60 cm</td
+                      ></tr
+                    >
+                    <tr
+                      ><td class="border-b-2 px-4 py-2">Vægt</td><td
+                        class="border-b-2 px-4 py-2">24 kg</td
+                      ></tr
+                    >
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Installationsdetaljer -->
+              <div>
+                <p class="font-medium mb-4">Installationsdetaljer</p>
+                <table class="table-auto w-full">
+                  <tr
+                    ><td class="border-b-2 px-4 py-2">Strømkrav</td><td
+                      class="border-b-2 px-4 py-2">Nej</td
+                    ></tr
+                  >
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content hidden" id="Download">
+            <p class="text-black-200">Information kommer snart</p>
+          </div>
+          <div class="tab-content hidden" id="Video">
+            <p class="text-black-200">Information kommer snart</p>
+          </div>
+          <div class="tab-content hidden" id="Illustrationer">
+            <p class="text-black-200">Information kommer snart</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- andmeldelser -->
+     <h3 class="py-s">Hvad siger vores kunder om os</h3>
+    <section class="grid md:grid-cols-3 gap-sm pb-ml">
+        <!-- 1 -->
+      <div class="bg-yellow-100 place-content-center flex flex-col  items-center p-sm space-y-s ">
+        <!-- stjerner -->
+        <div class="flex space-x-xs">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="orange"
+          >
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="orange"
+          >
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="orange"
+          >
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="orange"
+          >
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="orange"
+          >
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+            ></path>
+          </svg>
+        </div>
+
+        <p class="italic text-center">
+          "Vi er meget tilfredse med vores biopejs købt gennem biopejs-shop.dk.
+          Vi har valgt en biopejs primært pga. en pæn løsning til at skabe hygge
+          og god stemning i vores stue."
+        </p>
+        <p class="font-semibold">Christina</p>
+      </div>
+<!-- 2 -->
+      <div class="bg-yellow-100 place-content-center  flex flex-col items-center p-sm space-y-s">
+        <!-- stjerner -->
+        <div class="flex space-x-xs">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="orange"
+          >
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="orange"
+          >
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="orange"
+          >
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="orange"
+          >
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="orange"
+          >
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+            ></path>
+          </svg>
+        </div>
+
+        <p class="italic text-center">
+          "Vi købte vores Cocoon biopejs på
+bolig-og livstilsmessen, hvor vi fik den
+helt rigtige, hjælpsomme og ikke
+mindst søde rådgivning og vejledning
+til at finde den biopejs, der passede
+perfekt til vores behov."
+        </p>
+        <p class="font-semibold">Amanda</p>
+      </div>
+      <!-- 3 -->
+      <div class="bg-yellow-100 place-content-center  flex flex-col items-center p-sm space-y-s">
+        <!-- stjerner -->
+        <div class="flex space-x-xs">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="orange"
+          >
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="orange"
+          >
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="orange"
+          >
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="orange"
+          >
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="orange"
+          >
+            <path
+              d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+            ></path>
+          </svg>
+        </div>
+
+        <p class="italic text-center">
+         "Med Foco Two 800 fra Biopejs-shop er
+det blevet meget nemmere at
+frembringe "hyggen” i lejligheden. Den
+er meget nem at installere og kræver
+ikke aftræk."
+        </p>
+        <p class="font-semibold">Alexander</p>
+      </div>
+    </section>
   </article>
+
+  <!-- script til dynamist -->
+  <script type="module">
+    import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+    // Initialize Supabase client
+    const supabaseUrl = "https://cjepvoafgeuerftcusje.supabase.co";
+    const supabaseKey =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNqZXB2b2FmZ2V1ZXJmdGN1c2plIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ2MjU1MDksImV4cCI6MjA2MDIwMTUwOX0.gU1uwhXne8u2qV-q9X6GfqGiJhLSQ3lYIWqdx5_EzJ4";
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
+    // Function to extract product ID from the URL
+    function getProductIdFromUrl() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get("id");
+    }
+
+    async function fetchProductById() {
+      const productId = getProductIdFromUrl();
+      console.log("Extracted ID:", productId);
+
+      if (!productId) {
+        console.error("No product ID provided in the URL.");
+        return;
+      }
+
+      // Query product by ID
+      const { data, error } = await supabase
+        .from("productview")
+        .select("*")
+        .eq("id", productId)
+        .single(); // Expecting only one product
+
+      if (error) {
+        console.error("Supabase error:", error);
+      } else {
+        console.log("Fetched product:", data);
+      }
+
+      const product = document.getElementById("product");
+      if (data) {
+        product.innerHTML = `
+        <section class="grid md:grid-cols-2 pt-xs">
+            <div>
+                <img src="/imgs/produktbilleder/${data.image}" 
+                alt=${data.product}
+                class="w-[550px] h-[550px]" 
+                >
+                
+            </div>
+            <div class="flex flex-col justify-between">
+                <div class="-space-y-xs">
+                    <h4>${data.brand}</h4>
+                    <h2>${data.product}</h2>
+                </div>
+            <div class="flex flex-col space-y-xxs">
+                <h5>Kort om produktet</h5>
+                <p>${data.description}</p>
+            </div>
+            
+            <p class="text-orange-500 font-medium text-3xl">${data.price}</p>
+            
+            <a href="/kurv" class="relative flex items-center p-xxs justify-center  transition duration-200 ease-in-out border-2 text-white-500 bg-brown-700  border-transparent hover:bg-brown-400 hover:text-blue-300">Læg i Kurv</a>
+        </section>
+      `;
+      } else {
+        product.innerHTML = "<p>Product not found.</p>";
+      }
+    }
+
+    // Run the function on page load
+    fetchProductById();
+  </script>
+
+  <!-- script til tabs -->
+  <script>
+    // Hent alle buttons og indholdselementer
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Fjern den aktive tilstand fra alle knapper
+        tabButtons.forEach((btn) => btn.classList.remove("text-orange-500"));
+        // Tilføj aktiv tilstand til den klikkede knap
+        button.classList.add("text-orange-500");
+
+        // Skjul alt fanebindhold
+        tabContents.forEach((content) => content.classList.add("hidden"));
+
+        // Vis det indhold, der er forbundet med den aktive knap
+        const tabId = button.getAttribute("data-tab");
+        document.getElementById(tabId).classList.remove("hidden");
+      });
+    });
+  </script>
 </MainLayout>

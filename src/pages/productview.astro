@@ -3,9 +3,30 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Filtered Products">
-        <article class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">  
+ <article class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">  
 
-  <h2 class="mb-sm">Viser: <span id="tag-display">Loading tags...</span></h2>
+<!-- breadcrumb -->   
+  <section class="flex text-gray-700 text-sm" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+    <li>
+      <div class="flex items-center">
+        <a href="/biopejskategori" class="text-black-400 hover:text-orange-500">Biopejse</a>
+      </div>
+    </li>
+    <li aria-current="page">
+      <div class="flex items-center">
+        <svg class="w-xs h-xs text-gray-400 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M7.05 4.05a.5.5 0 01.7 0L13 9.3l-5.25 5.25a.5.5 0 01-.7-.7L11.29 9.3 7.05 5.05a.5.5 0 010-.7z" />
+        </svg>
+        <span class="text-black-400" id="tagbreadcurmbs">Nuværende side</span>
+      </div>
+    </li>
+  </ol>
+  </section>
+
+
+
+  <h2 class="mb-sm"><span id="tag-display">Loading tags...</span></h2>
   <div
     id="product-grid"
     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-sm"
@@ -13,6 +34,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     <p>Loading products...</p>
   </div>
         </article>
+
   <script type="module">
     import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
@@ -35,7 +57,12 @@ import MainLayout from "../layouts/MainLayout.astro";
 
       // Update the tag display
       const tagDisplay = document.getElementById("tag-display");
-      tagDisplay.textContent = clientTagList.join(", ") || "No tags selected";
+      tagDisplay.textContent = clientTagList.join(" ") || "No tags selected";
+
+  //  tags breadcurmbs sti 
+      const tagbreadcurmbs = document.getElementById("tagbreadcurmbs");
+      tagbreadcurmbs.textContent = clientTagList.join(" ") || "No tags selected";
+
 
       // Supabase query using AND logic for tags
       let query = supabase
@@ -58,7 +85,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         productGrid.innerHTML = data
           .map(
             (product) => `
-            <a href="/singleview?id=${product.id}" class="product-card block max-w-sm md:max-w-lg mx-auto bg-[#FFFFFF] overflow-hidden p-s hover:shadow-drop25 transition-shadow duration-200">
+            <a href="/singleview?id=${product.id}" class="block max-w-sm md:max-w-lg mx-auto bg-[#FFFFFF] overflow-hidden p-s hover:shadow-drop25 transition-shadow duration-200">
               <img  
               src="/imgs/produktbilleder/${product.image}" 
               alt=${product.product} 
