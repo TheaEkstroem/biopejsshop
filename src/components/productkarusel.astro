@@ -1,15 +1,14 @@
 ---
 ---
-
+<div class="overflow-x-auto scroll-pl-xxs snap-x snap-mandatory scrollbar-hide">
  <div
     id="anbefalinger"
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-sm"
-  >
+    class="flex flex-row gap-sm px-xxxs">
 
     <p>Loading products...</p>
     
   </div>
-
+</div>
 
   <script type="module">
     import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
@@ -43,7 +42,7 @@
           
         .map(
             (product) => ` 
-            <a href="/singleview?id=${product.id}" class="block max-w-sm md:max-w-lg mx-auto bg-[#FFFFFF] overflow-hidden p-s hover:shadow-drop25 transition-shadow duration-200">
+            <a href="/singleview?id=${product.id}" class="block max-w-sm md:max-w-lg mx-auto bg-[#FFFFFF] overflow-hidden p-xxs hover:shadow-drop25 transition-shadow duration-200">
               <img  
               src="/imgs/produktbilleder/${product.image}" 
               alt=${product.product} 

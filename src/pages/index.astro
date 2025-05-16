@@ -7,16 +7,17 @@ import ProductKarusel from "../components/productkarusel.astro";
 import { Image } from "astro:assets";
 import Børsen from "../assets/images/børsen.webp";
 ---
+
 <MainLayout title="Biopejs-shop">
   <article>
     <!-- hero -->
     <section
       class="relative flex items-center justify-center w-full h-[600px] md:h-[720px] bg-cover bg-center -mt-ml md:m-auto"
-      style="background-image: url('/src/assets/images/hero.webp');">
-  
+      style="background-image: url('/src/assets/images/hero.webp');"
+    >
       <div
         class="absolute bottom-sm md:left-1/2 transform z-10 flex flex-col px-s md:px-xl"
-        >
+      >
         <h1 class="text-white-500 w-full md:max-w-3xl lg:max-w-5xl mb-xxxs">
           Skab hygge uden røg – Biopejse til moderne hjem
         </h1>
@@ -81,7 +82,8 @@ import Børsen from "../assets/images/børsen.webp";
         class="text-white z-10 m-auto flex flex-col items-left gap-sm px-m sm:px-m md:px-lg lg:px-lg xl:px-xl"
       >
         <h2 class="text-white-500 w-full sm:max-w-lg md:max-w-xl lg:max-w-3xl">
-          <span class="font-bold">Få den perfekte pejs </span> – skræddersyet til jeres hjem og behov
+          <span class="font-bold">Få den perfekte pejs </span> – skræddersyet til
+          jeres hjem og behov
         </h2>
         <p
           class="text-white-500 py-s md:py-s text-xl md:text-3xl italic w-full sm:max-w-lg md:max-w-xl lg:max-w-3xl"
@@ -98,14 +100,14 @@ import Børsen from "../assets/images/børsen.webp";
     </section>
 
     <!-- bruger anbefalinger -->
-    <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
-      <h2 class="items-end">Køb favoritterne - Udvalgt af vores kunder</h2>
+    <section class="px-xs sm:p-s md:px-ml lg:px-lg max-w-screen-2xl mx-auto">
+      <h2 class="items-end py-xs">
+        Køb favoritterne - Udvalgt af vores kunder
+      </h2>
 
-  <div class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <ProductKarusel />
-  </div>
-
-
+      <div class="bg-gray-100 flex items-center justify-center">
+        <ProductKarusel />
+      </div>
     </section>
 
     <!-- acordion SEO tekst -->
@@ -372,5 +374,74 @@ import Børsen from "../assets/images/børsen.webp";
     </section>
 
     <!-- showroom -->
+
+    <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
+      <h2>Besøg vores et af vores showrooms</h2>
+
+      <!-- Langholt -->
+      <div class="grid md:grid-cols-3 items-center gap-s pt-s md:py-ml">
+        <!-- kort -->
+        <div class="order-2 md:order-1 col-span-2">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2454.5553009420682!2d10.07955673093424!3d57.10896137480412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ed3ae717c3b6f%3A0x1a4efe62131922d8!2sGravsholtvej%2015%2C%209310%20Vodskov!5e0!3m2!1sda!2sdk!4v1747413491783!5m2!1sda!2sdk"
+         
+                         class="w-[400px] md:w-[850px] h-auto md:h-[350px]"
+
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+
+        <div class="order-1 md:order-2 flex flex-col gap-s">
+          <div>
+            <p class="font-semibold">Langholt (Nordjylland)</p>
+            <p>Gravsholtvej 15, 9310 Vodskov</p>
+          </div>
+
+          <ul>
+            <li class="font-roboto font-light">Man - Fre:</li>
+            <li class="font-roboto font-light">8:00 - 16:00</li>
+          </ul>
+          <ul>
+            <li class="font-roboto font-light">Lørdag:</li>
+            <li class="font-roboto font-light">10:00 - 14:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Valby -->
+      <div class="grid md:grid-cols-3 items-center gap-s py-ml">
+        <div class="flex flex-col gap-s">
+          <div>
+            <p class="font-semibold">Valby (København)</p>
+            <p>Valby Langgade 30, 2500 Valby</p>
+          </div>
+
+          <ul>
+            <li class="font-roboto font-light">Man - Fre:</li>
+            <li class="font-roboto font-light">10:00 - 17:30</li>
+          </ul>
+          <ul>
+            <li class="font-roboto font-light">Lørdag:</li>
+            <li class="font-roboto font-light">10:00 - 14:00</li>
+          </ul>
+        </div>
+
+        <!-- kort -->
+        <div class="col-span-2">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.255974038247!2d12.516713076873806!3d55.66714879858517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652531381192a63%3A0x7a6a3311058f3e9b!2sValby%20Langgade%2030%2C%202500%20K%C3%B8benhavn!5e0!3m2!1sda!2sdk!4v1747413788570!5m2!1sda!2sdk"
+            
+            class="w-[400px] md:w-[850px] h-auto md:h-[350px]"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
   </article></MainLayout
 >
