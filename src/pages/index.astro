@@ -2,31 +2,24 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
+import StortBilledeLink from "../components/stortbilledelink.astro";
+import ProductKarusel from "../components/productkarusel.astro";
 import { Image } from "astro:assets";
-import biopejslink from "../assets/images/kategori_links/aduro_biopejslink.webp";
-import hybridlink from "../assets/images/kategori_links/hybrid_link.webp";
-import elpejslink from "../assets/images/kategori_links/elpejs_link.webp";
-import gaspejslink from "../assets/images/kategori_links/gaspejs_link.webp";
 import Børsen from "../assets/images/børsen.webp";
-
 ---
-
 <MainLayout title="Biopejs-shop">
   <article>
     <!-- hero -->
     <section
-      class="relative flex items-center justify-center w-full h-screen bg-cover bg-center"
-      style="background-image: url('/src/assets/images/hero.webp');"
-    >
+      class="relative flex items-center justify-center w-full h-[600px] md:h-[720px] bg-cover bg-center -mt-ml md:m-auto"
+      style="background-image: url('/src/assets/images/hero.webp');">
+  
       <div
-        class="text-white z-10 ml-auto flex flex-col px-m sm:px-m md:px-lg lg:px-lg xl:px-xl "
-      >
-        <h1
-          class="text-white-500 w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-2xl"
+        class="absolute bottom-sm md:left-1/2 transform z-10 flex flex-col px-s md:px-xl"
         >
-          Skab hygge uden røg Biopejse til moderne hjem
+        <h1 class="text-white-500 w-full md:max-w-3xl lg:max-w-5xl mb-xxxs">
+          Skab hygge uden røg – Biopejse til moderne hjem
         </h1>
-
         <Button size="medium" variant="buttonbrown" href="/biopejskategori">
           Find din Biopejs
         </Button>
@@ -34,7 +27,7 @@ import Børsen from "../assets/images/børsen.webp";
     </section>
 
     <!-- kategori -->
-    <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
+    <section class="p-s sm:p-xs md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
       <h2>Lær mere om vores brede udvalg af pejse</h2>
       <p class="max-w-full sm:max-w-[700px] md:max-w-[800px] lg:max-w-[832px]">
         Lær mere om vores forskellige typer pejse og find den perfekte løsning
@@ -47,79 +40,51 @@ import Børsen from "../assets/images/børsen.webp";
 
       <!-- kategori links -->
       <div
-        class="pt-sm sm:pt-ml md:pt-lg flex flex-wrap gap-s md:gap-lg justify-center"
+        class="pt-sm sm:pt-ml md:pt-lg flex flex-wrap gap-xxxs md:gap-lg justify-center pb-sm"
       >
         <!-- Biopejs -->
-        <div class="flex flex-col items-center justify-center">
-          <div
-            class="w-[170px] h-[280px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"
-          >
-            <Image
-              src={biopejslink}
-              alt="Biopejs"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <Link size="medium" variant="link" href="/biopejskategori">Biopejs</Link>
-        </div>
+        <StortBilledeLink
+          imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
+          linkUrl="/biopejskategori"
+          overlayText="Biopejs"
+        />
 
         <!-- Hybrid -->
-        <div class="flex flex-col items-center justify-center">
-          <div
-            class="w-[170px] h-[280px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"
-          >
-            <Image
-              src={hybridlink}
-              alt="Hybrid"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <Link size="medium" variant="link" href="/hybridpejs">Hybrid</Link>
-        </div>
+        <StortBilledeLink
+          imageSrc="/src/assets/images/kategori_links/hybrid_link.webp"
+          linkUrl="/hybridkategori"
+          overlayText="Hybrid"
+        />
 
         <!-- Elpejs  -->
-        <div class="flex flex-col items-center justify-center">
-          <div
-            class="w-[170px] h-[280px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"
-          >
-            <Image
-              src={elpejslink}
-              alt="Elpejs"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <Link size="medium" variant="link" href="/elpejs">Elpejs</Link>
-        </div>
+        <StortBilledeLink
+          imageSrc="/src/assets/images/kategori_links/elpejs_link.webp"
+          linkUrl="/elpejskategori"
+          overlayText="Elpejs"
+        />
 
         <!-- Gaspejs -->
-        <div class="flex flex-col items-center justify-center">
-          <div
-            class="w-[170px] h-[280px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"
-          >
-            <Image
-              src={gaspejslink}
-              alt="Gaspejs"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <Link size="medium" variant="link" href="/gaspejs">Gaspejs</Link>
-        </div>
+        <StortBilledeLink
+          imageSrc="/src/assets/images/kategori_links/gaspejs_link.webp"
+          linkUrl="/gaspejskategori"
+          overlayText="Gaspejs"
+        />
       </div>
     </section>
 
     <!-- citat og CTA  -->
     <section
-      class="relative flex items-center justify-center w-full h-[700px] bg-cover bg-center max-w-screen-2xl mx-auto"
+      class="relative flex items-center justify-center w-full h-[600px] md:h-[700px] bg-cover bg-center max-w-screen-2xl mx-auto"
       style="background-image: url('/src/assets/images/træbaggrund.webp');"
     >
       <div
-        class="text-white z-10 m-auto flex flex-col items-left gap-lg px-m sm:px-m md:px-lg lg:px-lg xl:px-xl "
+        class="text-white z-10 m-auto flex flex-col items-left gap-sm px-m sm:px-m md:px-lg lg:px-lg xl:px-xl"
       >
-        <h2 class="text-white-500 w-full sm:max-w-xl md:max-w-2xl lg:max-w-5xl">
-          <span class="font-bold">Skab hygge uden røg</span>  - Biopejse til moderne hjem
+        <h2 class="text-white-500 w-full sm:max-w-lg md:max-w-xl lg:max-w-3xl">
+          <span class="font-bold">Få den perfekte pejs </span> – skræddersyet til jeres hjem og behov
         </h2>
         <p
-          class="text-white-500 py-s md:py-s text-xl md:text-3xl italic w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl"
+          class="text-white-500 py-s md:py-s text-xl md:text-3xl italic w-full sm:max-w-lg md:max-w-xl lg:max-w-3xl"
         >
           “Vores passion er at finde den bedste løsning til jer, og vi har
           derfor altid jer i centrum. På den måde finder vi den rette pejs, der
@@ -135,36 +100,12 @@ import Børsen from "../assets/images/børsen.webp";
     <!-- bruger anbefalinger -->
     <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
       <h2 class="items-end">Køb favoritterne - Udvalgt af vores kunder</h2>
-      <div class="flex gap-xs">
-      <!-- <ProductCard
-        href="/singleview"
-        imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
-        brand="Cocoon Fires"
-        productName="Aeris"
-        price="22.999 kr."
-      />
-      <ProductCard
-        href="/singleview"
-        imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
-        brand="Cocoon Fires"
-        productName="Aeris"
-        price="22.999 kr."
-      />
-      <ProductCard
-        href="/singleview"
-        imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
-        brand="Cocoon Fires"
-        productName="Aeris"
-        price="22.999 kr."
-      />
-      <ProductCard
-        href="/singleview"
-        imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
-        brand="Cocoon Fires"
-        productName="Aeris"
-        price="22.999 kr."
-      /> -->
-    </div>
+
+  <div class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <ProductKarusel />
+  </div>
+
+
     </section>
 
     <!-- acordion SEO tekst -->
@@ -407,21 +348,29 @@ import Børsen from "../assets/images/børsen.webp";
     <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
       <div class="sm:grid grid-cols-3 items-center">
         <div class="sm:w-[850px] sm:h-[444px] col-span-2">
-      <Image
-              src={Børsen}
-              alt="Børsen gazelle pris "
-              class="w-full h-full object-cover col-span-2"
-            /> 
-          </div>
-      <div class="flex flex-col gap-xs">
-        <h2>Børsens Gazelle</h2>
-        <p class="text-orange-500">Biopejs-shop.dk er blevet tildelt Børsens Gazellepris hvert år fra 2018 til 2024.</p>
-        <p>Denne prestigefyldte pris uddeles til virksomheder, der udviser markant vækst, fordobler deres omsætning eller bruttoresultat over en fireårig periode og opererer med sund økonomi. Gazelleprisen er en anerkendelse af vores dedikation til innovation, kvalitet og kundetilfredshed.</p>
+          <Image
+            src={Børsen}
+            alt="Børsen gazelle pris "
+            class="w-full h-full object-cover col-span-2"
+          />
+        </div>
+        <div class="flex flex-col gap-xs">
+          <h2>Børsens Gazelle</h2>
+          <p class="text-orange-500">
+            Biopejs-shop.dk er blevet tildelt Børsens Gazellepris hvert år fra
+            2018 til 2024.
+          </p>
+          <p>
+            Denne prestigefyldte pris uddeles til virksomheder, der udviser
+            markant vækst, fordobler deres omsætning eller bruttoresultat over
+            en fireårig periode og opererer med sund økonomi. Gazelleprisen er
+            en anerkendelse af vores dedikation til innovation, kvalitet og
+            kundetilfredshed.
+          </p>
+        </div>
       </div>
-    </div>
     </section>
 
-<!-- showroom -->
-
+    <!-- showroom -->
   </article></MainLayout
 >

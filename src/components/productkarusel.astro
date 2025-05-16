@@ -1,0 +1,101 @@
+---
+---
+
+ <div
+    id="anbefalinger"
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-sm"
+  >
+
+    <p>Loading products...</p>
+    
+  </div>
+
+
+  <script type="module">
+    import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+
+    // Initialize Supabase client
+    const supabaseUrl = "https://cjepvoafgeuerftcusje.supabase.co";
+    const supabaseKey =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNqZXB2b2FmZ2V1ZXJmdGN1c2plIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ2MjU1MDksImV4cCI6MjA2MDIwMTUwOX0.gU1uwhXne8u2qV-q9X6GfqGiJhLSQ3lYIWqdx5_EzJ4";
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
+    async function fetchProducts() {
+     
+      // Supabase query using AND logic for tags
+      let query = supabase
+        .from("productview")
+        .select("*")
+        .order("id", { ascending: true });
+        query = query.contains("newtags", ["populær"]);
+      
+
+      const { data, error } = await query;
+      if (error) {
+        console.error("Supabase error:", error);
+      } else {
+        console.log("Fetched data:", data);
+      }
+
+      const productGrid = document.getElementById("anbefalinger");
+      if (data && data.length > 0) {
+        productGrid.innerHTML = data
+          
+        .map(
+            (product) => ` 
+            <a href="/singleview?id=${product.id}" class="block max-w-sm md:max-w-lg mx-auto bg-[#FFFFFF] overflow-hidden p-s hover:shadow-drop25 transition-shadow duration-200">
+              <img  
+              src="/imgs/produktbilleder/${product.image}" 
+              alt=${product.product} 
+              class="w-[380px] h-[380px] object-contain mx-auto -mt-xs bg-white shadow-md" />
+              <div class="mt-xs">
+                   <p class="text-brown-600  text-sm uppercase tracking-wide">${product.brand}</p>
+                <div class="flex items-center justify-between mt-xxs">
+                   <p class="text-brown-600">${product.product}</p>
+                   <p class="text-orange-500  font-bold">${product.price}</p>
+                </div>
+              </div>
+            </a>
+           `
+          )
+          .join("");
+      } else {
+        productGrid.innerHTML =
+          "<p>No products matched your selected tags.</p>";
+      }
+    }
+
+    // Run the fetchProducts function on page load
+    fetchProducts();
+  </script>
+
+
+
+<!-- 
+<div class="overflow-x-auto scroll-pl-6 snap-x snap-mandatory scrollbar-hide py-xxxs">
+  <div class="flex gap-sm px-6">
+    {products.map(data => (
+      <a
+        href={`/singleview${data.id}`}
+        class="snap-start flex-shrink-0 w-[280px] md:w-[360px] bg-[#FFFFFF]  p-xxs  shadow hover:shadow-lg transition-shadow duration-200"
+      >
+        <img
+          src={`/imgs/produktbilleder/${data.image}`}
+          alt={data.product}
+          class="w-full h-[280px] md:h-[360px] object-contain bg-white shadow-md rounded"
+        />
+        <div class="mt-3">
+          <p class="text-brown-600 text-sm uppercase tracking-wide">{data.brand}</p>
+          <div class="flex justify-between mt-1 text-brown-600">
+            <p>{data.product}</p>
+            <p class="text-orange-500 font-bold">{data.price}</p>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</div>
+ -->
+
+ 
+
