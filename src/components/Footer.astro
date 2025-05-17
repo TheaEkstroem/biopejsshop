@@ -6,10 +6,10 @@ import Button from "../components/Button.astro";
   <!-- nyhedsbrev -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
     <div class="flex-1">
-      <h6 class="font-semibold mb-2 col-span-1">Nyhedsbrev</h6>
+      <h6 class="font-semibold mb-2 col-span-1 mb-xs">Nyhedsbrev</h6>
     </div>
     <div class="col-span-2">
-      <h6 class="font-semibold mb-1">Hold dit opdateret</h6>
+      <p class="font-semibold mb-xxxs text-base text-white-500">Hold dit opdateret</p>
       <p class="text-white-500 mb-4">og få besked om tilbud, kampagner og konkurrencer!</p>
       <div class="flex flex-col sm:flex-row gap-s pt-xs">
         <input
@@ -24,10 +24,87 @@ import Button from "../components/Button.astro";
     </div>
   </div>
 
+  <hr class="my-s" />
+
+<!-- Besøg os -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+ <div class="col-span-1">
+      <h6 class="font-semibold mb-xxxs">Besøg os</h6>
+    </div>
+
+
+
+<div class="grid col-span-2 grid-cols-2">
+  <div class="mb-s">
+      <p class="font-medium text-white-500">Langholt (Nordjylland)</p>
+        <p class="text-white-500">
+          Gravsholtvej 15<br />
+          9310 Vodskov<br />
+          Man - Fre: 8:00 - 16:00<br />
+          Lørdag: 10:00 - 14:00
+        </p>
+    </div>
+    <div >
+      <p class="font-medium text-white-500">Valby (København)</p>
+        <p class="text-white-500">
+          Valby Langgade 30<br />
+          2500 Valby<br />
+          Man - Fre: 10:00 - 17:30<br />
+          Lørdag: 10:00 - 14:00
+        </p>
+    </div>
+</div>
+
+</div>
+
+
   <hr class=" my-s" />
 
-  <!-- Besøg os -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- lær mere -->
+<div class="grid md:grid-cols-3 gap-10" >
+<div class="col-span-1">
+      <h6 class="font-semibold mb-xxs">Lær mere</h6>
+    </div>
+
+<div class="grid col-span-2 grid-cols-2 ">
+   <div>
+      <p class="font-semibold md:mb-xxxs text-lg text-white-500">Kundeservice</p>
+      <div class="flex flex-col -space-y-xxxs">
+        <Link size="small" variant="footer" href="/">Kontakt</Link>
+        <Link size="small" variant="footer" href="/">Fragt / Levering</Link>
+        <Link size="small" variant="footer" href="/">Bytte / Retur</Link>
+        <Link size="small" variant="footer" href="/">Levering af paller</Link>
+        <Link size="small" variant="footer" href="/">Prisgaranti</Link>
+        <Link size="small" variant="footer" href="/">Finansiering</Link>
+        <Link size="small" variant="footer" href="/">Klarna betaling</Link>
+        <Link size="small" variant="footer" href="/">FAQ</Link>
+        <Link size="small" variant="footer" href="/">Erhvervskunde</Link>
+      </div>
+    </div>
+    <div>
+      <p class="font-semibold md:mb-xxxs text-lg text-white-500">Information</p>
+      <div class="flex flex-col -space-y-xxxs">
+        <Link size="small" variant="footer" href="/">Om Biopejs-shop</Link>
+        <Link size="small" variant="footer" href="/">Mød os på messe</Link>
+        <Link size="small" variant="footer" href="/">Handelsbetingelser</Link>
+        <Link size="small" variant="footer" href="/">Kundebilleder</Link>
+        <Link size="small" variant="footer" href="/">Guides om pejse</Link>
+        <Link size="small" variant="footer" href="/">Blog</Link>
+        <Link size="small" variant="footer" href="/">Persondata</Link>
+        <Link size="small" variant="footer" href="/">Cookies</Link>
+        <Link size="small" variant="footer" href="/">Bæredygtighed</Link>
+      </div>
+     
+    </div>
+</div>
+
+</div>
+
+
+
+
+  
+<!--   <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
     <div>
       <h6 class="font-semibold mb-4 col-span-1">Besøg os</h6>
     </div>
@@ -49,13 +126,10 @@ import Button from "../components/Button.astro";
           Lørdag: 10:00 - 14:00
         </p>
     </div>
-  </div>
+  </div> -->
 
-  <hr class=" my-s" />
-
-
-  <!-- lær mere -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+ 
+ <!--  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
     <div>
       <h6 class="font-semibold mb-2">Lær mere</h6>
     </div>
@@ -88,5 +162,5 @@ import Button from "../components/Button.astro";
       </div>
      
     </div>
-  </div>
+  </div> -->
 </section>
