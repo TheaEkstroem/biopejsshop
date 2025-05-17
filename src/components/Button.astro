@@ -23,7 +23,6 @@ const sizeClasses = {
     "large": "text-3xl px-xxs py-xxs font-semibold",
     "xlarge": "text-3xl px-xxs py-xxs font-semibold",
 };
-
 ---
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
 <a href={href} target={target} class:list={[linkStyling, variantClasses[variant], sizeClasses[size],]}><slot /></a>
