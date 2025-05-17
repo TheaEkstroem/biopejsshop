@@ -2,52 +2,96 @@
 import Button from "../components/Button.astro";
 ---
 
-<body class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
-  <div class="max-w-5xl mx-auto p-xs bg-white-500 mt-ml">
+<!-- &check; -->
+<section class="sm:p-xxxs md:p-xxs lg:p-s max-w-screen-2xl mx-auto">
+  <div class="max-w-5xl mx-auto p-s bg-white-500 mt-xxxs">
     <div id="step-1" class="checkout-step">
+      <!-- steps -->
+      <div class="flex items-center justify-center space-x-xl md:space-x-4xl my-s">
+        <!-- Step 1 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-3"
+          >
+            1
+          </p>
+          <p class="mt-xxxs">Levering</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-2 border-black-200 text-black-200"
+          >
+            2
+          </p>
+          <p class="mt-xxxs text-black-200">Betaling</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-2 border-black-200 text-black-200"
+          >
+            3
+          </p>
+          <p class="mt-xxxs text-black-200">Køb</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-2 border-black-200 text-black-200"
+          >
+            4
+          </p>
+          <p class="mt-xxxs text-black-200">Bekræft</p>
+        </div>
+      </div>
+
       <h4 class="mb-xs border-b-2">1. Forsendelsesoplysninger</h4>
-      <div class="grid md:grid-cols-2 gap-m">
+      <div class="grid md:grid-cols-2 gap-s md:gap-m md:h-[350px]">
         <!-- Info  -->
-        <div class="space-y-xxs mt-xs">
+        <div class="space-y-xxs">
           <input
             type="email"
             placeholder="Din E-mail*"
-            class="w-full p-xxs bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
+            class="text-sm md:text-base w-full p-xxs bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
           />
           <input
             type="text"
             placeholder="Fulde Navn*"
-            class="w-full p-xxs border bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
+            class="text-sm md:text-base w-full p-xxs border bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
           />
           <input
             type="tel"
             placeholder="Telefon*"
-            class="w-full p-xxs border bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
+            class="text-sm md:text-base w-full p-xxs border bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
           />
           <input
             type="text"
             placeholder="Adresse*"
-            class="w-full p-xxs border bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
+            class="text-sm md:text-base w-full p-xxs border bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
           />
           <input
             type="text"
             placeholder="Address (Valgfri)"
-            class="w-full p-xxs border bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
+            class="text-sm md:text-base w-full p-xxs border bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
           />
           <div class="grid grid-cols-2 gap-s">
             <input
               type="text"
               placeholder="By*"
-              class="p-xxs border bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
+              class= "text-sm md:text-base p-xxs border bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
             />
             <input
               type="text"
               placeholder="Postnummer*"
-              class="p-xxs border bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
+              class="text-sm md:text-base p-xxs border bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
             />
           </div>
           <select
-            class="w-full p-xxs border bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
+            class="text-sm md:text-base w-full p-xxs border bg-white-200 border-black-100 placeholder-black-200 font-roboto font-light"
           >
             <option class="">Danmark</option>
             <option>Sverige</option>
@@ -57,7 +101,7 @@ import Button from "../components/Button.astro";
         </div>
 
         <!-- levering -->
-        <div class="flex flex-col space-y-xxs mt-xxs">
+        <div class="flex flex-col space-y-xxs">
           <p class="font-semibold">Levering</p>
           <div
             class="flex items-center gap-s bg-white-200 border-2 border-black-100 p-xxs"
@@ -110,7 +154,7 @@ import Button from "../components/Button.astro";
       </div>
 
       <!-- button -->
-      <div class="flex justify-end mt-6">
+      <div class="flex justify-end pt-xs">
         <button
           id="next1"
           class="bg-orange-400 text-white-500 px-xs py-xxs rounded-xl hover:bg-orange-500"
@@ -120,9 +164,52 @@ import Button from "../components/Button.astro";
     </div>
 
     <div id="step-2" class="checkout-step hidden">
-      <h4 class="mb-xs border-b-2">2. Betalingsmuligheder</h4>
+      <!-- steps -->
+      <div
+        class="flex items-center justify-center space-x-xl md:space-x-4xl my-s"
+      >
+        <!-- Step 1 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-2 border-black-200 text-black-200"
+          >
+            <span>&check; </span>
+          </p>
+          <p class="mt-xxxs text-black-200">Levering</p>
+        </div>
 
-      <div class="grid md:grid-cols-3 gap-m">
+        <!-- Step 2 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-3 border-black-700 text-black-700"
+          >
+            2
+          </p>
+          <p class="mt-xxxs">Betaling</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-2 border-black-200 text-black-200"
+          >
+            3
+          </p>
+          <p class="mt-xxxs text-black-200">Køb</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-2 border-black-200 text-black-200"
+          >
+            4
+          </p>
+          <p class="mt-xxxs text-black-200">Bekræft</p>
+        </div>
+      </div>
+      <h4 class="mb-xs border-b-2">2. Betalingsmuligheder</h4>
+      <div class="grid md:grid-cols-3 gap-s md:gap-m md:h-[350px]">
         <div class="space-y-xs col-span-2">
           <div
             class="flex items-center gap-s bg-white-200 border-2 border-black-100 p-xxs"
@@ -205,30 +292,26 @@ import Button from "../components/Button.astro";
           </div>
         </div>
 
-
-<!-- total -->
- <div class="bg-white-200 h-[250px] p-sm w-[300px]  space-y-xs">
-<p class="font-medium">Kurv Total</p>
-<div class="flex justify-evenly space-x-5xl">
-    <p>Subtotal</p>
-    <p>22.999 kr</p>
-</div>
-<div class="flex justify-evenly space-x-5xl">
-    <p>Forsendelse</p>
-    <p>0 kr</p>
-</div>
-<hr>
-<div class="flex justify-evenly space-x-5xl">
-    <p>Total</p>
-    <p class="font-medium text-orange-500">22.999 kr</p>
-</div>
-
-</div> 
-
-       
+        <!-- total -->
+        <div class="bg-white-200 h-[250px] p-sm w-[300px] space-y-xs">
+          <p class="font-medium">Kurv Total</p>
+          <div class="flex justify-evenly space-x-5xl">
+            <p>Subtotal</p>
+            <p>22.999 kr</p>
+          </div>
+          <div class="flex justify-evenly space-x-5xl">
+            <p>Forsendelse</p>
+            <p>0 kr</p>
+          </div>
+          <hr />
+          <div class="flex justify-evenly space-x-5xl">
+            <p>Total</p>
+            <p class="font-medium text-orange-500">22.999 kr</p>
+          </div>
+        </div>
       </div>
 
-      <div class="flex justify-between mt-xs">
+      <div class="flex justify-between pt-xs">
         <button
           id="back2"
           class="text-brown-700 px-xs py-xxs border-2 hover:bg-white-600"
@@ -241,70 +324,177 @@ import Button from "../components/Button.astro";
           >Fortsæt til Betaling →</button
         >
       </div>
-
     </div>
- 
 
-  <div id="step-3" class="checkout-step hidden">
-  
-   
-    <h4 class="mb-xs border-b-2">3. Gennemgå og bekræft</h4>
-     <div class="grid md:grid-cols-3"> 
-<div class="col-span-2">
-    <!-- adresse -->
-    <div class="mb-xxxs">
-      <h5 class="mb-xxs">Sendes til:</h5>
-      <p class="">
-        Jens Hansen<br />Hovedgaden 123<br />8000 Aarhus C<br />Danmark
-      </p>
-    </div>
-    <!-- betaling -->
-    <div class="mb-xxxs">
-      <h5 class="mb-xxs">Betalings Metode:</h5>
-      <p class="">**** **** **** 1234</p>
-    </div>
-</div>
-
-    <!-- ordre  -->
- <div class="bg-white-200 h-[220px] p-sm w-[300px]  space-y-xs">
-<p class="font-medium">Order Total</p>
-<div>
-<div class="flex space-x-5xl">
-    <p>Product</p>
-    <p></p>
-</div>
-<div class="flex justify-evenly space-x-5xl">
-    <p>Antal: 1</p>
-    <p>22.999 kr</p>
-</div>
-</div>
-
-<hr>
-<div class="flex justify-evenly space-x-5xl">
-    <p>Total</p>
-    <p class="font-medium text-orange-500">22.999 kr</p>
-</div>
-
-</div> 
-  
-
-</div>
-    <div class="flex justify-between mt-6">
-      <button
-        id="back3"
-        class="text-brown-700 px-xs py-xxs border-2 hover:bg-white-600"
-        >← Back</button
+    <div id="step-3" class="checkout-step hidden">
+      <!-- steps -->
+      <div
+        class="flex items-center justify-center space-x-xl md:space-x-4xl my-s"
       >
-      <button
-     
-        class="bg-orange-400 text-white-500 px-xs py-xxs hover:bg-orange-500" 
+        <!-- Step 1 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-2 border-black-200 text-black-200"
+          >
+            <span>&check; </span>
+          </p>
+          <p class="mt-xxxs text-black-200">Levering</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-2 border-black-200 text-black-200"
+          >
+            <span>&check; </span>
+          </p>
+          <p class="mt-xxxs text-black-200">Betaling</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-3 border-black-700 text-black-700"
+          >
+            3
+          </p>
+          <p class="mt-xxxs">Køb</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-2 border-black-200 text-black-200"
+          >
+            4
+          </p>
+          <p class="mt-xxxs text-black-200">Bekræft</p>
+        </div>
+      </div>
+      <h4 class="mb-xs border-b-2">3. Gennemgå og bekræft</h4>
+      <div class="grid md:grid-cols-3 gap-s md:gap-m md:h-[350px]">
+        <div class="col-span-2">
+          <!-- adresse -->
+          <div class="mb-xxxs">
+            <h5 class="mb-xxs">Sendes til:</h5>
+            <p class="">
+              Jens Hansen<br />Hovedgaden 123<br />8000 Aarhus C<br />Danmark
+            </p>
+          </div>
+          <!-- betaling -->
+          <div class="mb-xxxs">
+            <h5 class="mb-xxs">Betalings Metode:</h5>
+            <p class="">**** **** **** 1234</p>
+          </div>
+        </div>
+
+        <!-- ordre  -->
+        <div class="bg-white-200 h-[220px] p-sm w-[300px] space-y-xs">
+          <p class="font-medium">Kurv Total</p>
+          <div>
+            <div class="flex space-x-5xl">
+              <p>Product</p>
+              <p></p>
+            </div>
+            <div class="flex justify-evenly space-x-5xl">
+              <p>Antal: 1</p>
+              <p>22.999 kr</p>
+            </div>
+          </div>
+
+          <hr />
+          <div class="flex justify-evenly space-x-5xl">
+            <p>Total</p>
+            <p class="font-medium text-orange-500">22.999 kr</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between pt-xs">
+        <button
+          id="back3"
+          class="text-brown-700 px-xs py-xxs border-2 hover:bg-white-600"
+          >← Back</button
         >
-        <a href="/">Køb</a></button
+
+        <button
+          id="next3"
+          class="bg-orange-400 text-white-500 px-xs py-xxs hover:bg-orange-500"
+          >Fortsæt til Betaling →</button
+        >
+      </div>
+    </div>
+
+    <div id="step-4" class="checkout-step hidden">
+      <!-- steps -->
+      <div
+        class="flex items-center justify-center space-x-xl md:space-x-4xl my-s"
       >
+        <!-- Step 1 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-2 border-black-200 text-black-200"
+          >
+            <span>&check; </span>
+          </p>
+          <p class="mt-xxxs text-black-200">Levering</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-2 border-black-200 text-black-200"
+          >
+            <span>&check; </span>
+          </p>
+          <p class="mt-xxxs text-black-200">Betaling</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-2 border-black-200 text-black-200"
+          >
+            <span>&check; </span>
+          </p>
+          <p class="mt-xxxs text-black-200">Køb</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="flex flex-col items-center">
+          <p
+            class="flex items-center justify-center w-ml h-ml rounded-full border-3 border-black-700 text-black-700"
+          >
+            4
+          </p>
+          <p class="mt-xxxs">Bekræft</p>
+        </div>
+      </div>
+      <h4 class="text-center mb-xs border-b-2">Tak For dit køb</h4>
+      <div class="md:h-[350px] flex justify-center ">
+        <p class="w-[700px] text-center pt-m">
+          Vi er helt antændt og klar til at behandle din ordre. Indenfor de
+          næste par minutter vil du modtage en ordrebekræftelse på din e-mail
+          med mere information vedrørende din ordre. Lad den ikke gå op i
+          flammer, da denne mail også fungerer som din produktgaranti.
+        </p>
+      </div>
+
+      <div class="flex justify-between pt-xs">
+        <div></div>
+        <!-- <button
+          id="back4"
+          class="text-brown-700 px-xs py-xxs border-2 hover:bg-white-600"
+          >← Back</button
+        > -->
+        <button
+          class="bg-brown-700 text-white-500 px-xs py-xxs hover:bg-orange-400"
+        >
+          <a href="/">Tilbage til Shoppen</a></button
+        >
+      </div>
     </div>
   </div>
-   </div>
-</body>
+</section>
 
 <script type="module">
   document.addEventListener("DOMContentLoaded", () => {
@@ -325,6 +515,11 @@ import Button from "../components/Button.astro";
       showStep(currentStep);
     });
 
+    document.getElementById("next3")?.addEventListener("click", () => {
+      currentStep = 4;
+      showStep(currentStep);
+    });
+
     document.getElementById("back2")?.addEventListener("click", () => {
       currentStep = 1;
       showStep(currentStep);
@@ -332,6 +527,11 @@ import Button from "../components/Button.astro";
 
     document.getElementById("back3")?.addEventListener("click", () => {
       currentStep = 2;
+      showStep(currentStep);
+    });
+
+    document.getElementById("back4")?.addEventListener("click", () => {
+      currentStep = 3;
       showStep(currentStep);
     });
   });
