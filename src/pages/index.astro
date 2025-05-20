@@ -75,18 +75,18 @@ import Børsen from "../assets/images/børsen.webp";
 
     <!-- citat og CTA  -->
     <section
-      class="relative flex items-center justify-center w-full h-[600px] md:h-[700px] bg-cover bg-center max-w-screen-2xl mx-auto"
+      class="relative flex items-center justify-center w-full h-[700px] md:h-[900px] bg-cover bg-center max-w-screen-2xl mx-auto"
       style="background-image: url('/src/assets/images/træbaggrund.webp');"
     >
       <div
-        class="text-white z-10 m-auto flex flex-col items-left gap-sm px-m sm:px-m md:px-lg lg:px-lg xl:px-xl"
+        class=" mx-auto p-sm sticky top-1/3 z-10 m-auto flex flex-col items-left md:gap-sm gap-xxs px-m sm:px-m md:px-lg lg:px-lg xl:px-xl"
       >
         <h2 class="text-white-500 w-full sm:max-w-lg md:max-w-xl lg:max-w-3xl">
           <span class="font-bold">Få den perfekte pejs </span> – skræddersyet til
           jeres hjem og behov
         </h2>
         <p
-          class="text-white-500 py-s md:py-s text-xl md:text-3xl italic w-full sm:max-w-lg md:max-w-xl lg:max-w-3xl"
+          class="text-white-500 py-s md:py-xs text-xl md:text-3xl italic w-full sm:max-w-lg md:max-w-xl lg:max-w-3xl"
         >
           “Vores passion er at finde den bedste løsning til jer, og vi har
           derfor altid jer i centrum. På den måde finder vi den rette pejs, der
@@ -100,6 +100,18 @@ import Børsen from "../assets/images/børsen.webp";
     </section>
 
     <!-- bruger anbefalinger -->
+<section class="px-xs sm:p-s md:px-ml lg:px-lg max-w-screen-2xl mx-auto">
+  <h2 class="py-xs">
+    Køb favoritterne - Udvalgt af vores kunder
+  </h2>
+
+  <div class="bg-gray-100 overflow-x-auto scrollbar-hide">
+    <div class="flex space-x-4 items-center w-max">
+      <ProductKarusel />
+    </div>
+  </div>
+</section>
+<!-- 
     <section class="px-xs sm:p-s md:px-ml lg:px-lg max-w-screen-2xl mx-auto">
       <h2 class="items-end py-xs">
         Køb favoritterne - Udvalgt af vores kunder
@@ -109,13 +121,15 @@ import Børsen from "../assets/images/børsen.webp";
         <ProductKarusel />
       </div>
     </section>
+ -->
+
 
     <!-- acordion SEO tekst -->
     <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
       <h2 class="py-s">Pejse uden besvær</h2>
       <div class="flex flex-col gap-sm">
         <!-- Biopejs: Miljøvenlige bioethanol pejs - uden skorsten!  -->
-        <details class="w-full sm:w-[1000px]">
+        <details class="invisible fade-target w-full sm:w-[1000px]">
           <summary
             class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
           >
@@ -157,7 +171,7 @@ import Børsen from "../assets/images/børsen.webp";
         </details>
 
         <!--  Biopejs ophæng: Til ethvert hjem  -->
-        <details class="w-full sm:w-[1000px]">
+        <details class="invisible fade-target w-full sm:w-[1000px]">
           <summary
             class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
           >
@@ -186,7 +200,7 @@ import Børsen from "../assets/images/børsen.webp";
         </details>
 
         <!-- Biopejs Tilbehør   -->
-        <details class="w-full sm:w-[1000px]">
+        <details class="invisible fade-target w-full sm:w-[1000px]">
           <summary
             class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
           >
@@ -219,7 +233,7 @@ import Børsen from "../assets/images/børsen.webp";
         </details>
 
         <!-- Gaspejs: Det autentiske flammevidunder uden brænde og rengøring  -->
-        <details class="w-full sm:w-[1000px]">
+        <details class="invisible fade-target w-full sm:w-[1000px]">
           <summary
             class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
           >
@@ -250,7 +264,7 @@ import Børsen from "../assets/images/børsen.webp";
         </details>
 
         <!-- Udendørs ildsteder og pejse: Bålfade, terrassevarmere og pizzaovne   -->
-        <details class="w-full sm:w-[1000px]">
+        <details class="invisible fade-target w-full sm:w-[1000px]">
           <summary
             class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
           >
@@ -290,7 +304,7 @@ import Børsen from "../assets/images/børsen.webp";
         </details>
 
         <!-- Opti-myst pejs: Hybridpejsen der skaber flammer af vand   -->
-        <details class="w-full sm:w-[1000px]">
+        <details class="invisible fade-target w-full sm:w-[1000px]">
           <summary
             class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
           >
@@ -317,7 +331,7 @@ import Børsen from "../assets/images/børsen.webp";
         </details>
 
         <!-- Elpejs: Flammer skabt med stikkontakten   -->
-        <details class="w-full sm:w-[1000px]">
+        <details class="invisible fade-target w-full sm:w-[1000px]">
           <summary
             class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
           >
@@ -442,5 +456,47 @@ import Børsen from "../assets/images/børsen.webp";
         </div>
       </div>
     </section>
-  </article></MainLayout
+  </article>
+  
+
+
+<style>
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 1.2s ease-out forwards;
+  }
+
+  .invisible {
+    opacity: 0;
+  }
+</style>
+
+  
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('invisible');
+        entry.target.classList.add('fade-in-up');
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-target').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+  </MainLayout
 >
