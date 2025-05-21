@@ -1,13 +1,278 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import "animate.css";
 ---
+
 <MainLayout title="Galleri">
-    <article class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
-<h2>Inspiration til Pejseløsninger med Stil og Komfort</h2>
+  <article class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
+    <h2>Inspiration til Pejseløsninger med Stil og Komfort</h2>
 
-<img src="" alt="">
+    <div
+      class="sticky top-1/2 md:p-xl mangeelementerinview grid md:grid-cols-3 md:gap-lg"
+    >
+      <div class="p-xxxs mangeelementer1 h-[400px] w-[400px] overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="public/imgs/galleri/biopejs.webp"
+          alt=""
+        />
+      </div>
+
+      <div class="p-xxxs mangeelementer2 h-[400px] w-[400px] overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="public/imgs/galleri/cocoon_terra.webp"
+          alt=""
+        />
+      </div>
+
+      <div class="p-xxxs mangeelementer3 h-[400px] w-[400px] overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="public/imgs/galleri/cocoon.webp"
+          alt=""
+        />
+      </div>
+      <div class="p-xxxs mangeelementer4 h-[400px] w-[400px] overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="public/imgs/galleri/cocoon2.webp"
+          alt=""
+        />
+      </div>
+
+      <div class="p-xxxs mangeelementer5 h-[400px] w-[400px] overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="public/imgs/galleri/columbus.webp"
+          alt=""
+        />
+      </div>
+      <div class="p-xxxs mangeelementer6 h-[400px] w-[400px] overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="public/imgs/galleri/elpejs.webp"
+          alt=""
+        />
+      </div>
+      <div class="p-xxxs mangeelementer7 h-[400px] w-[400px] overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="public/imgs/galleri/elpejs2.webp"
+          alt=""
+        />
+      </div>
+      <div class="p-xxxs mangeelementer8 h-[400px] w-[400px] overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="public/imgs/galleri/elpejs3.webp"
+          alt=""
+        />
+      </div>
+      <div class="p-xxxs mangeelementer9 h-[400px] w-[400px] overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="public/imgs/galleri/fireplace.webp"
+          alt=""
+        />
+      </div>
+      <div class="p-xxxs mangeelementer10 h-[400px] w-[400px] overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="public/imgs/galleri/foco-one.webp"
+          alt=""
+        />
+      </div>
+
+      <div class="p-xxxs mangeelementer11 h-[400px] w-[400px] overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="public/imgs/galleri/fritståendebiopejs.webp"
+          alt=""
+        />
+      </div>
+
+      <div class="p-xxxs mangeelementer12 h-[400px] w-[400px] overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="public/imgs/galleri/gaspejs.webp"
+          alt=""
+        />
+      </div>
+
+      <div class="p-xxxs mangeelementer13 h-[400px] w-[400px] overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="public/imgs/galleri/indbygning.webp"
+          alt=""
+        />
+      </div>
+
+      <div class="p-xxxs mangeelementer14 h-[400px] w-[392px] overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="public/imgs/galleri/nevada1.webp"
+          alt=""
+        />
+      </div>
+
+      <div class="p-xxxs mangeelementer15 h-[400px] w-[400px] overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="public/imgs/galleri/udendørs.webp"
+          alt=""
+        />
+      </div>
+    </div>
+    <!-- 	<div class="h-screen">
+	</div> -->
+  </article>
+
+  <script>
+    /* Mange elementer der animerer ind */
+    import { scroll, animate, inView, stagger } from "@motionone/dom";
+
+    inView(".mangeelementerinview", () => {
+      animate(
+        ".mangeelementer1",
+        { x: [-2000, 0], y: [-50, 0] },
+        { duration: 1 }
+      );
+      animate(
+        ".mangeelementer2",
+        { x: [-1500, 0], y: [-100, 0] },
+        { duration: 3 }
+      );
+      animate(
+        ".mangeelementer3",
+        { x: [-1000, 0], y: [-150, 0] },
+        { duration: 2 }
+      );
+      animate(".mangeelementer4", { x: [1750, 0] }, { duration: 2 });
+      animate(
+        ".mangeelementer5",
+        { x: [-2000, 0], y: [-100, 0] },
+        { duration: 4 }
+      );
+      animate(".mangeelementer6", { x: [2000, 0] }, { duration: 2 });
+      animate(
+        ".mangeelementer7",
+        { x: [1500, 0], y: [50, 0] },
+        { duration: 3 }
+      );
+      animate(
+        ".mangeelementer8",
+        { x: [1000, 0], y: [150, 0] },
+        { duration: 6 }
+      );
+      animate(".mangeelementer9", { x: [1500, 0], y: [0, 0] }, { duration: 1 });
+
+      animate(
+        ".mangeelementer10",
+        { x: [1700, 0], y: [0, 0] },
+        { duration: 3 }
+      );
+
+      animate(
+        ".mangeelementer11",
+        { x: [2000, 0], y: [50, 0] },
+        { duration: 2 }
+      );
+
+      animate(
+        ".mangeelementer12",
+        { x: [1500, 0], y: [20, 0] },
+        { duration: 5 }
+      );
+
+      animate(
+        ".mangeelementer13",
+        { x: [1500, 0], y: [50, 0] },
+        { duration: 4 }
+      );
+
+      animate(
+        ".mangeelementer14",
+        { x: [-1500, 0], y: [-100, 0] },
+        { duration: 6 }
+      );
+
+      animate(
+        ".mangeelementer15",
+        { x: [-1700, 0], y: [-50, 0] },
+        { duration: 1 }
+      );
+
+      return () => {
+        animate(
+          ".mangeelementer1",
+          { x: [-2000, 0], y: [-50, 0] },
+          { duration: 1 }
+        );
+        animate(
+          ".mangeelementer2",
+          { x: [-1500, 0], y: [-100, 0] },
+          { duration: 3 }
+        );
+        animate(
+          ".mangeelementer3",
+          { x: [-1000, 0], y: [-150, 0] },
+          { duration: 3 }
+        );
+        animate(".mangeelementer4", { x: [1750, 0] }, { duration: 2 });
+        animate(
+          ".mangeelementer5",
+          { x: [-2000, 0], y: [-100, 0] },
+          { duration: 1 }
+        );
+        animate(".mangeelementer6", { x: [2000, 0] }, { duration: 2 });
+        animate(
+          ".mangeelementer7",
+          { x: [1500, 0], y: [50, 0] },
+          { duration: 3 }
+        );
+        animate(
+          ".mangeelementer8",
+          { x: [1000, 0], y: [150, 0] },
+          { duration: 2 }
+        );
+        animate(
+          ".mangeelementer9",
+          { x: [1500, 0], y: [0, 0] },
+          { duration: 1 }
+        );
+        animate(
+          ".mangeelementer10",
+          { x: [2000, 0], y: [50, 0] },
+          { duration: 2 }
+        );
 
 
-    </article>
+ animate(
+          ".mangeelementer11",
+          { x: [1000, 0], y: [150, 0] },
+          { duration: 2 }
+        );
+        animate(
+          ".mangeelementer12",
+          { x: [1500, 0], y: [-100, 0] },
+          { duration: 1 }
+        );
+        animate(
+          ".mangeelementer13",
+          { x: [2000, 0], y: [50, 0] },
+          { duration: 2 }
+        );
+        animate(
+          ".mangeelementer14",
+          { x: [-2000, 0], y: [-100, 0] },
+          { duration: 1 }
+        );
+        animate(".mangeelementer15", { x: [2000, 0] }, { duration: 2 });
 
+
+
+      };
+    });
+  </script>
 </MainLayout>
