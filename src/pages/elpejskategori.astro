@@ -73,7 +73,7 @@ import KategoriLink from "../components/kategorilink.astro";
 
           <div class="flex flex-col gap-sm">
             <!-- 1 -->
-            <details class="w-full sm:w-[640px]">
+            <details class="invisible fade-target w-full sm:w-[640px]">
               <summary
                 class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
               >
@@ -102,7 +102,7 @@ import KategoriLink from "../components/kategorilink.astro";
               </div>
             </details>
             <!-- 2 -->
-            <details class="w-full sm:w-[640px]">
+            <details class="invisible fade-target w-full sm:w-[640px]">
               <summary
                 class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
               >
@@ -122,7 +122,7 @@ import KategoriLink from "../components/kategorilink.astro";
               </div>
             </details>
             <!-- 3 -->
-            <details class="w-full sm:w-[640px]">
+            <details class="invisible fade-target w-full sm:w-[640px]">
               <summary
                 class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
               >
@@ -161,7 +161,7 @@ import KategoriLink from "../components/kategorilink.astro";
               </div>
             </details>
             <!-- 4 -->
-            <details class="w-full sm:w-[640px]">
+            <details class="invisible fade-target w-full sm:w-[640px]">
               <summary
                 class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
               >
@@ -226,7 +226,7 @@ import KategoriLink from "../components/kategorilink.astro";
               </div>
             </details>
             <!-- 5 -->
-            <details class="w-full sm:w-[640px]">
+            <details class="invisible fade-target w-full sm:w-[640px]">
               <summary
                 class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
               >
@@ -276,7 +276,7 @@ import KategoriLink from "../components/kategorilink.astro";
           <!-- Højre -->
           <div class="flex flex-col gap-sm">
             <!-- 6 -->
-            <details class="w-full sm:w-[640px]">
+            <details class="invisible fade-target w-full sm:w-[640px]">
               <summary
                 class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
               >
@@ -314,7 +314,7 @@ import KategoriLink from "../components/kategorilink.astro";
               </div>
             </details>
             <!-- 7 -->
-            <details class="w-full sm:w-[640px]">
+            <details class="invisible fade-target w-full sm:w-[640px]">
               <summary
                 class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
               >
@@ -342,7 +342,7 @@ import KategoriLink from "../components/kategorilink.astro";
               </div>
             </details>
             <!-- 8 -->
-            <details class="w-full sm:w-[640px]">
+            <details class="invisible fade-target w-full sm:w-[640px]">
               <summary
                 class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
               >
@@ -387,7 +387,7 @@ import KategoriLink from "../components/kategorilink.astro";
               </div>
             </details>
             <!-- 9 -->
-            <details class="w-full sm:w-[640px]">
+            <details class="invisible fade-target w-full sm:w-[640px]">
               <summary
                 class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
               >
@@ -417,7 +417,7 @@ import KategoriLink from "../components/kategorilink.astro";
               </div>
             </details>
             <!-- 10 -->
-            <details class="w-full sm:w-[640px]">
+            <details class="invisible fade-target w-full sm:w-[640px]">
               <summary
                 class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"
               >
@@ -456,4 +456,44 @@ import KategoriLink from "../components/kategorilink.astro";
       </div>
     </section>
   </article>
+
+<style>
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 1.2s ease-out forwards;
+  }
+
+  .invisible {
+    opacity: 0;
+  }
+</style>
+
+  
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('invisible');
+        entry.target.classList.add('fade-in-up');
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-target').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
 </MainLayout>
