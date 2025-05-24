@@ -7,6 +7,7 @@ const {imageSrc, Name } = Astro.props;
   class="flex flex-col gap-s items-center max-w-sm mx-auto p-s"
 >
   <img
+   loading="lazy"
     src={imageSrc}
     alt={Name}
     class="w-[200px] h-[220px] object-contain mx-auto -mt-ml"

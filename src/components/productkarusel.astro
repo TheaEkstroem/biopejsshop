@@ -47,6 +47,7 @@
             (product) => ` 
             <a href="/singleview?id=${product.id}" class="block max-w-sm md:max-w-lg mx-auto bg-[#FFFFFF] overflow-hidden p-xxs hover:shadow-drop25 transition-shadow duration-200">
               <img  
+               loading="lazy"
               src="/imgs/produktbilleder/${product.image}" 
               alt=${product.product} 
               class="w-[380px] h-[380px] object-contain mx-auto -mt-xs bg-white shadow-md" />

@@ -6,14 +6,17 @@ import StortBilledeLink from "../components/stortbilledelink.astro";
 import ProductKarusel from "../components/productkarusel.astro";
 import { Image } from "astro:assets";
 import Børsen from "../assets/images/børsen.webp";
+import heroImage from '../assets/images/hero.webp';
 ---
+<!--   -->
 
 <MainLayout title="Biopejs-shop">
   <article>
     <!-- hero -->
     <section
       class="relative flex items-center justify-center w-full h-[600px] md:h-[720px] bg-cover bg-center -mt-ml md:m-auto"
-      style="background-image: url('/src/assets/images/hero.webp');"
+       style="background-image: url('/imgs/hero.webp')"
+    
     >
       <div
         class="absolute bottom-sm md:left-1/2 transform z-10 flex flex-col px-s md:px-xl"
@@ -45,28 +48,28 @@ import Børsen from "../assets/images/børsen.webp";
       >
         <!-- Biopejs -->
         <StortBilledeLink
-          imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
+          imageSrc="/imgs/kategori_links/aduro_biopejslink.webp"
           linkUrl="/biopejskategori"
           overlayText="Biopejs"
         />
 
         <!-- Hybrid -->
         <StortBilledeLink
-          imageSrc="/src/assets/images/kategori_links/hybrid_link.webp"
+          imageSrc="/imgs/kategori_links/hybrid_link.webp"
           linkUrl="/hybridkategori"
           overlayText="Hybrid"
         />
 
         <!-- Elpejs  -->
         <StortBilledeLink
-          imageSrc="/src/assets/images/kategori_links/elpejs_link.webp"
+          imageSrc="/imgs/kategori_links/elpejs_link.webp"
           linkUrl="/elpejskategori"
           overlayText="Elpejs"
         />
 
         <!-- Gaspejs -->
         <StortBilledeLink
-          imageSrc="/src/assets/images/kategori_links/gaspejs_link.webp"
+          imageSrc="/imgs/kategori_links/gaspejs_link.webp"
           linkUrl="/gaspejskategori"
           overlayText="Gaspejs"
         />
@@ -76,7 +79,7 @@ import Børsen from "../assets/images/børsen.webp";
     <!-- citat og CTA  -->
     <section
       class="relative flex items-center justify-center w-full h-[700px] md:h-[900px] bg-cover bg-center max-w-screen-2xl mx-auto"
-      style="background-image: url('/src/assets/images/træbaggrund.webp');"
+      style="background-image: url('/imgs/træbaggrund.webp');"
     >
       <div
         class=" mx-auto p-sm sticky top-1/3 z-10 m-auto flex flex-col items-left md:gap-sm gap-xxs px-m sm:px-m md:px-lg lg:px-lg xl:px-xl"
@@ -457,8 +460,6 @@ import Børsen from "../assets/images/børsen.webp";
       </div>
     </section>
   </article>
-  
-
 
 <style>
   @keyframes fadeInUp {
@@ -481,7 +482,6 @@ import Børsen from "../assets/images/børsen.webp";
   }
 </style>
 
-  
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -497,6 +497,4 @@ import Børsen from "../assets/images/børsen.webp";
     observer.observe(el);
   });
 </script>
-
-  </MainLayout
->
+  </MainLayout>

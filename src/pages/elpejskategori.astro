@@ -6,32 +6,30 @@ import Button from "../components/Button.astro";
 import KategoriLink from "../components/kategorilink.astro";
 ---
 
-<MainLayout title="Biopejs">
+<MainLayout title="Elpejs">
   <article>
     <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
-      <h2 class="pb-xs">ElPejse</h2>
+      <h2 class="pb-xs">Elektrisk pejs med eller uden varme</h2>
       <p class="max-w-full sm:max-w-[500px] md:max-w-[819px] lg:max-w-[819px]">
-        Hybridpejs, også kendt som Opti-myst pejs eller vandpejs, er det nye
-        inden for pejse. Den revolutionerende teknologi kombinerer vanddamp og
-        moderne LED teknologi til at skabe smukke flammeeffekter helt uden varme
-        og brandfare. Hybride vanddamp pejse er en ny type af el pejse, hvor
-        brugen af vanddampe gør flammen mere realistisk. Med en hybridpejs kan
-        du altså skabe helt ufarlige, men stadig meget realistiske og flotte
-        flammer. Pejse med vamddamp er et godt alternativ til f.eks. biopejsen,
-        og kan bruges steder, hvor man ikke kan brandsikre omkring pejsen.
+        En elektriske pejs kan bringe den hyggelige følelse af en pejs ind i dit
+        hjem - uden besværet med rengøring eller brandfare. Fordi elektriske
+        pejse udelukkende kører på LED-lys og refleksioner, skabes der en
+        flammeeffekt helt uden fare! Fordelen ved LED-pejse er, at de kan bruges
+        både som supplerende varmekilde og dekoration. Vores elektriske pejse er
+        tilgængelig i forskellige typer og farver samt sort og hvid.
       </p>
 
       <h3 class="pb-xs pt-ml">Kategorier</h3>
       <div
-        class="grid grid-cols-2 lg:grid-cols-4 gap-xs mx-auto md:gap-sm pb-ml"
+        class="slide-in-left grid grid-cols-2 lg:grid-cols-4 gap-xs mx-auto md:gap-sm pb-ml"
       >
         <KategoriLink
-          imageSrc="src/assets/images/kategori_links/elpejs_link.webp"
+          imageSrc="/imgs/kategori_links/elpejs_link.webp"
           linkUrl="/productview?tags=fritstående,elpejs"
           overlayText="Fritstående"
         />
         <KategoriLink
-          imageSrc="/src/assets/images/kategori_links/hybrid_link.webp"
+          imageSrc="/imgs/galleri/elpejs3.webp"
           linkUrl="/productview?tags=indbygget,elpejs"
           overlayText="Indsat"
         />
@@ -45,30 +43,52 @@ import KategoriLink from "../components/kategorilink.astro";
             alle, der kender til deres muligheder og funktioner. Derfor oplever
             vi, at der ofte opstår spørgsmål og usikkerhed i forbindelse med
             brugen af elpejse. For at gøre det nemt for dig har vi samlet de
-            mest almindelige spørgsmål. Her finder du masser af inspiration, gode råd og
-            praktiske tips til, hvordan du får mest muligt ud af din elpejs.
-            Skulle du ikke finde svar på netop dit spørgsmål, er du selvfølgelig
-            altid velkommen til at kontakte vores kundeservice – vi står klar
-            til at hjælpe og rådgive dig med vores ekspertise inden for elpejse.
+            mest almindelige spørgsmål. Her finder du masser af inspiration,
+            gode råd og praktiske tips til, hvordan du får mest muligt ud af din
+            elpejs. Skulle du ikke finde svar på netop dit spørgsmål, er du
+            selvfølgelig altid velkommen til at kontakte vores kundeservice - vi
+            står klar til at hjælpe og rådgive dig med vores ekspertise inden
+            for elpejse.
           </p>
         </div>
 
         <div class="md:pb-s">
-          <h3>Danmarks største udvalg</h3>
-          <p>--</p>
+          <!-- <h3>Danmarks største udvalg</h3>
+          <p>--</p> -->
         </div>
       </div>
     </section>
     <!-- opdelings billede -->
-    <section class="max-w-screen-2xl mx-auto py-sm">
-      <img src="/src/assets/images/hybridstor.webp" alt="" />
+     <section class="max-w-screen-2xl py-sm ">
+      <div class="grid md:grid-cols-3 mx-auto w-fit gap-ml  ">
+        <img
+         loading="lazy"
+          class="md:col-span-2 w-[373px] h-[373px] md:w-[800px] md:h-[800px]"
+         src="/imgs/galleri/elpejs3.webp"
+          alt="Elpejs"
+        />
+        <div class="grid grid-rows-2 gap-ml">
+          <img
+           loading="lazy"
+           class="w-[373px] h-[373px]"
+            src="/imgs/galleri/elpejs.webp"
+            alt="Elpejs "
+          />
+           <img
+            loading="lazy"
+            class="w-[373px] h-[373px]"
+            src="/imgs/galleri/cocoon.webp"
+            alt="Elpejs"
+          />
+        </div>
+      </div>
     </section>
-
+   
     <!-- SEO -->
     <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
       <div>
         <h3 class="pb-xs">Lær mere om Elpejse</h3>
-        <div class="grid lg:grid-cols-2 gap-sm md:gap-xl">
+        <div class="grid lg:grid-cols-2 gap-sm md:gap-xl pb-xl">
           <!-- Venstre -->
 
           <div class="flex flex-col gap-sm">
@@ -83,12 +103,12 @@ import KategoriLink from "../components/kategorilink.astro";
               <div>
                 <p class="py-xs">
                   Hybridpejse drives af vand og el, deraf kommer navnet hybrid.
-                  Denne teknologi kaldes også Opti-myst teknologi, som
-                  firmaet Dimplex har udviklet, og derfor kaldes denne type pejs
-                  til tider også for en opti myst pejs. Den benævnes af andre
-                  som en vandpejs, mens en helt tredje part kategoriserer den
-                  som en elektrisk pejs. Pejsen har ikke helt fundet fodfæste i
-                  forhold til en endelig betegnelse. Én ting er dog sikkert:
+                  Denne teknologi kaldes også Opti-myst teknologi, som firmaet
+                  Dimplex har udviklet, og derfor kaldes denne type pejs til
+                  tider også for en opti myst pejs. Den benævnes af andre som en
+                  vandpejs, mens en helt tredje part kategoriserer den som en
+                  elektrisk pejs. Pejsen har ikke helt fundet fodfæste i forhold
+                  til en endelig betegnelse. Én ting er dog sikkert:
                   Hybridpejsen skaber en fascinerende flammeeffekt, og flammerne
                   fremstår utrolig autentiske og overbevisende. Hybridpejsen er
                   samtidig med til at bevare det gode indeklima ved hverken at
@@ -144,7 +164,7 @@ import KategoriLink from "../components/kategorilink.astro";
                   markedet. Det er gældende for Danmark, men egentligt i hele
                   verden. Det er det nyeste inde for pejseverdenen. Vi ville
                   ønske, at folk havde lige så stort kendskab til hybridpejse,
-                  som eksempelvis brændeovne. Brændeovne er fantastiske – ingen
+                  som eksempelvis brændeovne. Brændeovne er fantastiske - ingen
                   tvivl om det. Der er dog nogle tilfælde, hvor folk ikke har
                   mulighed for at installere en sådan ovn eller gaspejs for
                   eksempel. I disse tilfælde kan det være oplagt at se mod de
@@ -173,7 +193,7 @@ import KategoriLink from "../components/kategorilink.astro";
                   Der er ingen tvivl om, at hybridpejsen, til nybyggeri- og
                   renoveringsprojekter, konkurrerer med biopejse, gaspejse eller
                   en brændeovn for den sags skyld. En biopejs drives dog af
-                  bioethanol, hvor gaspejse brænder på gas – enten fra gasflaske
+                  bioethanol, hvor gaspejse brænder på gas - enten fra gasflaske
                   eller direkte gasforsyning. Disse brændstoffer er dyrere i
                   brug end vanddamppejsen. Vandet i en damppejs koster ikke
                   alverdens. Det er mere elektricitet, der kan være bekostelig i
@@ -181,7 +201,7 @@ import KategoriLink from "../components/kategorilink.astro";
                 </p>
                 <p class="">
                   Et andet alternativ til pejsen, som ligger lidt mere i samme
-                  genre, er en el pejs. Elpejse er 100 % strømdrevne og kræver
+                  genre, er en el pejs. Elpejse er 100 % strømdrevne og kræver
                   ingen yderligere tilslutning eller brændsel såsom vand,
                   bioethanol eller gas. I sådanne tilfælde kan du typisk vælge
                   at styre den elektriske pejs med en fjernbetjening eller
@@ -457,43 +477,43 @@ import KategoriLink from "../components/kategorilink.astro";
     </section>
   </article>
 
-<style>
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(60px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .fade-in-up {
-    animation: fadeInUp 1.2s ease-out forwards;
-  }
-
-  .invisible {
-    opacity: 0;
-  }
-</style>
-
-  
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.remove('invisible');
-        entry.target.classList.add('fade-in-up');
-        observer.unobserve(entry.target); // Animate only once
+  <style>
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(60px);
       }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 1.2s ease-out forwards;
+    }
+
+    .invisible {
+      opacity: 0;
+    }
+  </style>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove("invisible");
+            entry.target.classList.add("fade-in-up");
+            observer.unobserve(entry.target); // Animate only once
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll(".fade-target").forEach((el) => {
+      observer.observe(el);
     });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.fade-target').forEach(el => {
-    observer.observe(el);
-  });
-</script>
-
-
+  </script>
 </MainLayout>

@@ -1,51 +1,116 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" href="../assets/images/favicon.jpeg" type="image/png"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.7.11"><link rel="stylesheet" href="https://use.typekit.net/vhi5zoy.css"><!-- Fonts cormorant, roboto --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><!-- --><title>Biopejs-shop</title><link rel="stylesheet" href="/_astro/biopejskategori.qTTKamwh.css"><script type="module" src="/_astro/page.BA34ORVw.js"></script></head> <body class="bg-white-500"> <header> <!-- Navigation --><div class="px-10"> <div x-data="{ showmenu: false }" class="px-s py-xs fixed top-0 left-0 z-50 w-full bg-white-500"> <!-- Desktop --> <div id="navbar" class="flex flex-row justify-between mb-s"> <!-- Logo --> <div class="logo"> <a href="/"> <img src="/public/imgs/biopejslogo.png" alt="Biopejs logo" class="h-ml mr-2"> </a> </div> <!-- Search bar --> <div class="hidden md:flex flex-1 max-w-xl px-4"> <div class="flex flex-1 space-x-m"> <input type="text" placeholder="Søg efter vare" class="w-full  bg-transparent border-0 border-b border-brown-700 text-brown-700 placeholder-brown-700 focus:border-black-200"> <a href="/kurv"> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16"> <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9zM1 7v1h14V7zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5"></path> </svg> </a> </div> </div> </div> <!-- nav --> <div class="flex place-items-end"> <nav id="desktopmenu" class="hidden md:flex md:flex-row md:items-center gap-20 ml-auto"> <ul class="flex flex-row gap-s"> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/biopejskategori" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Biopejs</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/hybridpejs" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Hybridpejs</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/elpejs" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Elpejs</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/gaspejs" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Gaspejs</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Udendørs</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Mærker</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/guides" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Guides</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/om" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Om os</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/galleri" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Galleri</a> </li> <!-- kurv --> <li> <a href="/kurv"> <!--   <Image
-                src={kurv}
-                alt="kurv symbol"
-                class="w-[30px] h-auto object-fit"
-              /> --> </a> </li> </ul> </nav> <!-- burgermenu --> <button id="burger-menu" id="burgermenu" class="md:hidden" x-on:click="showmenu = ! showmenu"> <svg viewBox="0 0 100 80" width="30" height="30"> <rect width="100" height="15" rx="10"></rect> <rect y="30" width="100" height="15" rx="10"></rect> <rect y="60" width="100" height="15" rx="10"></rect> </svg> </button> </div> <!-- mobile view --> <nav id="mobilmenu" class="flex flex-col pt-4 w-full md:hidden" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false"> <ul class="text-right no-underline pt-xs"> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/biopejskategori" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Biopejs</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/hybridpejs" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Hybridpejs</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/elpejs" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Elpejs</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/gaspejs" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Gaspejs</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Udendørs</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Mærker</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/guides" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Guides</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/om" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Om os</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/galleri" target="_self" class=" py-xxs text-brown-700 hover:underline text-s md:text-sm lg:text-m py-xxxs">Galleri</a> </li> </ul> </nav> </div> </div>  </header> <main class="bg-white-500 pt-5xl">  <article> <!-- hero --> <section class="relative flex items-center justify-center w-full h-screen bg-cover bg-center" style="background-image: url('/src/assets/images/hero.webp');"> <div class="text-white z-10 ml-auto flex flex-col px-m sm:px-m md:px-lg lg:px-lg xl:px-xl "> <h1 class="text-white-500 w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-2xl">
-Skab hygge uden røg Biopejse til moderne hjem
-</h1> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/biopejskategori" target="_self" class=" btn relative flex items-center p-xxs justify-center  transition duration-200 ease-in-out border-2 text-white-500 bg-brown-700  border-transparent hover:bg-brown-400 hover:text-blue-300 text-xl px-xxs py-xxs font-semibold">
+<!DOCTYPE html><!--   --><html lang="en"> <head><meta charset="utf-8"><link rel="icon" href="../assets/images/favicon.jpeg" type="image/png"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.7.11"><link rel="stylesheet" href="https://use.typekit.net/vhi5zoy.css"><!-- Fonts cormorant, roboto --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><!-- --><title>Biopejs-shop</title><link rel="stylesheet" href="/_astro/biopejskategori.CMCwNzre.css">
+<style>@keyframes fadeInUp{0%{opacity:0;transform:translateY(60px)}to{opacity:1;transform:translateY(0)}}.fade-in-up[data-astro-cid-j7pv25f6]{animation:fadeInUp 1.2s ease-out forwards}.invisible[data-astro-cid-j7pv25f6]{opacity:0}
+</style><script type="module" src="/_astro/page.BA34ORVw.js"></script></head> <body class="bg-white-200"> <header> <!-- Navigation --><div class=""> <div x-data="{ showmenu: false }" class="px-s py-xs fixed top-0 left-0 z-50 w-full bg-white-200"> <!-- Desktop --> <div id="navbar" class="flex flex-row justify-between md:mb-s"> <!-- Logo --> <div class="logo"> <a href="/"> <img loading="lazy" src="/imgs/biopejslogo.png" alt="Biopejs logo" class="h-ml mr-2"> </a> </div> <!-- Search bar --> <div class="hidden md:flex flex-1 max-w-xl px-4 items-center"> <div class="flex flex-1 space-x-m"> <input type="text" placeholder="Søg efter vare" class="w-full text-xs  bg-transparent border-0 border-b border-brown-700 text-brown-700 placeholder-brown-700 focus:border-black-200"> <a href="/kurv"> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-basket" viewBox="0 0 20 20"> <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9zM1 7v1h14V7zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5"></path> </svg> </a> </div> </div> <!-- burgermenu --> <button id="burger-menu" id="burgermenu" class="md:hidden" x-on:click="showmenu = ! showmenu"> <svg viewBox="0 0 100 80" width="30" height="30"> <rect width="100" height="8" rx="10"></rect> <rect y="30" width="100" height="8" rx="10"></rect> <rect y="60" width="100" height="8" rx="10"></rect> </svg> </button> </div> <!-- nav --> <div class="flex place-items-end"> <nav id="desktopmenu" class="hidden md:flex md:flex-row md:items-center gap-20 ml-auto"> <ul class="flex flex-row gap-s"> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/biopejskategori" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Biopejs</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/hybridpejskategori" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Hybridpejs</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/elpejskategori" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Elpejs</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/gaspejskategori" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Gaspejs</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Udendørs</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Mærker</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/guides" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Guides</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/om" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Om os</a> </li> <li> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/galleri" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Galleri</a> </li> </ul> </nav> </div> <!-- mobile view --> <nav id="mobilmenu" class="flex flex-col  pt-xxxs w-full md:hidden" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false"> <ul class="text-right transform no-underline pt-xxxs"> <li class="py-xxxs"> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/biopejskategori" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Biopejs</a> </li> <li class=""> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/hybridpejskategori" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Hybridpejs</a> </li> <li class="py-xxxs"> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/elpejskategori" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Elpejs</a> </li> <li class=""> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/gaspejskategori" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Gaspejs</a> </li> <li class="py-xxxs"> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Udendørs</a> </li> <li class=""> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Mærker</a> </li> <li class="py-xxxs"> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/guides" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Guides</a> </li> <li class=""> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/om" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Om os</a> </li> <li class="py-xxxs"> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/galleri" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Galleri</a> </li> <!-- kurv --> <li class=""> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/kurv" target="_self" class=" py-xxs text-brown-700 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Kurv</a> </li> </ul> </nav> </div> </div>  </header> <main class="bg-white-200 pt-6xl ">  <article data-astro-cid-j7pv25f6> <!-- hero --> <section class="relative flex items-center justify-center w-full h-[600px] md:h-[720px] bg-cover bg-center -mt-ml md:m-auto" style="background-image: url('/imgs/hero.webp')" data-astro-cid-j7pv25f6> <div class="absolute bottom-sm md:left-1/2 transform z-10 flex flex-col px-s md:px-xl" data-astro-cid-j7pv25f6> <h1 class="text-white-500 w-full md:max-w-3xl lg:max-w-5xl mb-xxxs" data-astro-cid-j7pv25f6>
+Skab hygge uden røg – Biopejse til moderne hjem
+</h1> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/biopejskategori" target="_self" class=" btn relative flex items-center p-xxs justify-center  transition duration-200 ease-in-out border-2 text-white-500 bg-brown-700  border-transparent hover:bg-orange-400 hover:text-white-300 text-ml md:text-xl px-xxs py-xxs font-semibold">
 Find din Biopejs
-</a> </div> </section> <!-- kategori --> <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto"> <h2>Lær mere om vores brede udvalg af pejse</h2> <p class="max-w-full sm:max-w-[700px] md:max-w-[800px] lg:max-w-[832px]">
+</a> </div> </section> <!-- kategori --> <section class="p-s sm:p-xs md:p-ml lg:p-lg max-w-screen-2xl mx-auto" data-astro-cid-j7pv25f6> <h2 data-astro-cid-j7pv25f6>Lær mere om vores brede udvalg af pejse</h2> <p class="max-w-full sm:max-w-[700px] md:max-w-[800px] lg:max-w-[832px]" data-astro-cid-j7pv25f6>
 Lær mere om vores forskellige typer pejse og find den perfekte løsning
         til dit hjem. Vi tilbyder både biopejse, hybridpejse, elpejse og
         gaspejse – hver med deres unikke fordele og designmuligheder. Uanset om
         du ønsker en miljøvenlig løsning, et moderne udtryk eller en pejs uden
         skorsten, kan du her læse mere om, hvad de forskellige modeller kan
         tilbyde.
-</p> <!-- kategori links --> <div class="pt-sm sm:pt-ml md:pt-lg flex flex-wrap gap-s md:gap-lg justify-center"> <!-- Biopejs --> <div class="flex flex-col items-center justify-center"> <div class="w-[170px] h-[280px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"> <img src="/_astro/aduro_biopejslink.O8OGRIdJ_ZV1mQq.webp" alt="Biopejs" width="1500" height="1500" loading="lazy" decoding="async" class="w-full h-full object-cover"> </div> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/biopejskategori" target="_self" class=" py-xxs text-brown-700 hover:underline text-lg py-xxxs">Biopejs</a> </div> <!-- Hybrid --> <div class="flex flex-col items-center justify-center"> <div class="w-[170px] h-[280px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"> <img src="/_astro/hybrid_link.DxBNN-Ll_13CohL.webp" alt="Hybrid" width="800" height="600" loading="lazy" decoding="async" class="w-full h-full object-cover"> </div> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/hybridpejs" target="_self" class=" py-xxs text-brown-700 hover:underline text-lg py-xxxs">Hybrid</a> </div> <!-- Elpejs  --> <div class="flex flex-col items-center justify-center"> <div class="w-[170px] h-[280px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"> <img src="/_astro/elpejs_link.zKZOOOFx_Z2eDyAX.webp" alt="Elpejs" width="2048" height="1706" loading="lazy" decoding="async" class="w-full h-full object-cover"> </div> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/elpejs" target="_self" class=" py-xxs text-brown-700 hover:underline text-lg py-xxxs">Elpejs</a> </div> <!-- Gaspejs --> <div class="flex flex-col items-center justify-center"> <div class="w-[170px] h-[280px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"> <img src="/_astro/gaspejs_link.X2jMHZih_Z1SwabE.webp" alt="Gaspejs" width="1553" height="1553" loading="lazy" decoding="async" class="w-full h-full object-cover"> </div> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/gaspejs" target="_self" class=" py-xxs text-brown-700 hover:underline text-lg py-xxxs">Gaspejs</a> </div> </div> </section> <!-- citat og CTA  --> <section class="relative flex items-center justify-center w-full h-[700px] bg-cover bg-center max-w-screen-2xl mx-auto" style="background-image: url('/src/assets/images/træbaggrund.webp');"> <div class="text-white z-10 m-auto flex flex-col items-left gap-lg px-m sm:px-m md:px-lg lg:px-lg xl:px-xl "> <h2 class="text-white-500 w-full sm:max-w-xl md:max-w-2xl lg:max-w-5xl"> <span class="font-bold">Skab hygge uden røg</span> - Biopejse til moderne hjem
-</h2> <p class="text-white-500 py-s md:py-s text-xl md:text-3xl italic w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl">
+</p> <!-- kategori links --> <div class="pt-sm sm:pt-ml md:pt-lg flex flex-wrap gap-xs md:gap-lg justify-center pb-sm" data-astro-cid-j7pv25f6> <!-- Biopejs --> <a href="/biopejskategori" class="relative group w-[180px] h-[270px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"> <div class="absolute bottom-xs left-1/2 transform -translate-x-1/2 z-10"> <p class="text-white-500 text-2xl md:text-4xl font-medium text-center">Biopejs</p> </div> <img loading="lazy" src="/imgs/kategori_links/aduro_biopejslink.webp" alt="Biopejs" class="w-full h-full object-cover transition duration-300 ease-in-out group-hover:brightness-75"> </a> <!-- Hybrid --> <a href="/hybridkategori" class="relative group w-[180px] h-[270px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"> <div class="absolute bottom-xs left-1/2 transform -translate-x-1/2 z-10"> <p class="text-white-500 text-2xl md:text-4xl font-medium text-center">Hybrid</p> </div> <img loading="lazy" src="/imgs/kategori_links/hybrid_link.webp" alt="Hybrid" class="w-full h-full object-cover transition duration-300 ease-in-out group-hover:brightness-75"> </a> <!-- Elpejs  --> <a href="/elpejskategori" class="relative group w-[180px] h-[270px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"> <div class="absolute bottom-xs left-1/2 transform -translate-x-1/2 z-10"> <p class="text-white-500 text-2xl md:text-4xl font-medium text-center">Elpejs</p> </div> <img loading="lazy" src="/imgs/kategori_links/elpejs_link.webp" alt="Elpejs" class="w-full h-full object-cover transition duration-300 ease-in-out group-hover:brightness-75"> </a> <!-- Gaspejs --> <a href="/gaspejskategori" class="relative group w-[180px] h-[270px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"> <div class="absolute bottom-xs left-1/2 transform -translate-x-1/2 z-10"> <p class="text-white-500 text-2xl md:text-4xl font-medium text-center">Gaspejs</p> </div> <img loading="lazy" src="/imgs/kategori_links/gaspejs_link.webp" alt="Gaspejs" class="w-full h-full object-cover transition duration-300 ease-in-out group-hover:brightness-75"> </a> </div> </section> <!-- citat og CTA  --> <section class="relative flex items-center justify-center w-full h-[700px] md:h-[900px] bg-cover bg-center max-w-screen-2xl mx-auto" style="background-image: url('/imgs/træbaggrund.webp');" data-astro-cid-j7pv25f6> <div class=" mx-auto p-sm sticky top-1/3 z-10 m-auto flex flex-col items-left md:gap-sm gap-xxs px-m sm:px-m md:px-lg lg:px-lg xl:px-xl" data-astro-cid-j7pv25f6> <h2 class="text-white-500 w-full sm:max-w-lg md:max-w-xl lg:max-w-3xl" data-astro-cid-j7pv25f6> <span class="font-bold" data-astro-cid-j7pv25f6>Få den perfekte pejs </span> – skræddersyet til
+          jeres hjem og behov
+</h2> <p class="text-white-500 py-s md:py-xs text-xl md:text-3xl italic w-full sm:max-w-lg md:max-w-xl lg:max-w-3xl" data-astro-cid-j7pv25f6>
 “Vores passion er at finde den bedste løsning til jer, og vi har
           derfor altid jer i centrum. På den måde finder vi den rette pejs, der
           passer til jeres hjem, behov og ønsker.”
-</p> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/biopejs" target="_self" class=" btn relative flex items-center p-xxs justify-center  transition duration-200 ease-in-out border-2 text-white-500 bg-orange-500  border-transparent hover:bg-orange-700 hover:text-white-300 text-xl px-xxs py-xxs font-semibold">Find din Biopejs</a> </div> </section> <!-- bruger anbefalinger --> <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto"> <h2 class="items-end">Køb favoritterne - Udvalgt af vores kunder</h2> <div class="flex gap-xs"> <!-- <ProductCard
-        href="/singleview"
-        imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
-        brand="Cocoon Fires"
-        productName="Aeris"
-        price="22.999 kr."
-      />
-      <ProductCard
-        href="/singleview"
-        imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
-        brand="Cocoon Fires"
-        productName="Aeris"
-        price="22.999 kr."
-      />
-      <ProductCard
-        href="/singleview"
-        imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
-        brand="Cocoon Fires"
-        productName="Aeris"
-        price="22.999 kr."
-      />
-      <ProductCard
-        href="/singleview"
-        imageSrc="/src/assets/images/kategori_links/aduro_biopejslink.webp"
-        brand="Cocoon Fires"
-        productName="Aeris"
-        price="22.999 kr."
-      /> --> </div> </section> <!-- acordion SEO tekst --> <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto"> <h2 class="py-s">Pejse uden besvær</h2> <div class="flex flex-col gap-sm"> <!-- Biopejs: Miljøvenlige bioethanol pejs - uden skorsten!  --> <details class="w-full sm:w-[1000px]"> <summary class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"> <div class="md:block hidden"></div> <h4>Biopejs: Miljøvenlige bioethanol pejs - uden skorsten!</h4> </summary> <div> <p class="py-xs">
+</p> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/biopejs" target="_self" class=" btn relative flex items-center p-xxs justify-center  transition duration-200 ease-in-out border-2 text-white-500 bg-orange-500  border-transparent hover:bg-orange-700 hover:text-white-300 text-ml md:text-xl px-xxs py-xxs font-semibold">Find din Biopejs</a> </div> </section> <!-- bruger anbefalinger --> <section class="px-xs sm:p-s md:px-ml lg:px-lg max-w-screen-2xl mx-auto" data-astro-cid-j7pv25f6> <h2 class="py-xs" data-astro-cid-j7pv25f6>
+Køb favoritterne - Udvalgt af vores kunder
+</h2> <div class="bg-gray-100 overflow-x-auto scrollbar-hide" data-astro-cid-j7pv25f6> <div class="flex space-x-4 items-center w-max" data-astro-cid-j7pv25f6> <div class="overflow-x-auto scroll-pl-xxs snap-x snap-mandatory scrollbar-hide"> <div id="anbefalinger" class="flex flex-row flex-wrap  gap-sm px-xxxs"> <p>Loading products...</p> </div> </div> <script type="module">
+    import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+
+    // Initialize Supabase client
+    const supabaseUrl = "https://cjepvoafgeuerftcusje.supabase.co";
+    const supabaseKey =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNqZXB2b2FmZ2V1ZXJmdGN1c2plIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ2MjU1MDksImV4cCI6MjA2MDIwMTUwOX0.gU1uwhXne8u2qV-q9X6GfqGiJhLSQ3lYIWqdx5_EzJ4";
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
+    async function fetchProducts() {
+     
+      // Supabase query using AND logic for tags
+      let query = supabase
+        .from("productview")
+        .select("*")
+        .order("id", { ascending: true });
+        query = query.contains("newtags", ["populær"]);
+      
+
+      const { data, error } = await query;
+      if (error) {
+        console.error("Supabase error:", error);
+      } else {
+        console.log("Fetched data:", data);
+      }
+
+      const productGrid = document.getElementById("anbefalinger");
+      if (data && data.length > 0) {
+        productGrid.innerHTML = data
+          
+        .map(
+            (product) => ` 
+            <a href="/singleview?id=${product.id}" class="block max-w-sm md:max-w-lg mx-auto bg-[#FFFFFF] overflow-hidden p-xxs hover:shadow-drop25 transition-shadow duration-200">
+              <img  
+               loading="lazy"
+              src="/imgs/produktbilleder/${product.image}" 
+              alt=${product.product} 
+              class="w-[380px] h-[380px] object-contain mx-auto -mt-xs bg-white shadow-md" />
+              <div class="mt-xs">
+                   <p class="text-brown-600  text-sm uppercase tracking-wide">${product.brand}</p>
+                <div class="flex items-center justify-between mt-xxs">
+                   <p class="text-brown-600">${product.product}</p>
+                   <p class="text-orange-500  font-bold">${product.price}</p>
+                </div>
+              </div>
+            </a>
+           `
+          )
+          .join("");
+      } else {
+        productGrid.innerHTML =
+          "<p>No products matched your selected tags.</p>";
+      }
+    }
+
+    // Run the fetchProducts function on page load
+    fetchProducts();
+  </script> <!-- 
+<div class="overflow-x-auto scroll-pl-6 snap-x snap-mandatory scrollbar-hide py-xxxs">
+  <div class="flex gap-sm px-6">
+    {products.map(data => (
+      <a
+        href={`/singleview${data.id}`}
+        class="snap-start flex-shrink-0 w-[280px] md:w-[360px] bg-[#FFFFFF]  p-xxs  shadow hover:shadow-lg transition-shadow duration-200"
+      >
+        <img
+          src={`/imgs/produktbilleder/${data.image}`}
+          alt={data.product}
+          class="w-full h-[280px] md:h-[360px] object-contain bg-white shadow-md rounded"
+        />
+        <div class="mt-3">
+          <p class="text-brown-600 text-sm uppercase tracking-wide">{data.brand}</p>
+          <div class="flex justify-between mt-1 text-brown-600">
+            <p>{data.product}</p>
+            <p class="text-orange-500 font-bold">{data.price}</p>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</div>
+ --> </div> </div> </section> <!-- 
+    <section class="px-xs sm:p-s md:px-ml lg:px-lg max-w-screen-2xl mx-auto">
+      <h2 class="items-end py-xs">
+        Køb favoritterne - Udvalgt af vores kunder
+      </h2>
+
+      <div class="bg-gray-100 flex items-center justify-center">
+        <ProductKarusel />
+      </div>
+    </section>
+ --> <!-- acordion SEO tekst --> <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto" data-astro-cid-j7pv25f6> <h2 class="py-s" data-astro-cid-j7pv25f6>Pejse uden besvær</h2> <div class="flex flex-col gap-sm" data-astro-cid-j7pv25f6> <!-- Biopejs: Miljøvenlige bioethanol pejs - uden skorsten!  --> <details class="invisible fade-target w-full sm:w-[1000px]" data-astro-cid-j7pv25f6> <summary class="list-none flex flex-wrap border-b-2 items-center cursor-pointer" data-astro-cid-j7pv25f6> <div class="md:block hidden" data-astro-cid-j7pv25f6></div> <h4 data-astro-cid-j7pv25f6>Biopejs: Miljøvenlige bioethanol pejs - uden skorsten!</h4> </summary> <div data-astro-cid-j7pv25f6> <p class="py-xs" data-astro-cid-j7pv25f6>
 En biopejs drives af brændstoffet bioethanol og kan installeres
               helt uden brug af skorsten eller aftræk. Derfor er det en yderst
               fleksibel pejs, som fås i mange prisklasser og typer til både
@@ -61,7 +126,7 @@ En biopejs drives af brændstoffet bioethanol og kan installeres
               Vi anbefaler derfor, at man følger manualen, der medfølger alle
               pejsene, samt følger Sikkerhedsstyrelsens gode råd om korrekt brug
               af biopejse.
-</p> <p class="py-xs">
+</p> <p class="py-xs" data-astro-cid-j7pv25f6>
 Biopejse fås i alle typer, designs og kan installeres stort set
               over alt - uanset om det er en fristående-, hængende- eller
               biopejs til indbygning. Flammen i biopejsen er ægte. Det vil sige
@@ -73,7 +138,7 @@ Biopejse fås i alle typer, designs og kan installeres stort set
               bringe hyggen fra din biopejs udendørs, er det også muligt at købe
               udendørs biopejse ved os. Se vores store udvalg af forskellige
               slags pejse og ildsteder her.
-</p> </div> </details> <!--  Biopejs ophæng: Til ethvert hjem  --> <details class="w-full sm:w-[1000px]"> <summary class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"> <div class="md:block hidden"></div> <h4>Biopejs ophæng: Til ethvert hjem</h4> </summary> <div> <p class="py-xs">
+</p> </div> </details> <!--  Biopejs ophæng: Til ethvert hjem  --> <details class="invisible fade-target w-full sm:w-[1000px]" data-astro-cid-j7pv25f6> <summary class="list-none flex flex-wrap border-b-2 items-center cursor-pointer" data-astro-cid-j7pv25f6> <div class="md:block hidden" data-astro-cid-j7pv25f6></div> <h4 data-astro-cid-j7pv25f6>Biopejs ophæng: Til ethvert hjem</h4> </summary> <div data-astro-cid-j7pv25f6> <p class="py-xs" data-astro-cid-j7pv25f6>
 Du kan hænge en biopejs op som ophæng på væggen og give nyt
               fantastisk liv i stuen eller køkkenet, og så fylder den næsten
               intet, så den kan være i stort set alle hjem. Det er utrolig nemt
@@ -81,14 +146,14 @@ Du kan hænge en biopejs op som ophæng på væggen og give nyt
               vægge kan bære vægten af en væg-biopejs. Vær dog altid opmærksom
               på den enkelte vægbiopejs' vægt, da denne kan variere en del fra
               pejs til pejs.
-</p> <p class="py-xs">
+</p> <p class="py-xs" data-astro-cid-j7pv25f6>
 Det nyeste skud på stammen af biopejse er lofthængte biopejse! En
               ekstremt populær lofthængt model er Cocoon Aeris fra Cocoon Fires,
               som du eksempelvis i en årrække kunne se hver morgen og aften i
               Go' Morgen Danmark og Go' Aften Live på TV2. Vi har en række
               forskellige lofthængte bioethanol pejse i vores sortiment, som kan
               findes sammen med vores væghængte biopejse.
-</p> </div> </details> <!-- Biopejs Tilbehør   --> <details class="w-full sm:w-[1000px]"> <summary class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"> <div class="md:block hidden"></div> <h4>Biopejs Tilbehør</h4> </summary> <div> <p class="py-xs">
+</p> </div> </details> <!-- Biopejs Tilbehør   --> <details class="invisible fade-target w-full sm:w-[1000px]" data-astro-cid-j7pv25f6> <summary class="list-none flex flex-wrap border-b-2 items-center cursor-pointer" data-astro-cid-j7pv25f6> <div class="md:block hidden" data-astro-cid-j7pv25f6></div> <h4 data-astro-cid-j7pv25f6>Biopejs Tilbehør</h4> </summary> <div data-astro-cid-j7pv25f6> <p class="py-xs" data-astro-cid-j7pv25f6>
 En biopejs er ikke fuldendt uden det rette tilbehør. Det første og
               vigtigste, man skal bruge, er selvfølgelig biopejsens brændstof,
               bioethanol. Vores bioethanol er af højeste kvalitet, og det
@@ -97,7 +162,7 @@ En biopejs er ikke fuldendt uden det rette tilbehør. Det første og
               mellem 95% - 97,5% for, at den brænder så rent og lugtfrit som
               muligt. Vores bioethanol har en alkoholprocent på 96,6%, og du
               finder vores bioethanol her.
-</p> <p class="py-xs">
+</p> <p class="py-xs" data-astro-cid-j7pv25f6>
 Vi har ofte også rigtig gode tilbud på storkøb af bioethanol! Ud
               over bioethanol kan det også være rart at have det rigtige værktøj
               til påfyldning, rengøring og at tænde pejsen. Vi har derfor et
@@ -106,9 +171,9 @@ Vi har ofte også rigtig gode tilbud på storkøb af bioethanol! Ud
               mere realistisk, så har vi også masser af dekorationer til
               biopejse. Her kan du finde både keramisk træ, keramiske sten eller
               glow flame, som laver realistiske gnister.
-</p> </div> </details> <!-- Gaspejs: Det autentiske flammevidunder uden brænde og rengøring  --> <details class="w-full sm:w-[1000px]"> <summary class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"> <div class="md:block hidden"></div> <h4>
+</p> </div> </details> <!-- Gaspejs: Det autentiske flammevidunder uden brænde og rengøring  --> <details class="invisible fade-target w-full sm:w-[1000px]" data-astro-cid-j7pv25f6> <summary class="list-none flex flex-wrap border-b-2 items-center cursor-pointer" data-astro-cid-j7pv25f6> <div class="md:block hidden" data-astro-cid-j7pv25f6></div> <h4 data-astro-cid-j7pv25f6>
 Gaspejs: Det autentiske flammevidunder uden brænde og rengøring
-</h4> </summary> <div> <p class="py-xs">
+</h4> </summary> <div data-astro-cid-j7pv25f6> <p class="py-xs" data-astro-cid-j7pv25f6>
 Gaspejse installeres ofte i nyere hjem, fordi de efterhånden er så
               intelligente og autentiske, at brugerne foretrækker denne frem for
               den traditionelle brændeovn. En gaspejs kan have en høj
@@ -124,9 +189,9 @@ Gaspejse installeres ofte i nyere hjem, fordi de efterhånden er så
               kræver ikke aftræk eller lignende, men placeres ofte direkte på
               terrassen, som en traditionel terrassevarmer. Se vores udvalg af
               indendørs gaspejse eller udendørs terrassevarmere til gas her.
-</p> </div> </details> <!-- Udendørs ildsteder og pejse: Bålfade, terrassevarmere og pizzaovne   --> <details class="w-full sm:w-[1000px]"> <summary class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"> <div class="md:block hidden"></div> <h4>
+</p> </div> </details> <!-- Udendørs ildsteder og pejse: Bålfade, terrassevarmere og pizzaovne   --> <details class="invisible fade-target w-full sm:w-[1000px]" data-astro-cid-j7pv25f6> <summary class="list-none flex flex-wrap border-b-2 items-center cursor-pointer" data-astro-cid-j7pv25f6> <div class="md:block hidden" data-astro-cid-j7pv25f6></div> <h4 data-astro-cid-j7pv25f6>
 Udendørs ildsteder og pejse: Bålfade, terrassevarmere og pizzaovne
-</h4> </summary> <div> <p class="py-xs">
+</h4> </summary> <div data-astro-cid-j7pv25f6> <p class="py-xs" data-astro-cid-j7pv25f6>
 Det nyeste skud på vores produktstamme er vores udendørs
               sortiment, som inkluderer alt fra bålfade, pizzaovne og grill til
               gas terrassevarmere og elektriske terrassevarmere, udendørs
@@ -138,7 +203,7 @@ Det nyeste skud på vores produktstamme er vores udendørs
               så du kan lave lækker mad på terrassen eller i haven. I vores
               udendørs sortiment har vi også forskellige ildsteder som bålfade
               og havepejse.
-</p> <p class="py-xs">
+</p> <p class="py-xs" data-astro-cid-j7pv25f6>
 Vores bålfade kommer i mange forskellige størrelser, former og
               materialer, så der er helt sikkert også et til dig og din have! Vi
               har også en masse tilbehør til bålfade, så du f.eks. kan lave mad
@@ -150,7 +215,7 @@ Vores bålfade kommer i mange forskellige størrelser, former og
               også mange udendørs biopejse, som du kan finde her , eller du kan
               bygge din egen udendørs pejs, f.eks. kan du bygge den ned i et
               bord.
-</p> </div> </details> <!-- Opti-myst pejs: Hybridpejsen der skaber flammer af vand   --> <details class="w-full sm:w-[1000px]"> <summary class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"> <div class="md:block hidden"></div> <h4>Opti-myst pejs: Hybridpejsen der skaber flammer af vand</h4> </summary> <div> <p class="py-xs">
+</p> </div> </details> <!-- Opti-myst pejs: Hybridpejsen der skaber flammer af vand   --> <details class="invisible fade-target w-full sm:w-[1000px]" data-astro-cid-j7pv25f6> <summary class="list-none flex flex-wrap border-b-2 items-center cursor-pointer" data-astro-cid-j7pv25f6> <div class="md:block hidden" data-astro-cid-j7pv25f6></div> <h4 data-astro-cid-j7pv25f6>Opti-myst pejs: Hybridpejsen der skaber flammer af vand</h4> </summary> <div data-astro-cid-j7pv25f6> <p class="py-xs" data-astro-cid-j7pv25f6>
 For de fleste lyder det vildt, at flammer kan skabes af vand, og
               normalt er vand og el heller ikke en god kombination. Men med en
               hybridpejs kombineres netop vand, strøm og LED-lys til at skabe
@@ -164,7 +229,7 @@ For de fleste lyder det vildt, at flammer kan skabes af vand, og
               de afgiver ingen varme. Med denne løsning skånes miljøet til det
               maksimale! Du kan se vores store udvalg af de miljøvenlige
               hybridpejse her.
-</p> </div> </details> <!-- Elpejs: Flammer skabt med stikkontakten   --> <details class="w-full sm:w-[1000px]"> <summary class="list-none flex flex-wrap border-b-2 items-center cursor-pointer"> <div class="md:block hidden"></div> <h4>Elpejs: Flammer skabt med stikkontakten</h4> </summary> <div> <p class="py-xs">
+</p> </div> </details> <!-- Elpejs: Flammer skabt med stikkontakten   --> <details class="invisible fade-target w-full sm:w-[1000px]" data-astro-cid-j7pv25f6> <summary class="list-none flex flex-wrap border-b-2 items-center cursor-pointer" data-astro-cid-j7pv25f6> <div class="md:block hidden" data-astro-cid-j7pv25f6></div> <h4 data-astro-cid-j7pv25f6>Elpejs: Flammer skabt med stikkontakten</h4> </summary> <div data-astro-cid-j7pv25f6> <p class="py-xs" data-astro-cid-j7pv25f6>
 Det har aldrig været nemmere at installere en pejs i hjemmet end
               med en elektrisk pejs. En elpejs drives af strøm og er særligt
               attraktiv for solcelleejere med overskydende energi. De er
@@ -179,7 +244,18 @@ Det har aldrig været nemmere at installere en pejs i hjemmet end
               forbundet hermed. De danner nemlig ikke ægte flammer, men derimod
               elektroniske ved hjælp af LED-lys, hvorfor "ilden" altid er under
               fuld kontrol.
-</p> </div> </details> </div> </section> <!-- børsen --> <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto"> <div class="sm:grid grid-cols-3 items-center"> <div class="sm:w-[850px] sm:h-[444px] col-span-2"> <img src="/_astro/b%C3%B8rsen.DvA1FEsY_Z211nQK.webp" alt="Børsen gazelle pris " width="2000" height="1502" loading="lazy" decoding="async" class="w-full h-full object-cover col-span-2"> </div> <div class="flex flex-col gap-xs"> <h2>Børsens Gazelle</h2> <p class="text-orange-500">Biopejs-shop.dk er blevet tildelt Børsens Gazellepris hvert år fra 2018 til 2024.</p> <p>Denne prestigefyldte pris uddeles til virksomheder, der udviser markant vækst, fordobler deres omsætning eller bruttoresultat over en fireårig periode og opererer med sund økonomi. Gazelleprisen er en anerkendelse af vores dedikation til innovation, kvalitet og kundetilfredshed.</p> </div> </div> </section> <!-- showroom --> </article> </main> <footer> <section class="bg-brown-600 text-white-500 p-xs sm:p-xxs md:p-sm lg:p-m"> <!-- nyhedsbrev --> <div class="grid grid-cols-1 md:grid-cols-3 gap-8"> <div class="flex-1"> <h6 class="font-semibold mb-2 col-span-1">Nyhedsbrev</h6> </div> <div class="col-span-2"> <h6 class="font-semibold mb-1">Hold dit opdateret</h6> <p class="text-white-500 mb-4">og få besked om tilbud, kampagner og konkurrencer!</p> <div class="flex flex-col sm:flex-row gap-s pt-xs"> <input type="email" placeholder="Email.." class="w-full sm:w-auto bg-transparent border-0 border-b border-white-600 text-white-500 placeholder-white-500 focus:border-white"> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/biopejs" target="_self" class=" btn relative flex items-center p-xxs justify-center  transition duration-200 ease-in-out border-2 text-white-500 bg-orange-500  border-transparent hover:bg-orange-700 hover:text-white-300 text-s px-xxs py-xxxs">Tilmeld</a> </div> </div> </div> <hr class=" my-s"> <!-- Besøg os --> <div class="grid grid-cols-1 md:grid-cols-3 gap-10"> <div> <h6 class="font-semibold mb-4 col-span-1">Besøg os</h6> </div> <div class="mb-s"> <p class="font-medium text-white-500">Langholt (Nordjylland)</p> <p class="text-white-500">
+</p> </div> </details> </div> </section> <!-- børsen --> <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto" data-astro-cid-j7pv25f6> <div class="sm:grid grid-cols-3 items-center" data-astro-cid-j7pv25f6> <div class="sm:w-[850px] sm:h-[444px] col-span-2" data-astro-cid-j7pv25f6> <img src="/_astro/b%C3%B8rsen.DvA1FEsY_Z211nQK.webp" alt="Børsen gazelle pris " data-astro-cid-j7pv25f6="true" width="2000" height="1502" loading="lazy" decoding="async" class="w-full h-full object-cover col-span-2"> </div> <div class="flex flex-col gap-xs" data-astro-cid-j7pv25f6> <h2 data-astro-cid-j7pv25f6>Børsens Gazelle</h2> <p class="text-orange-500" data-astro-cid-j7pv25f6>
+Biopejs-shop.dk er blevet tildelt Børsens Gazellepris hvert år fra
+            2018 til 2024.
+</p> <p data-astro-cid-j7pv25f6>
+Denne prestigefyldte pris uddeles til virksomheder, der udviser
+            markant vækst, fordobler deres omsætning eller bruttoresultat over
+            en fireårig periode og opererer med sund økonomi. Gazelleprisen er
+            en anerkendelse af vores dedikation til innovation, kvalitet og
+            kundetilfredshed.
+</p> </div> </div> </section> <!-- showroom --> <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto" data-astro-cid-j7pv25f6> <h2 data-astro-cid-j7pv25f6>Besøg vores et af vores showrooms</h2> <!-- Langholt --> <div class="grid md:grid-cols-3 items-center gap-s pt-s md:py-ml" data-astro-cid-j7pv25f6> <!-- kort --> <div class="order-2 md:order-1 col-span-2" data-astro-cid-j7pv25f6> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2454.5553009420682!2d10.07955673093424!3d57.10896137480412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ed3ae717c3b6f%3A0x1a4efe62131922d8!2sGravsholtvej%2015%2C%209310%20Vodskov!5e0!3m2!1sda!2sdk!4v1747413491783!5m2!1sda!2sdk" class="w-[400px] md:w-[850px] h-auto md:h-[350px]" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-astro-cid-j7pv25f6>
+          </iframe> </div> <div class="order-1 md:order-2 flex flex-col gap-s" data-astro-cid-j7pv25f6> <div data-astro-cid-j7pv25f6> <p class="font-semibold" data-astro-cid-j7pv25f6>Langholt (Nordjylland)</p> <p data-astro-cid-j7pv25f6>Gravsholtvej 15, 9310 Vodskov</p> </div> <ul data-astro-cid-j7pv25f6> <li class="font-roboto font-light" data-astro-cid-j7pv25f6>Man - Fre:</li> <li class="font-roboto font-light" data-astro-cid-j7pv25f6>8:00 - 16:00</li> </ul> <ul data-astro-cid-j7pv25f6> <li class="font-roboto font-light" data-astro-cid-j7pv25f6>Lørdag:</li> <li class="font-roboto font-light" data-astro-cid-j7pv25f6>10:00 - 14:00</li> </ul> </div> </div> <!-- Valby --> <div class="grid md:grid-cols-3 items-center gap-s py-ml" data-astro-cid-j7pv25f6> <div class="flex flex-col gap-s" data-astro-cid-j7pv25f6> <div data-astro-cid-j7pv25f6> <p class="font-semibold" data-astro-cid-j7pv25f6>Valby (København)</p> <p data-astro-cid-j7pv25f6>Valby Langgade 30, 2500 Valby</p> </div> <ul data-astro-cid-j7pv25f6> <li class="font-roboto font-light" data-astro-cid-j7pv25f6>Man - Fre:</li> <li class="font-roboto font-light" data-astro-cid-j7pv25f6>10:00 - 17:30</li> </ul> <ul data-astro-cid-j7pv25f6> <li class="font-roboto font-light" data-astro-cid-j7pv25f6>Lørdag:</li> <li class="font-roboto font-light" data-astro-cid-j7pv25f6>10:00 - 14:00</li> </ul> </div> <!-- kort --> <div class="col-span-2" data-astro-cid-j7pv25f6> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.255974038247!2d12.516713076873806!3d55.66714879858517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652531381192a63%3A0x7a6a3311058f3e9b!2sValby%20Langgade%2030%2C%202500%20K%C3%B8benhavn!5e0!3m2!1sda!2sdk!4v1747413788570!5m2!1sda!2sdk" class="w-[400px] md:w-[850px] h-auto md:h-[350px]" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-astro-cid-j7pv25f6>
+          </iframe> </div> </div> </section> </article>  <script type="module">const r=new IntersectionObserver(s=>{s.forEach(e=>{e.isIntersecting&&(e.target.classList.remove("invisible"),e.target.classList.add("fade-in-up"),r.unobserve(e.target))})},{threshold:.1});document.querySelectorAll(".fade-target").forEach(s=>{r.observe(s)});</script>  </main> <footer> <section class="bg-brown-600 text-white-500 p-xs sm:p-xxs md:p-sm lg:p-m"> <!-- nyhedsbrev --> <div class="grid grid-cols-1 md:grid-cols-3 gap-8"> <div class="flex-1"> <h6 class="font-semibold mb-2 col-span-1 mb-xs">Nyhedsbrev</h6> </div> <div class="col-span-2"> <p class="font-semibold mb-xxxs text-base text-white-500">Hold dit opdateret</p> <p class="text-white-500 mb-4">og få besked om tilbud, kampagner og konkurrencer!</p> <div class="flex flex-col sm:flex-row gap-s pt-xs"> <input type="email" placeholder="Email.." class="w-full sm:w-auto bg-transparent border-0 border-b border-white-600 text-white-500 placeholder-white-500 focus:border-white"> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/biopejs" target="_self" class=" btn relative flex items-center p-xxs justify-center  transition duration-200 ease-in-out border-2 text-white-500 bg-orange-500  border-transparent hover:bg-orange-700 hover:text-white-300 text-s px-xxs py-xxxs">Tilmeld</a> </div> </div> </div> <hr class="my-s"> <!-- Besøg os --> <div class="grid grid-cols-1 md:grid-cols-3 gap-10"> <div class="col-span-1"> <h6 class="font-semibold mb-xxxs">Besøg os</h6> </div> <div class="grid col-span-2 grid-cols-2"> <div class="mb-s"> <p class="font-medium text-white-500">Langholt (Nordjylland)</p> <p class="text-white-500">
 Gravsholtvej 15<br>
 9310 Vodskov<br>
 Man - Fre: 8:00 - 16:00<br>
@@ -189,4 +265,59 @@ Valby Langgade 30<br>
 2500 Valby<br>
 Man - Fre: 10:00 - 17:30<br>
 Lørdag: 10:00 - 14:00
-</p> </div> </div> <hr class=" my-s"> <!-- lær mere --> <div class="grid grid-cols-1 md:grid-cols-3 gap-10"> <div> <h6 class="font-semibold mb-2">Lær mere</h6> </div> <div> <h6 class="font-semibold mb-2">Kundeservice</h6> <div class="flex flex-col -space-y-xxxs"> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Kontakt</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Fragt / Levering</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Bytte / Retur</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Levering af paller</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Prisgaranti</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Finansiering</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Klarna betaling</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">FAQ</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Erhvervskunde</a> </div> </div> <div> <h6 class="font-semibold mb-2">Information</h6> <div class="flex flex-col -space-y-xxxs"> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Om Biopejs-shop</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Mød os på messe</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Handelsbetingelser</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Kundebilleder</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Guides om pejse</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Blog</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Persondata</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Cookies</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-s md:text-sm lg:text-m py-xxxs">Bæredygtighed</a> </div> </div> </div> </section> </footer> <script src="/login.js"></script></body></html>
+</p> </div> </div> </div> <hr class=" my-s"> <!-- lær mere --> <div class="grid md:grid-cols-3 gap-10"> <div class="col-span-1"> <h6 class="font-semibold mb-xxs">Lær mere</h6> </div> <div class="grid col-span-2 grid-cols-2 "> <div> <p class="font-semibold md:mb-xxxs text-lg text-white-500">Kundeservice</p> <div class="flex flex-col -space-y-xxxs"> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Kontakt</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Fragt / Levering</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Bytte / Retur</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Levering af paller</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Prisgaranti</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Finansiering</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Klarna betaling</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">FAQ</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Erhvervskunde</a> </div> </div> <div> <p class="font-semibold md:mb-xxxs text-lg text-white-500">Information</p> <div class="flex flex-col -space-y-xxxs"> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Om Biopejs-shop</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Mød os på messe</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Handelsbetingelser</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Kundebilleder</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Guides om pejse</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Blog</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Persondata</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Cookies</a> <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list --><a href="/" target="_self" class=" py-xxs text-white-500 hover:underline text-[14px] md:text-sm lg:text-m py-xxxs">Bæredygtighed</a> </div> </div> </div> </div> <!--   <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <div>
+      <h6 class="font-semibold mb-4 col-span-1">Besøg os</h6>
+    </div>
+    <div class="mb-s">
+      <p class="font-medium text-white-500">Langholt (Nordjylland)</p>
+        <p class="text-white-500">
+          Gravsholtvej 15<br />
+          9310 Vodskov<br />
+          Man - Fre: 8:00 - 16:00<br />
+          Lørdag: 10:00 - 14:00
+        </p>
+    </div>
+    <div >
+      <p class="font-medium text-white-500">Valby (København)</p>
+        <p class="text-white-500">
+          Valby Langgade 30<br />
+          2500 Valby<br />
+          Man - Fre: 10:00 - 17:30<br />
+          Lørdag: 10:00 - 14:00
+        </p>
+    </div>
+  </div> --> <!--  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <div>
+      <h6 class="font-semibold mb-2">Lær mere</h6>
+    </div>
+    <div>
+      <h6 class="font-semibold mb-2">Kundeservice</h6>
+      <div class="flex flex-col -space-y-xxxs">
+        <Link size="small" variant="footer" href="/">Kontakt</Link>
+        <Link size="small" variant="footer" href="/">Fragt / Levering</Link>
+        <Link size="small" variant="footer" href="/">Bytte / Retur</Link>
+        <Link size="small" variant="footer" href="/">Levering af paller</Link>
+        <Link size="small" variant="footer" href="/">Prisgaranti</Link>
+        <Link size="small" variant="footer" href="/">Finansiering</Link>
+        <Link size="small" variant="footer" href="/">Klarna betaling</Link>
+        <Link size="small" variant="footer" href="/">FAQ</Link>
+        <Link size="small" variant="footer" href="/">Erhvervskunde</Link>
+      </div>
+    </div>
+    <div>
+      <h6 class="font-semibold mb-2">Information</h6>
+      <div class="flex flex-col -space-y-xxxs">
+        <Link size="small" variant="footer" href="/">Om Biopejs-shop</Link>
+        <Link size="small" variant="footer" href="/">Mød os på messe</Link>
+        <Link size="small" variant="footer" href="/">Handelsbetingelser</Link>
+        <Link size="small" variant="footer" href="/">Kundebilleder</Link>
+        <Link size="small" variant="footer" href="/">Guides om pejse</Link>
+        <Link size="small" variant="footer" href="/">Blog</Link>
+        <Link size="small" variant="footer" href="/">Persondata</Link>
+        <Link size="small" variant="footer" href="/">Cookies</Link>
+        <Link size="small" variant="footer" href="/">Bæredygtighed</Link>
+      </div>
+     
+    </div>
+  </div> --> </section> </footer> <script src="/login.js"></script></body></html>

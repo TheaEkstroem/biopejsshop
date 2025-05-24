@@ -9,6 +9,7 @@ const { imageSrc, linkUrl, overlayText } = Astro.props;
     <p class="text-white-500 text-2xl md:text-4xl font-medium text-center">{overlayText}</p>
   </div>
   <img
+   loading="lazy"
     src={imageSrc}
     alt={overlayText}
     class="w-full h-full object-cover transition duration-300 ease-in-out group-hover:brightness-75"

@@ -5,6 +5,7 @@ import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
 import KategoriLink from "../components/kategorilink.astro";
 ---
+
 <MainLayout title="Biopejs">
   <article>
     <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
@@ -12,33 +13,35 @@ import KategoriLink from "../components/kategorilink.astro";
       <p class="max-w-full sm:max-w-[500px] md:max-w-[819px] lg:max-w-[819px]">
         Oplev et af verdens største udvalg af biopejse uden skorsten, der skaber
         varme og elegance uden behov for skorsten eller aftræk. Vores
-        miljøvenlige pejse bruger bioethanol, en vedvarende energikilde, der
+        miljøvenlige pejse bruger bioethanol, en vedvarende energikilde, der
         skaber ægte flammer uden røg, aske eller sod. Vælg mellem forskellige
-        stilarter, herunder fritstående, vægmonterede og indbyggede modeller, så
+        stilarter, herunder fritstående, vægmonterede og indbyggede modeller, så
         du kan finde den perfekte biopejs til din indretning og nyde den ideelle
         kombination af moderne design og bæredygtig opvarmning.
       </p>
 
       <h3 class="pb-xs pt-ml">Kategorier</h3>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-xs mx-auto md:gap-sm pb-ml">
+      <div
+        class="slide-in-left grid grid-cols-2 lg:grid-cols-4 gap-xs mx-auto md:gap-sm pb-ml"
+      >
         <KategoriLink
-          imageSrc="/src/assets/images/biopejs_link/loft-link.webp"
+          imageSrc="/imgs/biopejs_link/loft-link.webp"
           linkUrl="/productview?tags=lofthængt,biopejs"
           overlayText="Lofthængt"
         />
 
         <KategoriLink
-          imageSrc="/src/assets/images/biopejs_link/væg-link.webp"
+          imageSrc="/imgs/biopejs_link/væg-link.webp"
           linkUrl="/productview?tags=væghængt,biopejs"
           overlayText="Væghængt"
         />
         <KategoriLink
-          imageSrc="/src/assets/images/biopejs_link/fri-link.webp"
+          imageSrc="/imgs/biopejs_link/fri-link.webp"
           linkUrl="/productview?tags=fritstående,biopejs"
           overlayText="Fritstående"
         />
         <KategoriLink
-          imageSrc="/src/assets/images/biopejs_link/indbyg-link.webp"
+          imageSrc="/imgs/biopejs_link/indbyg-link.webp"
           linkUrl="/productview?tags=indbygget,biopejs"
           overlayText="Indsat"
         />
@@ -54,22 +57,22 @@ import KategoriLink from "../components/kategorilink.astro";
             bioethanol, som er en sprit produceret på organiske materialer, som
             for eksempel kartofler, majs og roer. Der er således tale om et
             miljøvenligt og bæredygtigt produkt. Ved afbrænding afgiver
-            bioethanol kun CO2, varme og fordampet vand. Derfor kræver biopejse
-            ikke skorsten eller aftræk og kan derfor være den ideelle løsning,
+            bioethanol kun CO2, varme og fordampet vand. Derfor kræver biopejse
+            ikke skorsten eller aftræk og kan derfor være den ideelle løsning,
             hvis man ikke har mulighed for eller lyst til at få lavet skorsten
             eller aftræk, men stadigvæk gerne vil have hyggen fra den åbne ild,
             som en biopejs giver
           </p>
         </div>
 
-        <div>
+        <div class="">
           <h3>Guide til biopejse</h3>
           <p>
             Biopejse er, for mange, stadig et nyt fænomen, der endnu ikke er
             stiftet alverdens bekendtskab med. Derfor oplever vi, at vores
             brugere er i tvivl om adskillige ting, når det kommer til brug af en
             pejs til bioethanol. Vi har forsøgt at samle de mest gængse
-            problemstillinger og informations-artikler i en guide sektion.  Find
+            problemstillinger og informations-artikler i en guide sektion. Find
             svar på alle dine spørgsmål omkring biopejse i vores guide, og lad
             dig inspirere af de mange tips og tricks, der gør sig gældende ved
             en biopejs. Skulle du have spørgsmål, som ikke er dækket af
@@ -78,17 +81,36 @@ import KategoriLink from "../components/kategorilink.astro";
           </p>
         </div>
       </div>
-   </section>
-<!-- opdelings billede -->
- <section class="max-w-screen-2xl mx-auto py-sm">
-    <img src="/src/assets/images/biopejsfullimage.webp" alt="">
-</section>
+    </section>
 
-       <!-- SEO -->
+    <!-- opdelings billeder -->
+    <section class="max-w-screen-2xl py-sm ">
+      <div class="grid md:grid-cols-3 mx-auto w-fit gap-ml  ">
+        <img
+          class="md:col-span-2 w-[373px] h-[373px] md:w-[800px] md:h-[800px]"
+          src="/imgs/galleri/cocoon2.webp"
+          alt="Cocoon"
+        />
+        <div class="grid grid-rows-2 gap-ml">
+          <img
+            class="w-[373px] h-[373px]"
+            src="/imgs/galleri/biopejsfri.webp"
+            alt="Fritstående biopejs"
+          />
+          <img
+            class="w-[373px] h-[373px]"
+            src="/imgs/galleri/udendørs.webp"
+            alt="udendørs"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO -->
     <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
       <div>
         <h3 class="pb-xs">Lær mere om biopejse</h3>
-        <div class="grid lg:grid-cols-2 gap-sm md:gap-xl">
+        <div class="grid lg:grid-cols-2 gap-sm md:gap-xl pb-xl">
           <!-- Venstre -->
 
           <div class="flex flex-col gap-sm">
@@ -296,8 +318,8 @@ import KategoriLink from "../components/kategorilink.astro";
 
                 <p class="py-xs">
                   Det er blandt andet ét af de sikkerhedsaspekter, der fokuseres
-                  på for at opnå en TÜV certificering i en manuel brænder. Som
-                  skrevet ovenfor må bioethanol aldrig påfyldes i et brændende
+                  på for at opnå en TÜV certificering i en manuel brænder. Som
+                  skrevet ovenfor må bioethanol aldrig påfyldes i et brændende
                   eller varmt brandkar. Det kan føre til en eksplosiv
                   forbrænding, som kan være svær at håndtere. Derfor anbefaler
                   vi altid at afkøle karret efter brug, så det minimum køler af
@@ -437,7 +459,7 @@ import KategoriLink from "../components/kategorilink.astro";
                   plads eller i et rum, der er godt ventileret. Hvis rummet ikke
                   er godt ventileret, kan der med fordel åbnes for vinduerne og
                   luftes ud efter brug. Kravene til en biopejs bør fremgå af
-                  produktmanualen, og du kan også læse mere om det her. Dette
+                  produktmanualen, og du kan også læse mere om det her. Dette
                   kan være tilstrækkeligt i mindre ventilerede omgivelser. Hvor
                   ofte vinduerne skal åbnes, samt hvor mange kvadratmeter, der
                   er nødvendige for, at brandkarret kan monteres i rummet, kan
@@ -476,45 +498,43 @@ import KategoriLink from "../components/kategorilink.astro";
     </section>
   </article>
 
-
-
-
-<style>
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(60px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .fade-in-up {
-    animation: fadeInUp 1.2s ease-out forwards;
-  }
-
-  .invisible {
-    opacity: 0;
-  }
-</style>
-
-  
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.remove('invisible');
-        entry.target.classList.add('fade-in-up');
-        observer.unobserve(entry.target); // Animate only once
+  <style>
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(60px);
       }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 1.2s ease-out forwards;
+    }
+
+    .invisible {
+      opacity: 0;
+    }
+  </style>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove("invisible");
+            entry.target.classList.add("fade-in-up");
+            observer.unobserve(entry.target); // Animate only once
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll(".fade-target").forEach((el) => {
+      observer.observe(el);
     });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.fade-target').forEach(el => {
-    observer.observe(el);
-  });
-</script>
-
-  </MainLayout>
+  </script>
+</MainLayout>

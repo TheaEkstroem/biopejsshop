@@ -38,13 +38,13 @@ import MainLayout from "../layouts/MainLayout.astro";
   <script type="module">
     import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
-    // Initialize Supabase client
+    //  Supabase 
     const supabaseUrl = "https://cjepvoafgeuerftcusje.supabase.co";
     const supabaseKey =
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNqZXB2b2FmZ2V1ZXJmdGN1c2plIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ2MjU1MDksImV4cCI6MjA2MDIwMTUwOX0.gU1uwhXne8u2qV-q9X6GfqGiJhLSQ3lYIWqdx5_EzJ4";
     const supabase = createClient(supabaseUrl, supabaseKey);
 
-    // Function to extract tags from the URL
+    // Udvinder tags fra URL
     function getTagsFromUrl() {
       const urlParams = new URLSearchParams(window.location.search);
       const tagParam = urlParams.get("tags") || "";
@@ -55,16 +55,16 @@ import MainLayout from "../layouts/MainLayout.astro";
       const clientTagList = getTagsFromUrl();
       console.log("Extracted tags:", clientTagList);
 
-      // Update the tag display
+      // Viser tag display
       const tagDisplay = document.getElementById("tag-display");
       tagDisplay.textContent = clientTagList.join(" ") || "No tags selected";
 
-  //  tags breadcurmbs sti 
+  //  tags breadcurmb sti 
       const tagbreadcurmbs = document.getElementById("tagbreadcurmbs");
       tagbreadcurmbs.textContent = clientTagList.join(" ") || "No tags selected";
 
 
-      // Supabase query using AND logic for tags
+      // henter produkterne der har tags 
       let query = supabase
         .from("productview")
         .select("*")
@@ -80,13 +80,14 @@ import MainLayout from "../layouts/MainLayout.astro";
         console.log("Fetched data:", data);
       }
 
+      // indsætter indholdet i siden
       const productGrid = document.getElementById("product-grid");
       if (data && data.length > 0) {
         productGrid.innerHTML = data
           .map(
             (product) => `
             <a href="/singleview?id=${product.id}" class="block max-w-sm md:max-w-lg mx-auto bg-[#FFFFFF] overflow-hidden p-s hover:shadow-drop25 transition-shadow duration-200">
-              <img  
+              <img   loading="lazy"
               src="/imgs/produktbilleder/${product.image}" 
               alt=${product.product} 
               class="w-[380px] h-[380px] object-contain mx-auto -mt-xs bg-white shadow-md" />

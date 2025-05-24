@@ -6,10 +6,10 @@ import Button from "../components/Button.astro";
 import KategoriLink from "../components/kategorilink.astro";
 ---
 
-<MainLayout title="Biopejs">
+<MainLayout title="Hybridpejs">
   <article>
     <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
-      <h2 class="pb-xs">HybridPejse</h2>
+      <h2 class="pb-xs">Hybridpejs / Opti-myst Pejs</h2>
       <p class="max-w-full sm:max-w-[500px] md:max-w-[819px] lg:max-w-[819px]">
         Hybridpejs, også kendt som Opti-myst pejs eller vandpejs, er det nye
         inden for pejse. Den revolutionerende teknologi kombinerer vanddamp og
@@ -17,26 +17,26 @@ import KategoriLink from "../components/kategorilink.astro";
         og brandfare. Hybride vanddamp pejse er en ny type af el pejse, hvor
         brugen af vanddampe gør flammen mere realistisk. Med en hybridpejs kan
         du altså skabe helt ufarlige, men stadig meget realistiske og flotte
-        flammer. Pejse med vamddamp er et godt alternativ til f.eks. biopejsen,
+        flammer. Pejse med vamddamp er et godt alternativ til f.eks. Biopejsen,
         og kan bruges steder, hvor man ikke kan brandsikre omkring pejsen.
       </p>
 
       <h3 class="pb-xs pt-ml">Kategorier</h3>
       <div
-        class="grid grid-cols-2 lg:grid-cols-4 gap-xs mx-auto md:gap-sm pb-ml"
+        class="slide-in-left grid grid-cols-2 lg:grid-cols-4 gap-xs mx-auto md:gap-sm pb-ml"
       >
         <KategoriLink
-          imageSrc="/src/assets/images/hybrid_link/væghybrid.webp"
+          imageSrc="/imgs/hybrid_link/væghybrid.webp"
           linkUrl="/productview?tags=væghængt,hybrid"
           overlayText="Væghængt"
         />
         <KategoriLink
-          imageSrc="/src/assets/images/hybrid_link/fritståendehybrid.webp"
+          imageSrc="/imgs/hybrid_link/frihybrid.webp"
           linkUrl="/productview?tags=fritstående,hybrid"
           overlayText="Fritstående"
         />
         <KategoriLink
-          imageSrc="/src/assets/images/kategori_links/hybrid_link.webp"
+          imageSrc="/imgs/kategori_links/hybrid_link.webp"
           linkUrl="/productview?tags=indbygget,hybrid"
           overlayText="Indsat"
         />
@@ -60,21 +60,40 @@ import KategoriLink from "../components/kategorilink.astro";
         </div>
 
         <div class="md:pb-s">
-          <h3>Danmarks største udvalg</h3>
-          <p>--</p>
+          <!--  <h3>Danmarks største udvalg</h3>
+          <p>--</p> -->
         </div>
       </div>
     </section>
-    <!-- opdelings billede -->
-    <section class="max-w-screen-2xl mx-auto py-sm">
-      <img src="/src/assets/images/hybridstor.webp" alt="" />
+
+   <!-- opdelings billede -->
+     <section class="max-w-screen-2xl py-sm ">
+      <div class="grid md:grid-cols-3 mx-auto w-fit gap-ml  ">
+      <div class="grid grid-rows-2 gap-ml">
+          <img  loading="lazy"
+           class="w-[373px] h-[373px]"
+            src="/imgs/galleri/biopejs.webp"
+            alt="Biopejs "
+          />
+           <img  loading="lazy"
+            class="w-[373px] h-[373px]"
+            src="/imgs/galleri/indbygning.webp"
+            alt="Foco one"
+          />
+        </div>
+        <img  loading="lazy"
+          class="md:col-span-2 w-[373px] h-[373px] md:w-[800px] md:h-[800px]"
+         src="/imgs/galleri/elpejs2.webp"
+          alt="Elpejs"
+        /> 
+      </div>
     </section>
 
     <!-- SEO -->
     <section class="p-xs sm:p-s md:p-ml lg:p-lg max-w-screen-2xl mx-auto">
       <div>
         <h3 class="pb-xs">Lær mere om Hybridpejse</h3>
-        <div class="grid lg:grid-cols-2 gap-sm md:gap-xl">
+        <div class="grid lg:grid-cols-2 gap-sm md:gap-xl pb-xl">
           <!-- Venstre -->
 
           <div class="flex flex-col gap-sm">
@@ -277,7 +296,6 @@ import KategoriLink from "../components/kategorilink.astro";
                 </p>
               </div>
             </details>
-            
           </div>
 
           <!-- Højre -->
@@ -403,14 +421,24 @@ import KategoriLink from "../components/kategorilink.astro";
               </summary>
               <div>
                 <p class="py-xs">
-                  Rent lavpraktisk – hvad gør jeg for at komme igang med min nye pejs? Kræver det alverdens opmåling, eller er man klar med det samme? Det afhænger principielt af, hvorvidt du ønsker at indbygge ildstedet til dampe i en væg, eller om den blot skal fungere som en fritstående hyggespreder. Ofte bliver disse opti-myst pejse nedfældet inde i en væg, en overflade eller et møbel. Derfor skal du tage lidt hensyn til målene i din konstruktion i sådanne tilfælde.
+                  Rent lavpraktisk – hvad gør jeg for at komme igang med min nye
+                  pejs? Kræver det alverdens opmåling, eller er man klar med det
+                  samme? Det afhænger principielt af, hvorvidt du ønsker at
+                  indbygge ildstedet til dampe i en væg, eller om den blot skal
+                  fungere som en fritstående hyggespreder. Ofte bliver disse
+                  opti-myst pejse nedfældet inde i en væg, en overflade eller et
+                  møbel. Derfor skal du tage lidt hensyn til målene i din
+                  konstruktion i sådanne tilfælde.
                 </p>
 
                 <p class="py-xs">
-                  Falder dit valg derimod på en af de færdige modeller – eksempelvis de væghængte hybridpejse eller fritstående optimyst pejse – så kan du roligt ligge produktet i kurven og udnytte vores tilbud med fri fragt på hybridpejse. Er du omvendt i tvivl, om det er det rigtige produkt, du har valgt, så kontakt os gerne inden.
+                  Falder dit valg derimod på en af de færdige modeller –
+                  eksempelvis de væghængte hybridpejse eller fritstående
+                  optimyst pejse – så kan du roligt ligge produktet i kurven og
+                  udnytte vores tilbud med fri fragt på hybridpejse. Er du
+                  omvendt i tvivl, om det er det rigtige produkt, du har valgt,
+                  så kontakt os gerne inden.
                 </p>
-
-                
               </div>
             </details>
             <!-- 10 -->
@@ -423,15 +451,31 @@ import KategoriLink from "../components/kategorilink.astro";
               </summary>
               <div>
                 <p class="py-xs">
-                  Du bør gøre op med dig selv omkring behovet i netop dit hus. Sætter du pris på varme, hygge, miljø eller noget helt fjerde. Det kan selvfølgelig også være i forhold til indretningen i hjemmet – om det er en fritstående, ophængt eller indbygget, der vælges? Gør dig nogle tanker og kontakt os endelig, hvis vi kan være behjælpelige. Vi tilbyder meget gerne en fremvisning i vores butikker i Aalborg (Langholt) og Valby eller på messerne rundt om i hele Danmark.
+                  Du bør gøre op med dig selv omkring behovet i netop dit hus.
+                  Sætter du pris på varme, hygge, miljø eller noget helt fjerde.
+                  Det kan selvfølgelig også være i forhold til indretningen i
+                  hjemmet – om det er en fritstående, ophængt eller indbygget,
+                  der vælges? Gør dig nogle tanker og kontakt os endelig, hvis
+                  vi kan være behjælpelige. Vi tilbyder meget gerne en
+                  fremvisning i vores butikker i Aalborg (Langholt) og Valby
+                  eller på messerne rundt om i hele Danmark.
                 </p>
 
                 <p class="py-xs">
-                  Kunne du godt tænke dig at se hvad andre har gjort? Det er du ikke alene om. Hos Biopejs-shop har vi derfor oprettet et album med kundebilleder, hvor du kan danne dig et overblik over alle de muligheder der er, når det kommer til at inkorporere en pejs i hjemmet. Desuden bliver vores Instagram løbende opdateret med flotte billeder, du ikke kan undgå at blive inspireret af. Du kan derfor med fordel tjekke den ud, mens du forsøger at gøre dig selv klogere på, hvad dit behov helt præcist er, og hvad lige netop du drømmer om. Mulighederne er mange, når det kommer til at indrette sig med en pejs, så slå dine tanker løs.
+                  Kunne du godt tænke dig at se hvad andre har gjort? Det er du
+                  ikke alene om. Hos Biopejs-shop har vi derfor oprettet et
+                  album med kundebilleder, hvor du kan danne dig et overblik
+                  over alle de muligheder der er, når det kommer til at
+                  inkorporere en pejs i hjemmet. Desuden bliver vores Instagram
+                  løbende opdateret med flotte billeder, du ikke kan undgå at
+                  blive inspireret af. Du kan derfor med fordel tjekke den ud,
+                  mens du forsøger at gøre dig selv klogere på, hvad dit behov
+                  helt præcist er, og hvad lige netop du drømmer om.
+                  Mulighederne er mange, når det kommer til at indrette sig med
+                  en pejs, så slå dine tanker løs.
                 </p>
               </div>
             </details>
-         
           </div>
         </div>
       </div>
@@ -439,42 +483,42 @@ import KategoriLink from "../components/kategorilink.astro";
   </article>
 
   <style>
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(60px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .fade-in-up {
-    animation: fadeInUp 1.2s ease-out forwards;
-  }
-
-  .invisible {
-    opacity: 0;
-  }
-</style>
-
-  
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.remove('invisible');
-        entry.target.classList.add('fade-in-up');
-        observer.unobserve(entry.target); // Animate only once
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(60px);
       }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 1.2s ease-out forwards;
+    }
+
+    .invisible {
+      opacity: 0;
+    }
+  </style>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove("invisible");
+            entry.target.classList.add("fade-in-up");
+            observer.unobserve(entry.target); // Animate only once
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll(".fade-target").forEach((el) => {
+      observer.observe(el);
     });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.fade-target').forEach(el => {
-    observer.observe(el);
-  });
-</script>
-
-
+  </script>
 </MainLayout>
