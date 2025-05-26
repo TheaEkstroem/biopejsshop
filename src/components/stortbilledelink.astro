@@ -5,13 +5,13 @@ const { imageSrc, linkUrl, overlayText } = Astro.props;
   href={linkUrl}
   class="relative group w-[180px] h-[270px] sm:w-[300px] sm:h-[385px] overflow-hidden flex justify-center items-center"
 >
-  <div class="absolute bottom-xs left-1/2 transform -translate-x-1/2 z-10">
-    <p class="text-white-500 text-2xl md:text-4xl font-medium text-center">{overlayText}</p>
+  <div class="absolute bottom-xxs left-1/2 transform -translate-x-1/2 z-10">
+    <p class="text-white-500 text-2xl md:text-4xl stroke-2 font-light text-center">{overlayText}</p>
   </div>
   <img
    loading="lazy"
     src={imageSrc}
     alt={overlayText}
-    class="w-full h-full object-cover transition duration-300 ease-in-out group-hover:brightness-75"
+    class="w-full h-full object-cover transition duration-300 ease-in-out brightness-90 group-hover:brightness-50"
   />
 </a>

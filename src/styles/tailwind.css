@@ -5,7 +5,7 @@
 
 @layer utilities {
   .slide-in-left {
-    animation: slide-in-left .2s cubic-bezier(.25, .46, .45, .94) 1s both
+    animation: slide-in-left 0.5s cubic-bezier(.25, .46, .45, .94) 0.1s both
   }
 
   /* ----------------------------------------------
